@@ -1,0 +1,316 @@
+{
+  "siteVisitsUpload": [
+    "com/kahf/dns/data/database/AppDatabase_Impl.java",
+    "p000/bba.java",
+    "p000/C0486jg.java",
+    "p000/dza.java",
+    "p000/e50.java",
+    "p000/fcb.java",
+    "p000/h20.java",
+    "p000/ifc.java",
+    "p000/j20.java",
+    "p000/uca.java",
+    "p000/xcb.java",
+    "p000/z45.java"
+  ],
+  "ipGeolocationFiles": [
+    "p000/C0957w6.java",
+    "p000/jd2.java"
+  ],
+  "dnsEngineFiles": [
+    "p000/C0969wi.java",
+    "p000/cd3.java",
+    "p000/gt5.java",
+    "p000/nb3.java",
+    "p000/ti9.java",
+    "p000/yc3.java"
+  ],
+  "graphqlOperations": [
+    {
+      "file": "p000/a0d.java",
+      "operations": [
+        "\"mutation UpdateDeviceInstalledApps($deviceId: ID!, $apps: [InstalledAppInput!]!) { updateDeviceInstalledApps(deviceId: $deviceId, apps: $apps) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/bqc.java",
+      "operations": [
+        "\"mutation TriggerAppUsageSync($deviceId: ID!) { triggerAppUsageSync(deviceId: $deviceId) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/brc.java",
+      "operations": [
+        "\"mutation TriggerPermissionSyncMutation($deviceId: ID!) { triggerPermissionSync(deviceId: $deviceId) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/C0260da.java",
+      "operations": [
+        "\"mutation AddRestrictionMutation($deviceIds: [ID!]!, $featureId: String, $isEnable: Boolean, $metadata: [NameValueInput!], $restrictedItems: [RestrictedItemInput!]) { addRestriction(deviceIds: $deviceIds, featureId: $featureId, isEnable: $isEnable, metadata: $metadata, restrictedItems: $restrictedItems) { deviceId success code error restriction { id featureId isEnable rev metadata { name value } restrictedItems { id type value blockingMode startTimestamp duration schedules { name startTime endTime daysOfWeek isEnabled } metadata { name value } } } } }\""
+      ]
+    },
+    {
+      "file": "p000/C0290e4.java",
+      "operations": [
+        "\"mutation AcceptSupervision($whom: ID!, $relationshipType: RelationshipType) { acceptSupervision(whom: $whom, relationshipType: $relationshipType) { id type status whom { id name email } } }\""
+      ]
+    },
+    {
+      "file": "p000/dq4.java",
+      "operations": [
+        "\"query GetChildDevicesWithPermissionsQuery { me { id name relationships { id type status whom { id name email isSupervised devices { id uniqueDeviceId deviceName deviceType metadata { name value } permissionStatus { deviceId uniqueDeviceId permissions { type status isRequired description } lastUpdated } } } } } }\""
+      ]
+    },
+    {
+      "file": "p000/e1d.java",
+      "operations": [
+        "\"mutation UpdateFirebaseTokenMutation($uniqueDeviceId: String!, $firebaseToken: String!) { updateFirebaseToken(uniqueDeviceId: $uniqueDeviceId, firebaseToken: $firebaseToken) { id deviceName uniqueDeviceId } }\""
+      ]
+    },
+    {
+      "file": "p000/e23.java",
+      "operations": [
+        "\"mutation DeviceCheckInMutation($uniqueDeviceId: String!) { deviceCheckIn(uniqueDeviceId: $uniqueDeviceId) { restrictionsRev } }\""
+      ]
+    },
+    {
+      "file": "p000/er4.java",
+      "operations": [
+        "\"query GetDeviceRestrictionsQuery($deviceId: ID!, $offset: Int, $limit: Int) { device(id: $deviceId) { id deviceName restrictions(offset: $offset, limit: $limit) { id featureId isEnable rev metadata { name value } restrictedItems { id type value blockingMode startTimestamp duration schedules { name startTime endTime daysOfWeek isEnabled } metadata { name value } } } } }\""
+      ]
+    },
+    {
+      "file": "p000/f4a.java",
+      "operations": [
+        "\"mutation RemoveRestrictionMutation($deviceIds: [ID!]!, $restrictionId: ID, $featureId: String, $ifRev: Int) { removeRestriction(deviceIds: $deviceIds, restrictionId: $restrictionId, featureId: $featureId, ifRev: $ifRev) { deviceId success code error } }\""
+      ]
+    },
+    {
+      "file": "p000/fz2.java",
+      "operations": [
+        "\"mutation DeleteDeviceMutation($id: ID!) { deleteDevice(id: $id) }\""
+      ]
+    },
+    {
+      "file": "p000/g6a.java",
+      "operations": [
+        "\"mutation RequestSupervisionByEmail($email: String!, $relationshipType: RelationshipType) { requestSupervisionByEmail(email: $email, relationshipType: $relationshipType) { id type status from { id } whom { id name email } } }\""
+      ]
+    },
+    {
+      "file": "p000/gg2.java",
+      "operations": [
+        "\"mutation CreateDeviceMutation($deviceType: DeviceType!, $deviceName: String!, $uniqueDeviceId: String!, $firebaseToken: String, $deviceKey: String) { createDevice(deviceType: $deviceType, deviceName: $deviceName, uniqueDeviceId: $uniqueDeviceId, firebaseToken: $firebaseToken, deviceKey: $deviceKey) { id deviceName uniqueDeviceId metadata { name value } } }\""
+      ]
+    },
+    {
+      "file": "p000/h0c.java",
+      "operations": [
+        "\"query SupervisionRequests { me { id relationships { id type status whom { id name email phone } from { id name email phone } } } }\""
+      ]
+    },
+    {
+      "file": "p000/h0d.java",
+      "operations": [
+        "\"mutation UpdateDeviceMetadataMutation($id: ID!, $metadata: [NameValueInput!]) { updateDevice(id: $id, metadata: $metadata) { id deviceName uniqueDeviceId metadata { name value } } }\""
+      ]
+    },
+    {
+      "file": "p000/hge.java",
+      "operations": [
+        "\"query attribute must be set in fallback element\""
+      ]
+    },
+    {
+      "file": "p000/i81.java",
+      "operations": [
+        "\"mutation CancelSupervision($whom: ID!, $relationshipType: RelationshipType) { cancelSupervision(whom: $whom, relationshipType: $relationshipType) { id type status whom { id name email } } }\""
+      ]
+    },
+    {
+      "file": "p000/js4.java",
+      "operations": [
+        "\"query GetReferralDataQuery($productId: String) { me { referral(productId: $productId) { code link commissionRate totalPurchases totalRegistrations totalEarnings availableBalance totalWithdrawn status } } }\""
+      ]
+    },
+    {
+      "file": "p000/jw7.java",
+      "operations": [
+        "\"query MyDeviceAlertsQuery($state: DeviceAlertState, $offset: Int, $limit: Int) { myDeviceAlerts(state: $state, offset: $offset, limit: $limit) { items { id deviceId deviceName personName type severity state openedAt resolvedAt context { permissions packages lastSeenAt thresholdHours } read } total unreadCount } }\""
+      ]
+    },
+    {
+      "file": "p000/l2a.java",
+      "operations": [
+        "\"mutation RejectSupervision($whom: ID!, $relationshipType: RelationshipType) { rejectSupervision(whom: $whom, relationshipType: $relationshipType) { id type status whom { id name email } } }\""
+      ]
+    },
+    {
+      "file": "p000/lp4.java",
+      "operations": [
+        "\"query GetChildDevicesQuery { me { id name relationships { id type status whom { id name email isSupervised isChild devices { id uniqueDeviceId deviceName deviceType metadata { name value } dnsSettings { dnsUrl lastSyncTime } installedApps { packageName appName isSystemApp } lastInstalledAppsSync } } } } }\""
+      ]
+    },
+    {
+      "file": "p000/mzc.java",
+      "operations": [
+        "\"mutation UpdateDeviceAppUsage($deviceId: ID!, $entries: [AppUsageEntryInput!]!) { updateDeviceAppUsage(deviceId: $deviceId, entries: $entries) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/og2.java",
+      "operations": [
+        "\"mutation CreateGoogleSubscription($productCode: String!, $purchaseToken: String!) { createGoogleSubscription(productCode: $productCode, purchaseToken: $purchaseToken) { id name type status recurring serverDateTime currentPeriodStart currentPeriodEnd provider providerPlanId providerSubscriptionId amount currency metadata { name value } } }\""
+      ]
+    },
+    {
+      "file": "p000/pk8.java",
+      "operations": [
+        "\"mutation OrgDeviceCheckInMutation($uniqueDeviceId: String!, $client: OrgDeviceClientInput, $phoneKey: String) { orgDeviceCheckIn(uniqueDeviceId: $uniqueDeviceId, client: $client, phoneKey: $phoneKey) { restrictionsRev } }\""
+      ]
+    },
+    {
+      "file": "p000/pqc.java",
+      "operations": [
+        "\"mutation TriggerDnsSyncMutation($deviceId: ID!) { triggerDnsSync(deviceId: $deviceId) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/q0d.java",
+      "operations": [
+        "\"mutation UpdateDevicePermissionStatusMutation($deviceId: ID, $uniqueDeviceId: String, $permissions: [PermissionInfoInput!]!) { updateDevicePermissionStatus(deviceId: $deviceId, uniqueDeviceId: $uniqueDeviceId, permissions: $permissions) { success error permissionStatus { deviceId uniqueDeviceId permissions { type status isRequired description } lastUpdated } } }\""
+      ]
+    },
+    {
+      "file": "p000/qo4.java",
+      "operations": [
+        "\"query GetChildDeviceAppUsage($deviceId: ID!) { device(id: $deviceId) { id deviceName appUsageData { packageName appName date hour duration } lastAppUsageSync } }\""
+      ]
+    },
+    {
+      "file": "p000/r97.java",
+      "operations": [
+        "\"mutation MarkDeviceAlertsReadMutation($ids: [ID!]!) { markDeviceAlertsRead(ids: $ids) }\""
+      ]
+    },
+    {
+      "file": "p000/rq4.java",
+      "operations": [
+        "\"query GetDevicePermissionStatusQuery($deviceId: ID!) { device(id: $deviceId) { id uniqueDeviceId deviceName deviceType permissionStatus { deviceId uniqueDeviceId permissions { type status isRequired description } lastUpdated } } }\""
+      ]
+    },
+    {
+      "file": "p000/t1d.java",
+      "operations": [
+        "\"mutation UpdateRestrictionMutation($deviceIds: [ID!]!, $id: ID, $featureId: String, $isEnable: Boolean, $metadata: [NameValueInput!], $restrictedItems: [RestrictedItemInput!], $ifRev: Int) { updateRestriction(deviceIds: $deviceIds, id: $id, featureId: $featureId, isEnable: $isEnable, metadata: $metadata, restrictedItems: $restrictedItems, ifRev: $ifRev) { deviceId success code error restriction { id featureId isEnable rev metadata { name value } restrictedItems { id type value blockingMode startTimestamp duration schedules { name startTime endTime daysOfWeek isEnabled } metadata { name value } } } } }\""
+      ]
+    },
+    {
+      "file": "p000/tzc.java",
+      "operations": [
+        "\"mutation UpdateDeviceDnsSettingsMutation($deviceId: ID!, $dnsUrl: String!) { updateDeviceDnsSettings(deviceId: $deviceId, dnsUrl: $dnsUrl) { success dnsSettings { dnsUrl lastSyncTime } error } }\""
+      ]
+    },
+    {
+      "file": "p000/vqc.java",
+      "operations": [
+        "\"mutation TriggerInstalledAppsSync($deviceId: ID!) { triggerInstalledAppsSync(deviceId: $deviceId) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/wr4.java",
+      "operations": [
+        "\"query GetMeQuery { me { id name email phone picture status isSupervised hasParent hasAccountabilityPartner isChild devices(limit: 1000) { id uniqueDeviceId deviceName metadata { name value } } relationships(limit: 1000) { type status whom { name email } } subscriptions(limit: 1000) { id name status type recurring cancelAtPeriodEnd providerPlanId isGiftSent currentPeriodStart currentPeriodEnd serverDateTime metadata { name value } eligibleClients } } }\""
+      ]
+    },
+    {
+      "file": "p000/y0d.java",
+      "operations": [
+        "\"mutation UpdateDeviceSiteVisits($deviceId: ID!, $days: [SiteVisitDayInput!]!) { updateDeviceSiteVisits(deviceId: $deviceId, days: $days) { success message error } }\""
+      ]
+    },
+    {
+      "file": "p000/yo4.java",
+      "operations": [
+        "\"query GetChildDeviceSiteVisits($deviceId: ID!, $from: String!, $to: String!, $limit: Int) { deviceSiteVisits(deviceId: $deviceId, from: $from, to: $to, limit: $limit) { topSites { domain visits blocked activeSeconds } } }\""
+      ]
+    }
+  ],
+  "dynamicCodeAndCrypto": [
+    {
+      "file": "androidx/graphics/path/PathIteratorPreApi34Impl.java",
+      "keyword": "System.loadLibrary"
+    },
+    {
+      "file": "com/pairip/VMRunner.java",
+      "keyword": "System.loadLibrary"
+    },
+    {
+      "file": "p000/b5b.java",
+      "keyword": "System.loadLibrary"
+    },
+    {
+      "file": "p000/C0058bf.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/C0383gn.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/C0421hn.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/C0671og.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/c8b.java",
+      "keyword": "System.loadLibrary"
+    },
+    {
+      "file": "p000/hb8.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/hk3.java",
+      "keyword": "DelegateLastClassLoader"
+    },
+    {
+      "file": "p000/ib8.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/jb8.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/kv9.java",
+      "keyword": "X509TrustManager"
+    },
+    {
+      "file": "p000/l21.java",
+      "keyword": "System.loadLibrary"
+    },
+    {
+      "file": "p000/l21.java",
+      "keyword": "System.load("
+    },
+    {
+      "file": "p000/tu2.java",
+      "keyword": "Runtime.getRuntime().exec"
+    },
+    {
+      "file": "p000/w29.java",
+      "keyword": "X509TrustManager"
+    }
+  ],
+  "facebookSdkCalls": [],
+  "posthogSessionReplayFiles": [
+    "p000/AbstractC0378gi.java",
+    "p000/ob9.java",
+    "p000/qc9.java"
+  ]
+}

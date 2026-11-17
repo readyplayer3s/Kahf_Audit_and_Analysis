@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service android:description="@string/accessibility_service_description" android:summary="Click to Enable Kahf-Guardz" android:settingsActivity="com.kahf.dns.ui.MainActivity" android:accessibilityEventTypes="typeWindowContentChanged|typeWindowStateChanged" android:accessibilityFeedbackType="feedbackVisual" android:notificationTimeout="300" android:accessibilityFlags="flagIncludeNotImportantViews|flagReportViewIds" android:canRetrieveWindowContent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

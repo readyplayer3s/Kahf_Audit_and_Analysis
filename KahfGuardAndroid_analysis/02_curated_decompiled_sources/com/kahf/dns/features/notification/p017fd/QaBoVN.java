@@ -1,0 +1,52 @@
+package com.kahf.dns.features.notification.p017fd;
+
+/* loaded from: classes.dex */
+public class QaBoVN {
+    public static String DXSMigOfxEwgw;
+    public static String DYuBxye;
+    public static String GEYvsxrAZRoa;
+    public static String IPtUExK;
+    public static String KDRkABODEoKBN;
+    public static String Ndfo;
+    public static String NivjZzXNXM;
+    public static String PeoqLCbrOV;
+    public static String QMJKR;
+    public static String SiaD;
+    public static String UIVr;
+    public static String UUMhn;
+    public static String UuhSIJOH;
+    public static String WVPLUOAO;
+    public static String YuEWuG;
+    public static String ZHlgFxrnuvJCgQ;
+    public static String ZWJtIBxHC;
+    public static String ZokzrI;
+    public static String aFoJSLs;
+    public static String afxltiGknyyqB;
+    public static String bPwKUGbEiAnrQ;
+    public static String bvOSqtnBKAi;
+    public static String idb;
+    public static String iiTTOwod;
+    public static String ioBHpSQyWpC;
+    public static String jWRCpBzB;
+    public static String kiXp;
+    public static String kmQc;
+    public static String kvifrtf;
+    public static String mtKoslJ;
+    public static String naTwVxuycXwPXzy;
+    public static String pkEiFl;
+    public static String qMs;
+    public static String qMzoyQWAqUTjKF;
+    public static String qnwSBuHaCKtAWN;
+    public static String sJzTGUnjtfrKHVK;
+    public static String svnNSIKuR;
+    public static String uLTWdD;
+    public static String uTXxrVfRGKAw;
+    public static String vjxQGPGCyZGa;
+    public static String xIcFywdQCOEuwbI;
+    public static String xfqSdB;
+    public static String xxPaFJPMljRlB;
+    public static String yCnBifMHKTkmvNd;
+    public static String yKTdx;
+    public static String zVDBWt;
+    public static String zYbVutU;
+}

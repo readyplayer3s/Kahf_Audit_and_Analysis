@@ -1,0 +1,2274 @@
+{
+  "kahfPackageClasses": [
+    {
+      "className": "Lcom/kahf/dns/EyfO/CBUcBg;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": null
+    },
+    {
+      "className": "Lcom/kahf/dns/KahfGuardApp;",
+      "superClass": "Landroid/app/Application;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/receiver/BootReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/receiver/BootRecoveryWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/receiver/HeartbeatReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/receiver/SystemEventReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ScreenViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ScreenViewEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ScreenViewEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ScreenViewEvent$ViewScreen;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ScreenViewEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$AppOpened;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsProvider;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/data/database/AppDatabase;",
+      "superClass": "Laha;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/data/database/AppDatabase_Impl;",
+      "superClass": "Lcom/kahf/dns/data/database/AppDatabase;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/DeviceToolsModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/DonationModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/EnrollModuleKt$enrollModule$lambda$0$$inlined$viewModelOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/EnrollModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/KoinConfig;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/KoinInitializer;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/NapierKoinLogger$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/NapierKoinLogger;",
+      "superClass": "Luy6;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/OfferModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$14$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$lambda$0$$inlined$viewModelOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/RestrictionModuleKt$restrictionModule$lambda$0$$inlined$singleOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/RestrictionModuleKt$restrictionModule$lambda$0$$inlined$viewModelOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/RestrictionModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/SalatModuleKt$salatModule$lambda$0$$inlined$singleOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/SalatModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/SupportModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/UpdateModuleKt$updateModule$lambda$0$$inlined$factoryOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/UpdateModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AndroidAnalyticsModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AndroidAnalyticsProviderFactory;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AndroidRestrictionModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AuthInterceptor$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AuthInterceptor;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/CommonModuleKt$commonModule$lambda$0$$inlined$viewModelOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/CommonModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/CoreModule_androidKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/DeviceModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/NetworkModuleGraphQlKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/NetworkModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/RepositoryModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$10;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$11;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$12;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$13;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$14;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$15;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$16;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$17;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$18;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$19;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$20;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$21;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$22;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$23;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$2;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$3;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$4;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$5;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$6;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$7;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$8;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$9;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/mT/NwivstN;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": null
+    },
+    {
+      "className": "Lcom/kahf/dns/features/analytics/DailyAnalyticsWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/analytics/FtDH/mmUZEXxylxd;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": null
+    },
+    {
+      "className": "Lcom/kahf/dns/features/analytics/PeriodicAnalyticsWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/app_usage/AppUsageSyncWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/block_counts/BlockCountsSyncWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/guards/service/KahfBlockerService;",
+      "superClass": "Landroid/accessibilityservice/AccessibilityService;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/AccessibilityServiceMonitorWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/AnsarReminderWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/AppUsageMonitorWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/DailyNotificationWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/HabitReminderWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/ReminderNotificationWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/WeeklyImpactWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/fd/QaBoVN;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": null
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/PermissionStatusSyncWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/admin/KahfDeviceAdminReceiver;",
+      "superClass": "Landroid/app/admin/DeviceAdminReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/restrictions/sync/RestrictionSyncWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/restrictions/sync/gc/jTCFTGKxOS;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": null
+    },
+    {
+      "className": "Lcom/kahf/dns/features/user/InstalledAppsSyncWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Drawable0_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Font0_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res$drawable;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res$font;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res$string;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String0_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String10_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String11_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String12_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String13_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String14_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String1_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String2_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String3_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String5_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String6_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String7_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String8_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/services/AndroidNotificationService;",
+      "superClass": "Lcom/google/firebase/messaging/FirebaseMessagingService;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/ui/MainActivity;",
+      "superClass": "Lgx1;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$init$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$startConnection$stateListener$1$onBillingSetupFinished$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$startConnection$stateListener$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/PreferencesHelper;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/receiver/SilenceModeReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/scheduler/RescheduleWorker;",
+      "superClass": "Landroidx/work/Worker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/auto_silence/scheduler/SilenceModeWorker;",
+      "superClass": "Landroidx/work/CoroutineWorker;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AccessibilityServiceStoppedEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AccessibilityServiceStoppedEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AccessibilityServiceStoppedEvent$Triggered;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AccessibilityServiceStoppedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppActivityEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppActivityEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppActivityEvent$TrackAppActivity;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppActivityEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$AccessibilityGrantClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$AppBlockerAction;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$AppControlsFeatureClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ChildDeviceSelected;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ChildOnboardingCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ChildOnboardingStepCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsCopied;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsCopyScreenViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsGotoSettingsClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsLevelSelected;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsSetFailed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsSetScreenViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsSetSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsSetupCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsSetupStarted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsUnsetFailed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsUnsetScreenViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$DnsUnsetSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$FeatureCardClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$GoalCardClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$GuardToggled;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$NotificationItemClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$OnboardingStepRevisited;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$PremiumDialogResponse;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$PremiumDialogShown;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ReferralCardClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SectionToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SettingsItemClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccConsentDeclineClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccConsentGrantClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccDeclineConfirmed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccGotoSettingsClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccPermissionResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupAccessibilityConsentNavigated;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupFlowAbandoned;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupFlowCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupFlowEmptyState;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupFlowStarted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupOptimizationConfirmed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupOptimizationRetry;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupPhoneMasterResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupStepActionClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupStepCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupStepViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupSupportLinkClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupTutorialViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SetupXiaomiBatteryToast;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ShareDialogDismissed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ShareDialogResponse;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ShareDialogShown;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$SupervisionAction;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$TierUpgradeDialogResponse;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$TierUpgradeDialogShown;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ToolbarMenuClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ToolbarNotificationClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$TroubleshootingItemClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$UpdateBannerClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$UpgradeCtaClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$ViewStatsClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent$WebsiteBlockerAction;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppBehaviorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppOpenedByNotificationEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppOpenedByNotificationEvent$AppOpenedByNotification;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppOpenedByNotificationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AppOpenedByNotificationEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent$LoginAttempt;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent$LoginSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent$Logout;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$AuthEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent$BackendVerificationFailure;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent$PurchaseFlowFailure;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BillingErrorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BrowserLaunchEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BrowserLaunchEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BrowserLaunchEvent$LaunchAttempt;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$BrowserLaunchEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopiedDnsEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopiedDnsEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopiedDnsEvent$CopiedDns;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopiedDnsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopyScreenEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopyScreenEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopyScreenEvent$EnterCopyScreenScreen;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$CopyScreenEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DailyStatusEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DailyStatusEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DailyStatusEvent$Snapshot;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DailyStatusEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsBootstrapDiagnosticEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsBootstrapDiagnosticEvent$BootstrapCheck;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsBootstrapDiagnosticEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsBootstrapDiagnosticEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsDiagnosticEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsDiagnosticEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsDiagnosticEvent$DiagnosticRun;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsDiagnosticEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent$EnterSetDnsScreen;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent$EnterUnsetDnsScreen;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEnableBlockedEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEnableBlockedEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEnableBlockedEvent$EnableBlocked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEnableBlockedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEvent$DnsSafetyDisable;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSafetyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetFailedEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetFailedEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetFailedEvent$DnsFailed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetFailedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetSuccessEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetSuccessEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetSuccessEvent$DnsSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DnsSetSuccessEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$CardClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$CtaClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$IconClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$PageOpenFailure;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent$PageOpenSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$DonationEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$Completed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$Dismissed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$Shown;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$StepCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent$StepCtaClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GettingStartedEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GotoSettingsEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GotoSettingsEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GotoSettingsEvent$TrackGoToSettingsActivity;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GotoSettingsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardAutoDisableEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardAutoDisableEvent$AutoDisable;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardAutoDisableEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardAutoDisableEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardEvent$GuardBlock;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardToggleEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardToggleEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardToggleEvent$GuardToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$GuardToggleEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$AddButtonClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$CalendarOpen;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$CategoryToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$DateChange;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$HabitAdd;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$HabitAddBackPress;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$HabitDelete;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$HabitToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$NotificationToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$PrayerSubHabitToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$ReportPeriodNavigate;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent$ReportTabChange;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HabitTrackerEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$Completed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$Dismissed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$Started;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$StepBackClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$StepSkippedDeclarative;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$StepSkippedNoAnchor;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent$StepViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$HomeTourEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$InfrastructureErrorEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$InfrastructureErrorEvent$ActivityContextFailure;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$InfrastructureErrorEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$InfrastructureErrorEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent$SetLanguage;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent$UpdateLanguage;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$LanguageEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$AutoDismissed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$Closed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$Continued;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$LimitReached;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent$Shown;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$MindfulPauseEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$NetworkEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$NetworkEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$NetworkEvent$DnsSafetyTrigger;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$NetworkEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$OpenSettingsEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$OpenSettingsEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$OpenSettingsEvent$OpenSettings;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$OpenSettingsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ParentalControlEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ParentalControlEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ParentalControlEvent$TrackParentalControlActivity;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ParentalControlEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PostDnsSetDiagnosticEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PostDnsSetDiagnosticEvent$Check;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PostDnsSetDiagnosticEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PostDnsSetDiagnosticEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PosthogSetPropTesterEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PosthogSetPropTesterEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PosthogSetPropTesterEvent$SendTestEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PosthogSetPropTesterEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PrayerSilenceEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PrayerSilenceEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PrayerSilenceEvent$PrayerSilenceToggle;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PrayerSilenceEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent$CardClick;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent$OpenFailure;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent$OpenSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$PremiumSupportEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ProtectionActiveEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ProtectionActiveEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ProtectionActiveEvent$Daily;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ProtectionActiveEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent$SetReligion;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent$UpdateReligion;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$ReligionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent$SyncFailed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent$SyncRefused;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$RestrictionSyncEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SessionEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SessionEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SessionEvent$SessionUser;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SessionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialActivityEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialActivityEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialActivityEvent$TrackSocialActivity;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialActivityEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialShareEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialShareEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialShareEvent$ShareClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SocialShareEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$AcceptRequest;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$CancelSupervision;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$RejectRequest;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$RequestFailed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$RequestSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$SendRequest;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent$ViewChildDevice;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$SupervisionEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent$Companion;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent$Dismiss;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent$Error;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent$Play;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$TutorialEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$AutoNavigateExistingUser;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$ChildLoginDialogCancelClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$ChildLoginDialogOkClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$DeviceRoleChildLoginResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$DeviceRoleChildSelected;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$DeviceRoleParentSelected;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$FirstGuardEnabled;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$HomeArrived;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$IapBillingResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$IapLaunchResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$IapTrialUnavailableChoice;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$IapVerificationResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$LanguageSelected;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$LoginAttempt;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$LoginResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$OnboardingCompleted;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$OnboardingSkipClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$OnboardingStepBack;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$OnboardingStepViewed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$PurchaseResult;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$SadakaUpgradeClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$SafeInternetAlreadyOn;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$SafeInternetDnsSuccess;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$SafeInternetSetupClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$SafeInternetSkipClicked;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$WebPaywallDismissed;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$WebPaywallOpened;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent$WebPaywallReturn;",
+      "superClass": "Lcom/kahf/dns/core/analytics/AnalyticsEvent$UserJourneyEvent;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/AndroidPairingModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/DIError;",
+      "superClass": "Ljava/lang/Exception;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/DIError$InitializationError;",
+      "superClass": "Lcom/kahf/dns/di/DIError;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/DIErrorKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/NapierKoinLogger$WhenMappings;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PairingModuleKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$11$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$15$1$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$15$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$15$2$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$15$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$17$2$1;",
+      "superClass": "Lxm4;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$17$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$41$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$41$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$9$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/PlatformModule_androidKt$platformModule$1$9$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/RestrictionModuleKt$restrictionModule$1$9$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AndroidRestrictionModuleKt$androidRestrictionModule$1$3$1$1;",
+      "superClass": "Lxm4;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AndroidRestrictionModuleKt$androidRestrictionModule$1$3$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/AuthInterceptor$intercept$1;",
+      "superClass": "Lza2;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/NetworkModuleGraphQlKt$networkModuleGraphQl$1$1$1$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/NetworkModuleKt$networkModule$1$1$1$1$1;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$24;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$25;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/di/core/ViewModelModuleKt$viewModelModule$lambda$0$$inlined$viewModelOf$default$26;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/enroll/KahfPhoneEnrollActivity;",
+      "superClass": "Lgx1;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/guards/service/AccessibilityMonitorService;",
+      "superClass": "Landroid/app/Service;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/AccessibilityReminderActionReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/notification/ReminderActionReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/UserAction;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/UserAction$CopyClicked;",
+      "superClass": "Lcom/kahf/dns/features/permission_flows/dns_update/UserAction;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/UserAction$GotoSettingsClicked;",
+      "superClass": "Lcom/kahf/dns/features/permission_flows/dns_update/UserAction;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/a;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/b;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/c;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/permission_flows/dns_update/d;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/features/user/DeviceKeyReceiver;",
+      "superClass": "Landroid/content/BroadcastReceiver;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/ActualResourceCollectorsKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Array0_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Plurals0_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res$array;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/Res$plurals;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String15_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String4_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/resources/String9_commonMainKt;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$FailureReason;",
+      "superClass": "Ljava/lang/Enum;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$LaunchOffer;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$PurchaseResult;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$WhenMappings;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$clearAccountScopedState$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$emitPurchaseResult$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$launchPurchase$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$markCelebrationDelivered$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$maybeEmitNewPurchase$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$onPurchasesUpdated$2;",
+      "superClass": "Lxm4;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$processPurchases$1$1$WhenMappings;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$processPurchases$1$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$queryAllProductDetails$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$redeliverPendingCelebrations$2;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$restorePurchases$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$scheduleRetry$outcome$1$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$startConnection$stateListener$1$onBillingServiceDisconnected$1;",
+      "superClass": "Ls1c;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$verificationFailureResult$1;",
+      "superClass": "Lza2;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$verifyAndFinalize$1;",
+      "superClass": "Lza2;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/AndroidBillingManagerWithSubscription$verifyPaymentFromKahfId$1;",
+      "superClass": "Lza2;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/PrefKeys;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/a;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    },
+    {
+      "className": "Lcom/kahf/dns/utils/b;",
+      "superClass": "Ljava/lang/Object;",
+      "sourceFile": "r8-map-id-b8b93801524a0cb5f1b2b7f102d051fba074747374ffcd125865f57b5b99c0dd"
+    }
+  ]
+}

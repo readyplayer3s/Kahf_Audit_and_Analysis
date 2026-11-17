@@ -1,0 +1,980 @@
+{
+  "executedAt": "2026-11-17T11:11:43.208Z",
+  "rateLimitMs": 500,
+  "endpoints": {
+    "high.kahfguard.com": {
+      "ipv4": [
+        "203.190.10.120"
+      ],
+      "ipv6": []
+    },
+    "medium.kahfguard.com": {
+      "ipv4": [
+        "203.190.10.120"
+      ],
+      "ipv6": []
+    },
+    "low.kahfguard.com": {
+      "ipv4": [
+        "203.190.10.120"
+      ],
+      "ipv6": []
+    },
+    "safety.kahfguard.com": {
+      "error": "getaddrinfo ENOTFOUND safety.kahfguard.com"
+    }
+  },
+  "ipGeoAndAsn": {
+    "203.190.10.120": {
+      "ip": "203.190.10.120",
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "region": "Dhaka Division",
+      "city": "Dhaka",
+      "isp": "Daffodil Online Ltd.",
+      "org": "DAFFODILNET-SUB-BLOCK-3",
+      "asn": 58768,
+      "domain": "daffodilnet.com"
+    }
+  },
+  "protocolSupport": {
+    "udp53": {
+      "success": true,
+      "rttMs": 57.52,
+      "decoded": {
+        "txid": 60899,
+        "rcode": 0,
+        "rcodeName": "NOERROR",
+        "flags": {
+          "qr": 1,
+          "opcode": 0,
+          "aa": false,
+          "tc": false,
+          "rd": true,
+          "ra": true,
+          "ad": true,
+          "cd": false,
+          "rawHex": "0x81a0"
+        },
+        "counts": {
+          "qdcount": 1,
+          "ancount": 2,
+          "nscount": 0,
+          "arcount": 0
+        },
+        "questions": [
+          {
+            "name": "example.com",
+            "type": "A",
+            "class": 1
+          }
+        ],
+        "answers": [
+          {
+            "name": "example.com",
+            "type": "A",
+            "ttl": 149,
+            "data": "172.66.147.243"
+          },
+          {
+            "name": "example.com",
+            "type": "A",
+            "ttl": 149,
+            "data": "104.20.23.154"
+          }
+        ],
+        "authorities": [],
+        "additionals": []
+      }
+    },
+    "tcp53": {
+      "success": true,
+      "rttMs": 77.37,
+      "decoded": {
+        "txid": 34983,
+        "rcode": 0,
+        "rcodeName": "NOERROR",
+        "flags": {
+          "qr": 1,
+          "opcode": 0,
+          "aa": false,
+          "tc": false,
+          "rd": true,
+          "ra": true,
+          "ad": true,
+          "cd": false,
+          "rawHex": "0x81a0"
+        },
+        "counts": {
+          "qdcount": 1,
+          "ancount": 2,
+          "nscount": 0,
+          "arcount": 0
+        },
+        "questions": [
+          {
+            "name": "example.com",
+            "type": "A",
+            "class": 1
+          }
+        ],
+        "answers": [
+          {
+            "name": "example.com",
+            "type": "A",
+            "ttl": 154,
+            "data": "172.66.147.243"
+          },
+          {
+            "name": "example.com",
+            "type": "A",
+            "ttl": 154,
+            "data": "104.20.23.154"
+          }
+        ],
+        "authorities": [],
+        "additionals": []
+      }
+    },
+    "doh": {
+      "high.kahfguard.com": {
+        "success": false,
+        "rttMs": 41.47,
+        "httpHeaders": {
+          "statusCode": 505
+        },
+        "bodyPreview": "<html><body>This server implements RFC 8484 - DNS Queries over HTTP, and requires HTTP/2 in accordance with section 5.2 of the RFC.</body></html>\r\n"
+      }
+    },
+    "dot853": {
+      "high.kahfguard.com": {
+        "connected": true,
+        "handshakeMs": 20.04,
+        "certInfo": {
+          "authorized": true,
+          "authorizationError": null,
+          "protocol": "TLSv1.3",
+          "cipher": {
+            "name": "TLS_AES_256_GCM_SHA384",
+            "standardName": "TLS_AES_256_GCM_SHA384",
+            "version": "TLSv1.3"
+          },
+          "alpnProtocol": "dot",
+          "subject": {
+            "CN": "kahfguard.com"
+          },
+          "issuer": {
+            "C": "US",
+            "O": "Let's Encrypt",
+            "CN": "YE1"
+          },
+          "subjectaltname": "DNS:*.kahfguard.com, DNS:kahfguard.com",
+          "valid_from": "Oct 23 05:34:28 2026 GMT",
+          "valid_to": "Jan 21 05:34:27 2027 GMT",
+          "fingerprint256": "8D:6B:41:2D:F3:1B:BB:73:05:52:DA:FD:1C:E9:B0:F5:AC:27:BD:7D:99:60:86:03:81:83:F6:0E:33:F8:5A:E7",
+          "serialNumber": "06EA436F4A84010C53801916C968EC36A4E1"
+        }
+      },
+      "medium.kahfguard.com": {
+        "connected": true,
+        "handshakeMs": 23.13,
+        "certInfo": {
+          "authorized": true,
+          "authorizationError": null,
+          "protocol": "TLSv1.3",
+          "cipher": {
+            "name": "TLS_AES_256_GCM_SHA384",
+            "standardName": "TLS_AES_256_GCM_SHA384",
+            "version": "TLSv1.3"
+          },
+          "alpnProtocol": "dot",
+          "subject": {
+            "CN": "kahfguard.com"
+          },
+          "issuer": {
+            "C": "US",
+            "O": "Let's Encrypt",
+            "CN": "YE1"
+          },
+          "subjectaltname": "DNS:*.kahfguard.com, DNS:kahfguard.com",
+          "valid_from": "Oct 23 05:34:28 2026 GMT",
+          "valid_to": "Jan 21 05:34:27 2027 GMT",
+          "fingerprint256": "8D:6B:41:2D:F3:1B:BB:73:05:52:DA:FD:1C:E9:B0:F5:AC:27:BD:7D:99:60:86:03:81:83:F6:0E:33:F8:5A:E7",
+          "serialNumber": "06EA436F4A84010C53801916C968EC36A4E1"
+        }
+      },
+      "low.kahfguard.com": {
+        "connected": true,
+        "handshakeMs": 27.14,
+        "certInfo": {
+          "authorized": true,
+          "authorizationError": null,
+          "protocol": "TLSv1.3",
+          "cipher": {
+            "name": "TLS_AES_256_GCM_SHA384",
+            "standardName": "TLS_AES_256_GCM_SHA384",
+            "version": "TLSv1.3"
+          },
+          "alpnProtocol": "dot",
+          "subject": {
+            "CN": "kahfguard.com"
+          },
+          "issuer": {
+            "C": "US",
+            "O": "Let's Encrypt",
+            "CN": "YE1"
+          },
+          "subjectaltname": "DNS:*.kahfguard.com, DNS:kahfguard.com",
+          "valid_from": "Oct 23 05:34:28 2026 GMT",
+          "valid_to": "Jan 21 05:34:27 2027 GMT",
+          "fingerprint256": "8D:6B:41:2D:F3:1B:BB:73:05:52:DA:FD:1C:E9:B0:F5:AC:27:BD:7D:99:60:86:03:81:83:F6:0E:33:F8:5A:E7",
+          "serialNumber": "06EA436F4A84010C53801916C968EC36A4E1"
+        }
+      }
+    }
+  },
+  "tierComparison": {
+    "www.youtube.com": {
+      "purpose": "YouTube Restricted Mode CNAME enforcement check",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 7.83,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "216.239.38.120"
+            }
+          ],
+          "authorities": []
+        },
+        "medium.kahfguard.com": {
+          "rttMs": 11.09,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.151.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.153.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.156.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.154.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.152.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.155.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.150.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.157.4"
+            }
+          ],
+          "authorities": []
+        },
+        "low.kahfguard.com": {
+          "rttMs": 9.22,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.151.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.153.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.156.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.154.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.152.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.155.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.150.4"
+            },
+            {
+              "name": "www.youtube.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.157.4"
+            }
+          ],
+          "authorities": []
+        }
+      }
+    },
+    "www.google.com": {
+      "purpose": "Google SafeSearch CNAME enforcement check",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 7.25,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "216.239.38.120"
+            }
+          ],
+          "authorities": []
+        },
+        "medium.kahfguard.com": {
+          "rttMs": 172.38,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "216.239.38.120"
+            }
+          ],
+          "authorities": []
+        },
+        "low.kahfguard.com": {
+          "rttMs": 7.83,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.155.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.153.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.152.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.150.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.154.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.156.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.157.119"
+            },
+            {
+              "name": "www.google.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "142.251.151.119"
+            }
+          ],
+          "authorities": []
+        }
+      }
+    },
+    "www.bing.com": {
+      "purpose": "Bing SafeSearch CNAME enforcement check",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 5.75,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.bing.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "150.171.27.16"
+            }
+          ],
+          "authorities": []
+        },
+        "medium.kahfguard.com": {
+          "rttMs": 6.36,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.bing.com",
+              "type": "A",
+              "ttl": 3600,
+              "data": "150.171.27.16"
+            }
+          ],
+          "authorities": []
+        },
+        "low.kahfguard.com": {
+          "rttMs": 6.65,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": false,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8180"
+          },
+          "answers": [
+            {
+              "name": "www.bing.com",
+              "type": "CNAME",
+              "ttl": 21558,
+              "data": "www-www.bing.com.trafficmanager.net"
+            },
+            {
+              "name": "www-www.bing.com.trafficmanager.net",
+              "type": "CNAME",
+              "ttl": 3600,
+              "data": "www.bing.com.edgekey.net"
+            },
+            {
+              "name": "www.bing.com.edgekey.net",
+              "type": "CNAME",
+              "ttl": 21212,
+              "data": "e86303.dscx.akamaiedge.net"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.211"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.213"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.199"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.206"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.204"
+            },
+            {
+              "name": "e86303.dscx.akamaiedge.net",
+              "type": "A",
+              "ttl": 3600,
+              "data": "2.19.212.196"
+            }
+          ],
+          "authorities": []
+        }
+      }
+    },
+    "thequran.com": {
+      "purpose": "Kahf Guard hardcoded canary domain (oa3.java / i48.java)",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 9.17,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "thequran.com",
+              "type": "CNAME",
+              "ttl": 300,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        },
+        "medium.kahfguard.com": {
+          "rttMs": 7.61,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "thequran.com",
+              "type": "CNAME",
+              "ttl": 300,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        },
+        "low.kahfguard.com": {
+          "rttMs": 6.54,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "thequran.com",
+              "type": "CNAME",
+              "ttl": 299,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        }
+      }
+    },
+    "pornhub.com": {
+      "purpose": "Adult content blocking mechanism check",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 4.93,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "pornhub.com",
+              "type": "CNAME",
+              "ttl": 300,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        },
+        "medium.kahfguard.com": {
+          "rttMs": 6.35,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "pornhub.com",
+              "type": "CNAME",
+              "ttl": 300,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        },
+        "low.kahfguard.com": {
+          "rttMs": 4.14,
+          "rcodeName": "NOERROR",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8580"
+          },
+          "answers": [
+            {
+              "name": "pornhub.com",
+              "type": "CNAME",
+              "ttl": 300,
+              "data": "blocked.kahfguard.com"
+            }
+          ],
+          "authorities": []
+        }
+      }
+    },
+    "nxdomain-audit-check-982734.invalid": {
+      "purpose": "NXDOMAIN integrity check (non-hijacking verification)",
+      "results": {
+        "high.kahfguard.com": {
+          "rttMs": 7.8,
+          "rcodeName": "NXDOMAIN",
+          "flags": {
+            "qr": 1,
+            "opcode": 0,
+            "aa": true,
+            "tc": false,
+            "rd": true,
+            "ra": true,
+            "ad": false,
+            "cd": false,
+            "rawHex": "0x8583"
+          },
+          "answers": [],
+          "authorities": [
+            {
+              "name": "invalid",
+              "type": "SOA",
+              "ttl": 10800,
+              "data": "localhost nobody.invalid"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "trackerSelfWhitelisting": {
+    "graph.facebook.com": {
+      "sdk": "Meta / Facebook SDK (embedded in Kahf Guard)",
+      "rttMs": 76.81,
+      "rcodeName": "NOERROR",
+      "answers": [
+        {
+          "name": "graph.facebook.com",
+          "type": "CNAME",
+          "ttl": 3600,
+          "data": "star.c10r.facebook.com"
+        },
+        {
+          "name": "star.c10r.facebook.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "57.144.142.141"
+        }
+      ]
+    },
+    "app-measurement.com": {
+      "sdk": "Google Firebase Analytics (embedded in Kahf Guard)",
+      "rttMs": 10.69,
+      "rcodeName": "NOERROR",
+      "answers": [
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.113"
+        },
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.139"
+        },
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.100"
+        },
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.102"
+        },
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.138"
+        },
+        {
+          "name": "app-measurement.com",
+          "type": "A",
+          "ttl": 3600,
+          "data": "142.250.143.101"
+        }
+      ]
+    },
+    "p.kahf.co.uk": {
+      "sdk": "PostHog Session Replay Reverse Proxy (embedded in Kahf Guard)",
+      "rttMs": 8.95,
+      "rcodeName": "NOERROR",
+      "answers": [
+        {
+          "name": "p.kahf.co.uk",
+          "type": "CNAME",
+          "ttl": 300,
+          "data": "large1.kahf.co.uk"
+        },
+        {
+          "name": "large1.kahf.co.uk",
+          "type": "A",
+          "ttl": 24544,
+          "data": "157.180.4.107"
+        }
+      ]
+    },
+    "doubleclick.net": {
+      "sdk": "Google DoubleClick Ad Tracker (Control)",
+      "rttMs": 9.98,
+      "rcodeName": "NOERROR",
+      "answers": [
+        {
+          "name": "doubleclick.net",
+          "type": "CNAME",
+          "ttl": 3600,
+          "data": "blocked.kahfguard.com"
+        }
+      ]
+    }
+  },
+  "dnssecValidation": {
+    "sigok_verteiltesysteme_net": {
+      "rttMs": 581.76,
+      "rcodeName": "NOERROR",
+      "adFlag": true,
+      "answers": [
+        {
+          "name": "sigok.verteiltesysteme.net",
+          "type": "CNAME",
+          "ttl": 1799,
+          "data": "sigok.rsa2048-sha256.ippacket.stream"
+        },
+        {
+          "name": "sigok.verteiltesysteme.net",
+          "type": "RRSIG",
+          "ttl": 1799,
+          "data": "0x00050d03000007076afe3c006ae28c80b853107665727465696c746573797374"
+        },
+        {
+          "name": "sigok.rsa2048-sha256.ippacket.stream",
+          "type": "A",
+          "ttl": 300,
+          "data": "195.201.14.36"
+        },
+        {
+          "name": "sigok.rsa2048-sha256.ippacket.stream",
+          "type": "RRSIG",
+          "ttl": 300,
+          "data": "0x000108040000003c6b1b75416ae567c1b5640e727361323034382d7368613235"
+        }
+      ]
+    },
+    "sigfail_verteiltesysteme_net": {
+      "rttMs": 680.53,
+      "rcodeName": "SERVFAIL",
+      "adFlag": false,
+      "answers": []
+    }
+  },
+  "latencyBenchmarkDhaka": {
+    "Kahf Guard High (DoT 853)": {
+      "tlsHandshakeMs": 20.04,
+      "queryRttMs": 7.83
+    },
+    "Cloudflare Families 1.1.1.3 (UDP)": {
+      "rttMs": 30.19,
+      "success": true
+    },
+    "Quad9 9.9.9.9 (UDP)": {
+      "rttMs": 31.08,
+      "success": true
+    },
+    "AdGuard Family 94.140.14.15 (UDP)": {
+      "rttMs": 32.47,
+      "success": true
+    }
+  },
+  "totalDiagnosticQueriesIssued": 28
+}

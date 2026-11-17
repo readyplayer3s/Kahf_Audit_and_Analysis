@@ -1,0 +1,32 @@
+{
+  "packageName": "com.kahf.dns",
+  "versionCode": 361,
+  "versionName": "4.6.287",
+  "compileSdkVersion": 37,
+  "minSdkVersion": 32,
+  "targetSdkVersion": 37,
+  "applicationClass": "com.pairip.application.Application",
+  "extractNativeLibs": 0,
+  "apks": [
+    {
+      "fileName": "base.apk",
+      "sizeBytes": 31006367,
+      "sha256": "B338D08B7661F3A22E47C95E951E611213F43DD42389041DB0C0291F029CF402"
+    },
+    {
+      "fileName": "split_config.arm64_v8a.apk",
+      "sizeBytes": 1806815,
+      "sha256": "C185CC3B04EAC9FAFE320A2737282CEF57ADFDDE83A9C47E9D926F41F770BD97"
+    },
+    {
+      "fileName": "split_config.en.apk",
+      "sizeBytes": 45266,
+      "sha256": "19624EFACCD975CDEF21B51E71DA6B8AA8AEB2412B4730CD500D2A9DE0759FF2"
+    },
+    {
+      "fileName": "split_config.xxhdpi.apk",
+      "sizeBytes": 65514,
+      "sha256": "A690650765B1871EE228E365B98EB8719EEBE6DBAF6B740886BAB6CA24EA8522"
+    }
+  ]
+}

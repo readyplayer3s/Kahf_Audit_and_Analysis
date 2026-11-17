@@ -1,0 +1,1360 @@
+{
+  "manifestAttrs": {
+    "versionCode": 361,
+    "versionName": "4.6.287",
+    "compileSdkVersion": 37,
+    "compileSdkVersionCodename": "17",
+    "requiredSplitTypes": "base__abi,base__density",
+    "splitTypes": "",
+    "package": "com.kahf.dns",
+    "platformBuildVersionCode": 37,
+    "platformBuildVersionName": 17
+  },
+  "usesSdk": {
+    "minSdkVersion": 32,
+    "targetSdkVersion": 37
+  },
+  "applicationAttrs": {
+    "theme": "@0x1030241",
+    "label": "@0x7f120027",
+    "icon": "@0x7f0f0004",
+    "name": "com.pairip.application.Application",
+    "allowBackup": false,
+    "supportsRtl": true,
+    "extractNativeLibs": false,
+    "roundIcon": "@0x7f0f0006",
+    "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+    "dataExtractionRules": "@0x7f150004"
+  },
+  "usesPermissions": [
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.INTERNET"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_NETWORK_STATE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.google.android.gms.permission.AD_ID"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.SYSTEM_ALERT_WINDOW"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.PACKAGE_USAGE_STATS"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.QUERY_ALL_PACKAGES"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_NOTIFICATION_POLICY"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.SCHEDULE_EXACT_ALARM"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.READ_PHONE_STATE",
+      "maxSdkVersion": 28
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "minSdkVersion": 34
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.FOREGROUND_SERVICE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.POST_NOTIFICATIONS"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.WAKE_LOCK"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.VIBRATE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "co.kahf.provision.permission.RING_SYNC"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.android.vending.BILLING"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.google.android.c2dm.permission.RECEIVE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_ADSERVICES_AD_ID"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "android.permission.ACCESS_ADSERVICES_TOPICS"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.kahf.dns.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    },
+    {
+      "tag": "uses-permission",
+      "name": "com.android.vending.CHECK_LICENSE"
+    }
+  ],
+  "customPermissions": [
+    {
+      "name": "com.kahf.dns.permission.MEDIA_PLAYER_SERVICE",
+      "protectionLevel": "0x2"
+    },
+    {
+      "name": "com.kahf.dns.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "protectionLevel": "0x2"
+    }
+  ],
+  "queries": [
+    {
+      "tag": "queries",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.intent.action.VIEW"
+              },
+              "children": []
+            },
+            {
+              "tag": "category",
+              "attrs": {
+                "name": "android.intent.category.BROWSABLE"
+              },
+              "children": []
+            },
+            {
+              "tag": "data",
+              "attrs": {
+                "scheme": "https"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.settings.APPLICATION_DETAILS_SETTINGS"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.intent.action.VIEW"
+              },
+              "children": []
+            },
+            {
+              "tag": "data",
+              "attrs": {
+                "scheme": "https"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.facebook.katana"
+          },
+          "children": []
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "com.android.vending.billing.InAppBillingService.BIND"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "queries",
+      "attrs": {},
+      "children": [
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.miui.securitycenter"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.miui.permcenter"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.miui.powerkeeper"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.letv.android.letvsafe"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.asus.mobilemanager"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.huawei.systemmanager"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.huawei.powergenie"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.coloros.safecenter"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.oppo.safe"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.oneplus.security"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.iqoo.secure"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.vivo.permissionmanager"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.vivo.abe"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.evenwell.powersaving"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.evenwell.powersaving.g3"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.samsung.android"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.samsung.android.lool"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.samsung.android.sm"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.oneplus"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.realme"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.nothing.smartcenter"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.transsion.phoenix"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.android.settings"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.google.android.gms"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.android.vending"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "io.kahf.browser"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.mahfil.app"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.kahf.kids"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.whatsapp"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.whatsapp.w4b"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.facebook.katana"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.facebook.orca"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "org.telegram.messenger"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.imo.android.imoim"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.twitter.android"
+          },
+          "children": []
+        },
+        {
+          "tag": "package",
+          "attrs": {
+            "name": "com.instagram.android"
+          },
+          "children": []
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.intent.action.SEND"
+              },
+              "children": []
+            },
+            {
+              "tag": "data",
+              "attrs": {
+                "mimeType": "text/plain"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.intent.action.VIEW"
+              },
+              "children": []
+            },
+            {
+              "tag": "data",
+              "attrs": {
+                "scheme": "https"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "intent",
+          "attrs": {},
+          "children": [
+            {
+              "tag": "action",
+              "attrs": {
+                "name": "android.intent.action.DIAL"
+              },
+              "children": []
+            },
+            {
+              "tag": "data",
+              "attrs": {
+                "scheme": "tel"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "applicationMetaData": [
+    {
+      "name": "isMonitoringTool",
+      "value": "child_monitoring"
+    },
+    {
+      "name": "com.google.firebase.messaging.default_notification_channel_id",
+      "value": "@0x7f120074"
+    },
+    {
+      "name": "firebase_analytics_collection_enabled",
+      "value": true
+    },
+    {
+      "name": "com.facebook.sdk.ApplicationId",
+      "value": "@0x7f1200c3"
+    },
+    {
+      "name": "com.facebook.sdk.ClientToken",
+      "value": "@0x7f1200c4"
+    },
+    {
+      "name": "com.facebook.sdk.AutoLogAppEventsEnabled",
+      "value": true
+    },
+    {
+      "name": "com.facebook.sdk.AdvertiserIDCollectionEnabled",
+      "value": true
+    },
+    {
+      "name": "com.facebook.sdk.DEBUG",
+      "value": false
+    },
+    {
+      "name": "com.google.android.play.billingclient.version",
+      "value": "9.1.0"
+    },
+    {
+      "name": "com.google.android.gms.version",
+      "value": "@0x7f0b000a"
+    },
+    {
+      "name": "com.android.vending.splits.required",
+      "value": true
+    },
+    {
+      "name": "com.android.stamp.source",
+      "value": "https://play.google.com/store"
+    },
+    {
+      "name": "com.android.stamp.type",
+      "value": "STAMP_TYPE_DISTRIBUTION_APK"
+    },
+    {
+      "name": "com.android.vending.splits",
+      "resource": "@0x7f15000d"
+    },
+    {
+      "name": "com.android.vending.derived.apk.id",
+      "value": 4
+    }
+  ],
+  "providers": [
+    {
+      "name": "org.jetbrains.compose.resources.AndroidContextProvider",
+      "enabled": true,
+      "exported": false,
+      "authorities": "com.kahf.dns.resources.AndroidContextProvider",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.facebook.internal.FacebookInitProvider",
+      "exported": false,
+      "authorities": "com.kahf.dns.FacebookInitProvider",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.google.firebase.provider.FirebaseInitProvider",
+      "exported": false,
+      "authorities": "com.kahf.dns.firebaseinitprovider",
+      "initOrder": 100,
+      "directBootAware": true,
+      "intentFilters": [],
+      "metaData": []
+    }
+  ],
+  "services": [
+    {
+      "name": "com.kahf.dns.services.AndroidNotificationService",
+      "exported": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "label": "@0x7f12001c",
+      "name": "com.kahf.dns.features.guards.service.KahfBlockerService",
+      "permission": "android.permission.BIND_ACCESSIBILITY_SERVICE",
+      "exported": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.accessibilityservice.AccessibilityService"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": [
+        {
+          "name": "android.accessibilityservice",
+          "resource": "@0x7f150000"
+        }
+      ]
+    },
+    {
+      "name": "com.kahf.dns.features.guards.service.AccessibilityMonitorService",
+      "exported": false,
+      "foregroundServiceType": "0x40000000",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.google.firebase.components.ComponentDiscoveryService",
+      "exported": false,
+      "directBootAware": true,
+      "intentFilters": [],
+      "metaData": [
+        {
+          "name": "com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        },
+        {
+          "name": "com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar",
+          "value": "com.google.firebase.components.ComponentRegistrar"
+        }
+      ]
+    },
+    {
+      "name": "com.google.firebase.messaging.FirebaseMessagingService",
+      "exported": false,
+      "directBootAware": true,
+      "intentFilters": [
+        {
+          "priority": 4294966796,
+          "actions": [
+            "com.google.firebase.MESSAGING_EVENT"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.google.android.gms.measurement.AppMeasurementService",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "androidx.work.impl.background.systemjob.SystemJobService",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "enabled": "@0x7f050004",
+      "exported": true,
+      "directBootAware": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "androidx.work.impl.foreground.SystemForegroundService",
+      "enabled": "@0x7f050003",
+      "exported": false,
+      "directBootAware": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "androidx.room.MultiInstanceInvalidationService",
+      "exported": false,
+      "directBootAware": true,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.google.firebase.sessions.SessionLifecycleService",
+      "enabled": false,
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": false,
+      "intentFilters": [],
+      "metaData": [
+        {
+          "name": "backend:com.google.android.datatransport.cct.CctBackendFactory",
+          "value": "cct"
+        }
+      ]
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    }
+  ],
+  "receivers": [
+    {
+      "label": "@0x7f1201d6",
+      "name": "com.kahf.dns.features.permission_flows.admin.KahfDeviceAdminReceiver",
+      "permission": "android.permission.BIND_DEVICE_ADMIN",
+      "exported": true,
+      "description": "@0x7f1201d4",
+      "intentFilters": [
+        {
+          "actions": [
+            "android.app.action.DEVICE_ADMIN_ENABLED",
+            "android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED",
+            "android.app.action.DEVICE_ADMIN_DISABLED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": [
+        {
+          "name": "android.app.device_admin",
+          "resource": "@0x7f150005"
+        }
+      ]
+    },
+    {
+      "name": "com.kahf.dns.auto_silence.receiver.BootReceiver",
+      "enabled": true,
+      "exported": false,
+      "priority": 999,
+      "directBootAware": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.BOOT_COMPLETED",
+            "android.intent.action.LOCKED_BOOT_COMPLETED",
+            "android.intent.action.QUICKBOOT_POWERON"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.auto_silence.receiver.SystemEventReceiver",
+      "enabled": true,
+      "exported": false,
+      "directBootAware": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.TIME_SET",
+            "android.intent.action.TIMEZONE_CHANGED",
+            "android.intent.action.MY_PACKAGE_REPLACED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.auto_silence.receiver.HeartbeatReceiver",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [
+        {
+          "priority": 1000,
+          "actions": [
+            "android.intent.action.BOOT_COMPLETED",
+            "android.intent.action.TIME_SET",
+            "android.intent.action.TIMEZONE_CHANGED",
+            "android.intent.action.MY_PACKAGE_REPLACED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.auto_silence.receiver.SilenceModeReceiver",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.features.notification.AccessibilityReminderActionReceiver",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.kahf.dns.TURN_OFF_ACCESSIBILITY_REMINDER"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.features.notification.ReminderActionReceiver",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.kahf.dns.TURN_OFF_TRIAL_REMINDER",
+            "com.kahf.dns.TURN_OFF_SADAKA_REMINDER",
+            "com.kahf.dns.TURN_OFF_ANSAR_REMINDER"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.kahf.dns.features.user.DeviceKeyReceiver",
+      "permission": "co.kahf.provision.permission.SEND_DEVICE_KEY",
+      "enabled": true,
+      "exported": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "co.kahf.provision.action.DEVICE_KEY"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+      "permission": "com.google.android.c2dm.permission.SEND",
+      "exported": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.google.android.c2dm.intent.RECEIVE"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": [
+        {
+          "name": "com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+      "enabled": true,
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+      "enabled": true,
+      "exported": false,
+      "directBootAware": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+      "enabled": false,
+      "exported": false,
+      "directBootAware": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.BOOT_COMPLETED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "exported": true,
+      "directBootAware": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.facebook.CurrentAccessTokenExpirationBroadcastReceiver",
+      "exported": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver",
+      "exported": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "androidx.profileinstaller.ProfileInstallReceiver",
+      "permission": "android.permission.DUMP",
+      "enabled": true,
+      "exported": true,
+      "directBootAware": false,
+      "intentFilters": [
+        {
+          "actions": [
+            "androidx.profileinstaller.action.INSTALL_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SKIP_FILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.SAVE_PROFILE"
+          ],
+          "categories": [],
+          "data": []
+        },
+        {
+          "actions": [
+            "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+          ],
+          "categories": [],
+          "data": []
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    }
+  ],
+  "activities": [
+    {
+      "name": "com.kahf.dns.ui.MainActivity",
+      "exported": true,
+      "launchMode": 2,
+      "configChanges": "0x50005ffb",
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.MAIN"
+          ],
+          "categories": [
+            "android.intent.category.LAUNCHER"
+          ],
+          "data": []
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "com.kahf.dns",
+              "host": "auth"
+            }
+          ]
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "com.kahf.dns",
+              "host": "pay"
+            }
+          ]
+        },
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "com.kahf.dns",
+              "host": "open"
+            }
+          ]
+        }
+      ],
+      "metaData": [
+        {
+          "name": "android.app.shortcuts",
+          "resource": "@0x7f15000c"
+        }
+      ]
+    },
+    {
+      "theme": "@0x103012c",
+      "name": "com.kahf.dns.enroll.KahfPhoneEnrollActivity",
+      "exported": true,
+      "taskAffinity": "com.kahf.dns.enroll",
+      "excludeFromRecents": true,
+      "launchMode": 2,
+      "configChanges": "0x50005ffb",
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "com.kahf.dns",
+              "host": "enroll"
+            }
+          ]
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "theme": "@0x7f130631",
+      "name": "com.facebook.FacebookActivity",
+      "configChanges": "0x5b0",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.facebook.CustomTabMainActivity",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.facebook.CustomTabActivity",
+      "exported": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [
+            "android.intent.category.DEFAULT",
+            "android.intent.category.BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "fbconnect",
+              "host": "cct.com.kahf.dns"
+            }
+          ]
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "theme": "@0x1030010",
+      "name": "com.android.billingclient.api.ProxyBillingActivity",
+      "exported": false,
+      "configChanges": "0x5b0",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "theme": "@0x1030010",
+      "name": "com.android.billingclient.api.ProxyBillingActivityV2",
+      "exported": false,
+      "configChanges": "0x5b0",
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "theme": "@0x1030055",
+      "name": "androidx.media3.session.BluetoothValidationActivity",
+      "permission": "android.permission.BLUETOOTH_PRIVILEGED",
+      "exported": true,
+      "excludeFromRecents": true,
+      "noHistory": true,
+      "intentFilters": [
+        {
+          "actions": [
+            "android.intent.action.VIEW"
+          ],
+          "categories": [],
+          "data": [
+            {
+              "scheme": "content"
+            },
+            {
+              "host": "media"
+            },
+            {
+              "pathPrefix": "/internal/audio/media/"
+            },
+            {
+              "mimeType": "audio/*"
+            }
+          ]
+        }
+      ],
+      "metaData": []
+    },
+    {
+      "theme": "@0x1030010",
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "theme": "@0x7f130396",
+      "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+      "exported": false,
+      "stateNotNeeded": true,
+      "intentFilters": [],
+      "metaData": []
+    },
+    {
+      "name": "com.pairip.licensecheck.LicenseActivity",
+      "exported": false,
+      "intentFilters": [],
+      "metaData": []
+    }
+  ]
+}

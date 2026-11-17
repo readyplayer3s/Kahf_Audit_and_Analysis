@@ -1,0 +1,1268 @@
+{
+  "sdkProperties": {
+    "app-update-ktx.properties": "version=2.1.0\nclient=app-update-ktx\napp-update-ktx_client=2.1.0",
+    "app-update.properties": "version=2.1.0\nclient=app-update\napp-update_client=2.1.0",
+    "billing-ktx.properties": "version=9.1.0\nclient=billing-ktx\nbilling-ktx_client=9.1.0",
+    "billing.properties": "version=9.1.0\nclient=billing\nbilling_client=9.1.0",
+    "core-common.properties": "version=2.0.4\nclient=core-common\ncore-common_client=2.0.4",
+    "firebase-analytics.properties": "version=24.0.0\nclient=firebase-analytics\nfirebase-analytics_client=24.0.0",
+    "firebase-iid-interop.properties": "version=17.1.0\nclient=firebase-iid-interop\nfirebase-iid-interop_client=17.1.0",
+    "firebase-measurement-connector.properties": "version=20.0.1\nclient=firebase-measurement-connector\nfirebase-measurement-connector_client=20.0.1",
+    "play-services-ads-identifier.properties": "version=18.0.0\nclient=play-services-ads-identifier\nplay-services-ads-identifier_client=18.0.0",
+    "play-services-appset.properties": "version=16.1.0\nclient=play-services-appset\nplay-services-appset_client=16.1.0",
+    "play-services-base.properties": "version=18.9.0\nclient=play-services-base\nplay-services-base_client=18.9.0",
+    "play-services-basement.properties": "version=18.12.0\nclient=play-services-basement\nplay-services-basement_client=18.12.0",
+    "play-services-cloud-messaging.properties": "version=17.4.0\nclient=play-services-cloud-messaging\nplay-services-cloud-messaging_client=17.4.0",
+    "play-services-location.properties": "version=19.0.0\nclient=play-services-location\nplay-services-location_client=19.0.0",
+    "play-services-measurement-api.properties": "version=24.0.0\nclient=play-services-measurement-api\nplay-services-measurement-api_client=24.0.0",
+    "play-services-measurement-base.properties": "version=24.0.0\nclient=play-services-measurement-base\nplay-services-measurement-base_client=24.0.0",
+    "play-services-measurement-impl.properties": "version=24.0.0\nclient=play-services-measurement-impl\nplay-services-measurement-impl_client=24.0.0",
+    "play-services-measurement-sdk-api.properties": "version=24.0.0\nclient=play-services-measurement-sdk-api\nplay-services-measurement-sdk-api_client=24.0.0",
+    "play-services-measurement-sdk.properties": "version=24.0.0\nclient=play-services-measurement-sdk\nplay-services-measurement-sdk_client=24.0.0",
+    "play-services-measurement.properties": "version=24.0.0\nclient=play-services-measurement\nplay-services-measurement_client=24.0.0",
+    "play-services-places-placereport.properties": "version=17.0.0\nclient=play-services-places-placereport\nplay-services-places-placereport_client=17.0.0",
+    "play-services-stats.properties": "version=17.0.2\nclient=play-services-stats\nplay-services-stats_client=17.0.2",
+    "play-services-tasks.properties": "version=18.4.0\nclient=play-services-tasks\nplay-services-tasks_client=18.4.0",
+    "review-ktx.properties": "version=2.0.2\nclient=review-ktx\nreview-ktx_client=2.0.2",
+    "review.properties": "version=2.0.2\nclient=review\nreview_client=2.0.2"
+  },
+  "androidxAndLibVersions": {
+    "androidx.activity_activity-compose": "1.13.0",
+    "androidx.activity_activity-ktx": "1.13.0",
+    "androidx.activity_activity": "1.13.0",
+    "androidx.annotation_annotation-experimental": "1.5.0",
+    "androidx.appcompat_appcompat-resources": "1.8.0",
+    "androidx.appcompat_appcompat": "1.8.0",
+    "androidx.arch.core_core-runtime": "task ':arch:core:core-runtime:writeVersionFile' property 'version'",
+    "androidx.asynclayoutinflater_asynclayoutinflater": "1.0.0",
+    "androidx.autofill_autofill": "1.0.0",
+    "androidx.browser_browser": "1.10.0",
+    "androidx.cardview_cardview": "1.0.0",
+    "androidx.compose.animation_animation-core": "1.12.1",
+    "androidx.compose.animation_animation": "1.12.1",
+    "androidx.compose.foundation_foundation-layout": "1.12.1",
+    "androidx.compose.foundation_foundation": "1.12.1",
+    "androidx.compose.material3_material3": "1.5.0-alpha22",
+    "androidx.compose.material_material-icons-core": "1.7.6",
+    "androidx.compose.material_material-icons-extended": "1.7.6",
+    "androidx.compose.material_material-ripple": "1.12.0-beta01",
+    "androidx.compose.runtime_runtime-annotation": "1.12.1",
+    "androidx.compose.runtime_runtime-retain": "1.12.1",
+    "androidx.compose.runtime_runtime-saveable": "1.12.1",
+    "androidx.compose.runtime_runtime": "1.12.1",
+    "androidx.compose.ui_ui-geometry": "1.12.1",
+    "androidx.compose.ui_ui-graphics": "1.12.1",
+    "androidx.compose.ui_ui-text": "1.12.1",
+    "androidx.compose.ui_ui-tooling-preview": "1.12.1",
+    "androidx.compose.ui_ui-unit": "1.12.1",
+    "androidx.compose.ui_ui-util": "1.12.1",
+    "androidx.compose.ui_ui": "1.12.1",
+    "androidx.constraintlayout_constraintlayout": "2.2.1",
+    "androidx.coordinatorlayout_coordinatorlayout": "1.1.0",
+    "androidx.core_core-ktx": "1.19.1",
+    "androidx.core_core-viewtree": "1.0.0",
+    "androidx.core_core": "1.19.1",
+    "androidx.cursoradapter_cursoradapter": "1.0.0",
+    "androidx.customview_customview-poolingcontainer": "1.0.0",
+    "androidx.customview_customview": "1.2.0",
+    "androidx.datastore_datastore-core": "1.3.0",
+    "androidx.datastore_datastore-preferences-core": "1.3.0",
+    "androidx.datastore_datastore-preferences": "1.3.0",
+    "androidx.datastore_datastore": "1.3.0",
+    "androidx.documentfile_documentfile": "1.0.0",
+    "androidx.drawerlayout_drawerlayout": "1.1.1",
+    "androidx.dynamicanimation_dynamicanimation": "1.1.0",
+    "androidx.emoji2_emoji2-views-helper": "1.4.0",
+    "androidx.emoji2_emoji2": "1.4.0",
+    "androidx.exifinterface_exifinterface": "1.4.2",
+    "androidx.fragment_fragment-ktx": "1.8.9",
+    "androidx.fragment_fragment": "1.8.9",
+    "androidx.graphics_graphics-path": "1.0.1",
+    "androidx.graphics_graphics-shapes": "1.1.0",
+    "androidx.interpolator_interpolator": "1.0.0",
+    "androidx.legacy_legacy-support-core-ui": "1.0.0",
+    "androidx.legacy_legacy-support-core-utils": "1.0.0",
+    "androidx.legacy_legacy-support-v4": "1.0.0",
+    "androidx.lifecycle_lifecycle-livedata-core-ktx": "2.11.0",
+    "androidx.lifecycle_lifecycle-livedata-core": "2.11.0",
+    "androidx.lifecycle_lifecycle-livedata": "2.11.0",
+    "androidx.lifecycle_lifecycle-process": "2.11.0",
+    "androidx.lifecycle_lifecycle-runtime-compose": "2.11.0",
+    "androidx.lifecycle_lifecycle-runtime-ktx": "2.11.0",
+    "androidx.lifecycle_lifecycle-runtime": "2.11.0",
+    "androidx.lifecycle_lifecycle-service": "2.11.0",
+    "androidx.lifecycle_lifecycle-viewmodel-compose": "2.11.0",
+    "androidx.lifecycle_lifecycle-viewmodel-ktx": "2.11.0",
+    "androidx.lifecycle_lifecycle-viewmodel-savedstate": "2.11.0",
+    "androidx.lifecycle_lifecycle-viewmodel": "2.11.0",
+    "androidx.loader_loader": "1.0.0",
+    "androidx.localbroadcastmanager_localbroadcastmanager": "1.0.0",
+    "androidx.media_media": "1.7.0",
+    "androidx.navigationevent_navigationevent-compose": "1.1.2",
+    "androidx.navigationevent_navigationevent": "1.1.2",
+    "androidx.navigation_navigation-common": "2.10.0",
+    "androidx.navigation_navigation-compose": "2.10.0",
+    "androidx.navigation_navigation-runtime": "2.10.0",
+    "androidx.paging_paging-common": "3.3.0-alpha02",
+    "androidx.paging_paging-compose": "3.3.0-alpha02",
+    "androidx.print_print": "1.0.0",
+    "androidx.privacysandbox.ads_ads-adservices-java": "1.1.0-beta11",
+    "androidx.privacysandbox.ads_ads-adservices": "1.1.0-beta11",
+    "androidx.profileinstaller_profileinstaller": "1.4.1",
+    "androidx.recyclerview_recyclerview": "1.3.0",
+    "androidx.room_room-ktx": "2.8.5",
+    "androidx.room_room-runtime": "2.8.5",
+    "androidx.savedstate_savedstate-compose": "1.5.0",
+    "androidx.savedstate_savedstate-ktx": "1.5.0",
+    "androidx.savedstate_savedstate": "1.5.0",
+    "androidx.slidingpanelayout_slidingpanelayout": "1.0.0",
+    "androidx.sqlite_sqlite-bundled": "2.7.1",
+    "androidx.sqlite_sqlite-framework": "2.7.1",
+    "androidx.sqlite_sqlite": "2.7.1",
+    "androidx.startup_startup-runtime": "1.2.0",
+    "androidx.swiperefreshlayout_swiperefreshlayout": "1.0.0",
+    "androidx.tracing_tracing-ktx": "2.0.1",
+    "androidx.tracing_tracing": "2.0.1",
+    "androidx.transition_transition": "1.5.0",
+    "androidx.vectordrawable_vectordrawable-animated": "1.2.0",
+    "androidx.vectordrawable_vectordrawable": "1.2.0",
+    "androidxedparcelable_versionedparcelable.version": "1.1.1",
+    "androidx.viewpager2_viewpager2": "1.0.0",
+    "androidx.viewpager_viewpager": "1.0.0",
+    "androidx.webkit_webkit": "1.18.0",
+    "androidx.window_window-core": "1.5.0",
+    "androidx.window_window": "1.5.0",
+    "androidx.work_work-runtime-ktx": "2.12.0",
+    "androidx.work_work-runtime": "2.12.0",
+    "com.google.android.material_material": "1.14.0",
+    "kotlinx_coroutines_android": "1.11.0",
+    "kotlinx_coroutines_core": "1.11.0",
+    "kotlinx_coroutines_play_services": "1.11.0",
+    "kotlinx_coroutines_slf4j": "1.11.0"
+  },
+  "nativeLibraries": [
+    {
+      "fileName": "libandroidx.graphics.path.so",
+      "sizeBytes": 10096,
+      "sha256": "41E9A793C43A0F4FDDB19E33F346BACE464F30F888BA7B9EAF96294EA115BFB6",
+      "jniSymbols": [
+        "JNI_OnLoad"
+      ],
+      "interestingStrings": [
+        "libandroidx.graphics.path.so",
+        "LIBANDROIDX.GRAPHICS.PATH",
+        "androidx/graphics/path/ConicConverter",
+        "ro.build.version.sdk",
+        "androidx/graphics/path/PathIteratorPreApi34Impl",
+        "version",
+        "https://android.googlesource.com/toolchain/llvm-project",
+        ".gnu.version_r",
+        ".gnu.version",
+        ".gnu.version_d"
+      ]
+    },
+    {
+      "fileName": "libdatastore_shared_counter.so",
+      "sizeBytes": 10376,
+      "sha256": "0BC48E5B2B1DEDDA291EDCD703FFA2252CAC6DA4BA71513C668CCF84CC664299",
+      "jniSymbols": [
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeTruncateFile",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeCreateSharedCounter",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeGetCounterValue",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeIncrementAndGetCounterValue"
+      ],
+      "interestingStrings": [
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeTruncateFile",
+        "_ZN9datastore12TruncateFileEi",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeCreateSharedCounter",
+        "_ZN9datastore19CreateSharedCounterEiPPv",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeGetCounterValue",
+        "_ZN9datastore15GetCounterValueEPNSt6__ndk16atomicIjEE",
+        "Java_androidx_datastore_core_NativeSharedCounter_nativeIncrementAndGetCounterValue",
+        "_ZN9datastore27IncrementAndGetCounterValueEPNSt6__ndk16atomicIjEE",
+        "version",
+        "https://android.googlesource.com/toolchain/llvm-project",
+        ".gnu.version_r",
+        ".gnu.version"
+      ]
+    },
+    {
+      "fileName": "libpairipcore.so",
+      "sizeBytes": 608896,
+      "sha256": "E7D73746525BAE12FAD14EE027F0D3B0C3EE1451996F789F0304C53AE11B025F",
+      "jniSymbols": [
+        "JNI_OnLoad"
+      ],
+      "interestingStrings": [
+        "libpairipcore.so",
+        "version",
+        "version:",
+        "N12_GLOBAL__N_116itanium_demangle14ConversionExprE",
+        "N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE",
+        "N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE",
+        ".gnu.version_r",
+        ".gnu.version"
+      ]
+    },
+    {
+      "fileName": "libsqliteJni.so",
+      "sizeBytes": 1116192,
+      "sha256": "EBFA980AFF616622E79A452EB4CAE2C66C4A62402C9F2421302973941B51C924",
+      "jniSymbols": [
+        "JNI_OnLoad"
+      ],
+      "interestingStrings": [
+        "libpairipcore.so",
+        "libsqliteJni.so",
+        "sqlite3_aggregate_context",
+        "sqlite3_auto_extension",
+        "sqlite3_autovacuum_pages",
+        "sqlite3_backup_finish",
+        "sqlite3_backup_init",
+        "sqlite3_backup_pagecount",
+        "sqlite3_backup_remaining",
+        "sqlite3_backup_step",
+        "sqlite3_bind_blob",
+        "sqlite3_bind_blob64",
+        "sqlite3_bind_double",
+        "sqlite3_bind_int",
+        "sqlite3_bind_int64",
+        "sqlite3_bind_null",
+        "sqlite3_bind_parameter_count",
+        "sqlite3_bind_parameter_index",
+        "sqlite3_bind_parameter_name",
+        "sqlite3_bind_pointer",
+        "sqlite3_bind_text",
+        "sqlite3_bind_text16",
+        "sqlite3_bind_text64",
+        "sqlite3_bind_value",
+        "sqlite3_bind_zeroblob",
+        "sqlite3_bind_zeroblob64",
+        "sqlite3_blob_bytes",
+        "sqlite3_blob_close",
+        "sqlite3_blob_open",
+        "sqlite3_blob_read",
+        "sqlite3_blob_reopen",
+        "sqlite3_blob_write",
+        "sqlite3_busy_handler",
+        "sqlite3_busy_timeout",
+        "sqlite3_cancel_auto_extension",
+        "sqlite3_changes",
+        "sqlite3_changes64",
+        "sqlite3_clear_bindings",
+        "sqlite3_close",
+        "sqlite3_close_v2"
+      ]
+    }
+  ],
+  "specialAssets": [
+    {
+      "path": "assets/$catalog.json",
+      "sizeBytes": 35,
+      "sha256": "ECCA573C14A5EF0239994DA90387554B50F878094DE25CF683C3E2EDB2B181DB",
+      "previewHex": "7b224d4554412d494e465c2f223a5b34",
+      "previewText": "{\"META-INF\\/\":[4096,1692829678400]}"
+    },
+    {
+      "path": "assets/0BsIPvj9Z4qktCWT",
+      "sizeBytes": 215840,
+      "sha256": "B13D66D830ADB180AFBD1ACE32CD37E842B4F7186AFCBB904FBBE6B5A5B3D5D5",
+      "previewHex": "0049415002000000080737221c539024",
+      "previewText": ".IAP......7\".S.$o..?.-......!.V..n...oea.kb...zG....Q..Q.vt...#.8.B.4G....VU....:.`>FZ.&.V.{o.a.~\\.)...)..c....!hAQ"
+    },
+    {
+      "path": "assets/22CwURWv6jEUo1yC",
+      "sizeBytes": 165626,
+      "sha256": "0B4C2371EC6B001FD430667CF54226B272D65360104E1FF38ACDA1588E9BF333",
+      "previewHex": "00494150020000000807f6556bd94b2c",
+      "previewText": ".IAP.......Uk.K,*.&..H.;.#.....\\....L8...E.Z..M.....V..a.j.7,G.w....Wo..x|...(..J.YI..G..z.?._J.F.b.K...0Wb./|aP..^.Z."
+    },
+    {
+      "path": "assets/3bUKFa4KRIb5LN7O",
+      "sizeBytes": 161174,
+      "sha256": "214A3228909544148D94BA4A67E45DEBED5A7B07FD66DFD93D44E01178452153",
+      "previewHex": "00494150020000000807c8c5b8eb9278",
+      "previewText": ".IAP.........x.f..n......z...u.T.}%&...d..B..+_L.G.B........N)...E........l.....K....xZ!rQ.N>.g,../DN......t...G."
+    },
+    {
+      "path": "assets/5hm1Oj2x5EnNy1U2",
+      "sizeBytes": 156215,
+      "sha256": "B58858B5FAD51211BB65E578F809C9AD781D036E53B5FB646E58C9295936E384",
+      "previewHex": "00494150020000000807d96dccb547c3",
+      "previewText": ".IAP.......m.G.....5....^..e....!.....J..} .,..*-D.....@....S..G.2.[....{....fc3..2.3..0I..../l..D....S.$g........uy.."
+    },
+    {
+      "path": "assets/8ml2L2ltPeIt2U0q",
+      "sizeBytes": 169840,
+      "sha256": "326B923539290641AF7EFF45CE40BBBB0B0F93CCE9D579CA3894C9126E84DDE0",
+      "previewHex": "0049415002000000080733603fec1720",
+      "previewText": ".IAP......3`?.. .W.oo........2...n..<.......]c..$.....z..1........q..n.M.\".n...=a<.7........8.'vKXw..8!......z..^...P"
+    },
+    {
+      "path": "assets/8ZcHqTRUFceh08t0",
+      "sizeBytes": 155524,
+      "sha256": "C2B2CC4EA353549C5AE863E7D4AB5BEE239CF24B5601A3870282AD091B83B0EE",
+      "previewHex": "0049415002000000080783e766db6f2f",
+      "previewText": ".IAP........f.o/z...L.S...\\.:...z..g....a.q2...e^A.2<.|.D...)..U].V........{..H.5..._+.X.MD+<...........u..6......."
+    },
+    {
+      "path": "assets/Aflpao2oPHzPGb6s",
+      "sizeBytes": 181444,
+      "sha256": "49E64F65299F411BAB89346BA816D5F2A25872FB1A956F909C8ED486132E5AC8",
+      "previewHex": "0049415002000000080755a8106ba4a0",
+      "previewText": ".IAP......U..k......A...0..}|....U3.hng.!....#+....LNz..O....5....y.......R.;..y?C....b..S..@m.bg6._k0n.*.;D..M."
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/files/json/acc_json/acc_lottie_urls.json",
+      "sizeBytes": 712,
+      "sha256": "32D7826E4A0C3F99AFE1E3160B6E8E566AE0A488A004256405FD3BE1E05000A0",
+      "previewHex": "7b0a2020226163636573736962696c69",
+      "previewText": "{.  \"accessibility\": [.    {\"device\": \"xiaomi\", \"anim_url\": \"https://kahfguard-downloads.b-cdn.net/configs/lottie-json/a"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/files/json/app_promos_default.json",
+      "sizeBytes": 4538,
+      "sha256": "CEBC66A13819C60F3B80003E29919A4FE8B4B4EF5D2EFA49E42B4D3492D9512F",
+      "previewHex": "7b0a20202276657273696f6e223a2032",
+      "previewText": "{.  \"version\": 2,.  \"apps\": [.    {.      \"id\": 1,.      \"titles\": {.        \"en\": \"Kahf Internet\",.        \"bn\": \".."
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/files/json/countries_metadata.json",
+      "sizeBytes": 70541,
+      "sha256": "8AAEE6F75E9B5EBC4889FED8AA39D39CCCC15667737283073F787DAD1AADC1F0",
+      "previewHex": "5b7b226964223a312c226e6d223a2241",
+      "previewText": "[{\"id\":1,\"nm\":\"Afghanistan\",\"pc\":93,\"cp\":\"Kabul\",\"tzs\":[{\"znm\":\"Asia/Kabul\",\"gmtOffset\":16200,\"tznm\":\"Afghanistan Time\"}"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/files/json/priority_countries.json",
+      "sizeBytes": 445401,
+      "sha256": "22BCAD2433251092CA708D78A8FEC525E356E595AB3D14C262AA3DB6BFB34901",
+      "previewHex": "5b7b226964223a31392c226e6d223a22",
+      "previewText": "[{\"id\":19,\"nm\":\"Bangladesh\",\"pc\":880,\"cp\":\"Dhaka\",\"tzs\":[{\"znm\":\"Asia/Dhaka\",\"gmtOffset\":21600,\"tznm\":\"Bangladesh Standa"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/files/json/video_tutorials.json",
+      "sizeBytes": 3003,
+      "sha256": "D6372F19FD06FDA03B0F7A8B0B53BDA309C4BB543102C68B4FC1BCD7D0D5BE02",
+      "previewHex": "7b0a20202276657273696f6e223a2031",
+      "previewText": "{.  \"version\": 1,.  \"enabled\": true,.  \"screens\": {.    \"app_blocker\": { \"enabled\": false },.    \"social_media_controls\""
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/values/strings.commonMain.cvr",
+      "sizeBytes": 124089,
+      "sha256": "2C74FB56276099B198A6E4D15CA376B8A2D613EDD550964F5AC03BBE3F0D8F84",
+      "previewHex": "76657273696f6e3a300a706c7572616c",
+      "previewText": "version:0.plurals|billing_period_months|ONE:bW9udGg=,OTHER:JTEkZCBtb250aHM=.plurals|billing_period_weeks|ONE:d2Vlaw==,OT"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/values-ar/strings.commonMain.cvr",
+      "sizeBytes": 166601,
+      "sha256": "3A83F449D039C206C3D8155A67BE24F400B7B7DFE64F46400BFEB5B01E536162",
+      "previewHex": "76657273696f6e3a300a706c7572616c",
+      "previewText": "version:0.plurals|billing_period_months|ZERO:JTEkZCDYtNmH2LE=,ONE:2LTZh9ix,TWO:2LTZh9ix2YrZhg==,FEW:JTEkZCDYo9i02YfYsQ=="
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/values-bn/strings.commonMain.cvr",
+      "sizeBytes": 248459,
+      "sha256": "C0114ECEA516AFE03543BC053280548927088C49583F31EAF6EBAD649771F109",
+      "previewHex": "76657273696f6e3a300a706c7572616c",
+      "previewText": "version:0.plurals|billing_period_months|ONE:4Kau4Ka+4Ka4,OTHER:JTEkZCDgpq7gpr7gprg=.plurals|billing_period_weeks|ONE:4Ka"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/values-ms/strings.commonMain.cvr",
+      "sizeBytes": 134923,
+      "sha256": "D20A4436BF690347C51CBE18E16962B3B67107FE4E0CC0EA90D1DE456A6AA26D",
+      "previewHex": "76657273696f6e3a300a706c7572616c",
+      "previewText": "version:0.plurals|billing_period_months|ONE:YnVsYW4=,OTHER:JTEkZCBidWxhbg==.plurals|billing_period_weeks|ONE:bWluZ2d1,OT"
+    },
+    {
+      "path": "assets/composeResources/com.kahf.dns.resources/values-tr/strings.commonMain.cvr",
+      "sizeBytes": 138535,
+      "sha256": "46F3EB993C6B0727E5C9D7975D5EA798B34531C659CE36739663D66BAFFAB3F9",
+      "previewHex": "76657273696f6e3a300a706c7572616c",
+      "previewText": "version:0.plurals|billing_period_months|ONE:YXk=,OTHER:JTEkZCBheQ==.plurals|billing_period_weeks|ONE:aGFmdGE=,OTHER:JTEk"
+    },
+    {
+      "path": "assets/dexopt/baseline.prof",
+      "sizeBytes": 25349,
+      "sha256": "806EB1D6E08C7E294155B0810A267F77A41103C7719CC453400DD176CE2E614E",
+      "previewHex": "70726f00303130000232420100f46200",
+      "previewText": "pro.010..2B...b..x..}.`T...%..B.....aQ.....d.Q..m..B\\.V.`..+07..K..}.W5.....O....%.h....AT.s.h.2...~.._..u.h....x."
+    },
+    {
+      "path": "assets/EPLf059whsZaRnPY",
+      "sizeBytes": 377842,
+      "sha256": "FFEC25D4C77DBEF4F366761A407DEF99A7D4424649E91A930ACCCEA87BE02FCC",
+      "previewHex": "004941500200000008072a2f6db1eae2",
+      "previewText": ".IAP......*/m...-.v.|.....@..WX....T..5/e..-..S.r.eR..w.).R...~.N.s...5RW.......&U.e....t.....n{d...z?...z.\"3.."
+    },
+    {
+      "path": "assets/ewL0cpHn4SzJVrRK",
+      "sizeBytes": 149830,
+      "sha256": "00154A21F1826C8A22CC15942183BE7F13BB73BC696FE97B4D8FE04D6DCBD202",
+      "previewHex": "00494150020000000807056a25766bd4",
+      "previewText": ".IAP.......j%vk....m.(HT.l.cJ].....29...K.....x:..6s:..Iv.Dn.p-a3F...^DH......w.n...`.....5.....FK..PK.....h..)..s.q5w."
+    },
+    {
+      "path": "assets/F9EZAYF60H6hFAGA",
+      "sizeBytes": 159580,
+      "sha256": "36E6694292D98B8A272237022289537E82151F774FDF8193667C5F59DC48111C",
+      "previewHex": "00494150020000000807107eaf7a6edc",
+      "previewText": ".IAP.......~.zn...P..{.9.(X.h...\"bD'..}.=F....oZ.*+I..U..7...[...x9..o.l1..g..yk}.....|]x.,.M......=S..K-.x...q7?/."
+    },
+    {
+      "path": "assets/fgK6BTjJTAZHAdS8",
+      "sizeBytes": 161285,
+      "sha256": "B9E0A6C61D78D753E0C8D1A36754CFB529ED925F84B4F99EE1D19A29C3A41EE4",
+      "previewHex": "00494150020000000807b83b40649e3b",
+      "previewText": ".IAP.......;@d.;i.gt.G..nA....x.f..n......z...u.T.}%&...d..B..+_L.G.B........N)...E........l.....K....xZ!rQ.N>.g,."
+    },
+    {
+      "path": "assets/FXhM4RQMhecVbubm",
+      "sizeBytes": 153016,
+      "sha256": "438F73DADFFC73D3826721D6148A1466E59123065CA3FC945BBFEF2663064AC1",
+      "previewHex": "00494150020000000807a0de3cf6f681",
+      "previewText": ".IAP........<......)K,\\.].Fp..........T^._.}R...&..n.._g...)i^.5&.{|{)..^..l>....o..Db...Z.:j..}..e.`.\".8w..D.$..2.O"
+    },
+    {
+      "path": "assets/I5qtSUXk12jbAKiy",
+      "sizeBytes": 153080,
+      "sha256": "AE8460292163B16512340424C9E13439DC8B4FECED366273B2A25A72089B6135",
+      "previewHex": "00494150020000000807ce98bb29695e",
+      "previewText": ".IAP........)i^.5&.{|{)..^..l>....o..Db...Z.:j..}..e.`.\".8w..D.$..2.OZ./.+G.|..n...n8G...7.@.0<......_...;z...$.wy]9)!"
+    },
+    {
+      "path": "assets/iyGmolD1CyxfcIND",
+      "sizeBytes": 159038,
+      "sha256": "38729210A5F85BB715D43ACC6AAC9050921A3AA1B8C161EF4DC0BBD0BE29CFC8",
+      "previewHex": "004941500200000008079c2cd4fb4abf",
+      "previewText": ".IAP.......,..J.PVm.........$]C...*%c.i.W~.......G %...S.#\".-.U....b.1r.(..{_.....=..}..&...../p....k[..y..T....(vZ."
+    },
+    {
+      "path": "assets/Lo3csLkWuvfK8TEq",
+      "sizeBytes": 158380,
+      "sha256": "B03AAFE31213CD555A847E0D17F6E7CB31198DF069305548FA5C572EF8353D70",
+      "previewHex": "004941500200000008072b76aca22548",
+      "previewText": ".IAP......+v..%HF.........=...>....6...b..r.L..3....#..;Va.Bn....!.._...........6...(.jg+@ub.n1Z0v.P.9...=...QN'Vj.h"
+    },
+    {
+      "path": "assets/mEBpNyK72e1ebo2K",
+      "sizeBytes": 161715,
+      "sha256": "AB0493902DD32E8F8F6D758DD70CFDA877DA051806535093D1BBE7D85881BEA5",
+      "previewHex": "00494150020000000807b83b40649e3b",
+      "previewText": ".IAP.......;@d.;i.gt.G..nA....x.f..n......z...u.T.}%&...d..B..+_L.G.B........N)...E........l.....K....xZ!rQ.N>.g,."
+    },
+    {
+      "path": "assets/META-INF/$catalog.json",
+      "sizeBytes": 35,
+      "sha256": "AB5A8208AF9C1468D003DDEE4E206385FD826CBC22FC4EE16E92A4F6D62AE28E",
+      "previewHex": "7b2270726f67756172645c2f223a5b34",
+      "previewText": "{\"proguard\\/\":[4096,1692829678400]}"
+    },
+    {
+      "path": "assets/META-INF/proguard/$catalog.json",
+      "sizeBytes": 33,
+      "sha256": "FEE97FA08219E4B07906D79F6B9C3CD1CC6D16005C2930059B9015201E9ECECE",
+      "previewHex": "7b226b6f72696f2e70726f223a5b3137",
+      "previewText": "{\"korio.pro\":[178,1692829678400]}"
+    },
+    {
+      "path": "assets/META-INF/proguard/korio.pro",
+      "sizeBytes": 178,
+      "sha256": "CCA68A9AC029E2D5DD9C25EFBD4A128242FDCE45395B8FBB123B3F723B626DDD",
+      "previewHex": "232d6b6565702c616c6c6f776f626675",
+      "previewText": "#-keep,allowobfuscation @interface korlibs.io.annotations.Keep.-keep @korlibs.io.annotations.Keep public class *.-keepcl"
+    },
+    {
+      "path": "assets/MiYJ7MYhZYQUMaWe",
+      "sizeBytes": 216106,
+      "sha256": "1945FDF3A4170CC7A0B2E68C4CC3C13EFECFF0F977778CFDBDE6E7859DDC7012",
+      "previewHex": "004941500200000008071ff2ae231138",
+      "previewText": ".IAP........#.8.B.4G....VU....:.`>FZ.&.V.{o.a.~\\.)...)..c....!hAQ.9O.v...Y.(.MgO5.......C4.NIQ.T4X\\CZ../e *~:...c.r"
+    },
+    {
+      "path": "assets/Pj7QWLKKW7dsmXfg",
+      "sizeBytes": 194822,
+      "sha256": "36450E6E79C4D8D4467273E7DBAE4F0C5BEA12E9EC5D9A60009E470C5A37829D",
+      "previewHex": "004941500200000008076e6766cf38e3",
+      "previewText": ".IAP......ngf.8.@w.7}.4.].I:_...?...`._0.t/.9@..t.p..\"R.F.....?....G3.....v..<..*.s..`U.....9...S+..w.......ii.9. .."
+    },
+    {
+      "path": "assets/PublicSuffixDatabase.list",
+      "sizeBytes": 132737,
+      "sha256": "C75AB827AFD7FFFF59A51B14729C25DBFC3B45237EB40CCF02BEC7B7D44304A4",
+      "previewHex": "000206022a2e3030312e746573742e63",
+      "previewText": "....*.001.test.code-builder-stg.platform.salesforce.com.*.0emm.com.*.advisor.ws.*.af-south-1.airflow.amazonaws.com.*.alc"
+    },
+    {
+      "path": "assets/Qafx9L3UlmpFMKsE",
+      "sizeBytes": 216093,
+      "sha256": "1BC28097C56D0F8FAB4FAC32E02ED975FA66C7445D0D0F1AEB096E79D0DD950A",
+      "previewHex": "00494150020000000807104e4951c654",
+      "previewText": ".IAP.......NIQ.T4X\\CZ../e *~:...c.r.........`{..I...j...N8Q...R.a.)o..R.g....3.*..6.0...QQ.[.$EE..ms.`.e..r....W...W.."
+    },
+    {
+      "path": "assets/r1nvbANBuycgwlWL",
+      "sizeBytes": 166707,
+      "sha256": "CCEDF5FA0EF33982BE34119C4325A07E480CEC36473DEC20DFAA819FB64723F1",
+      "previewHex": "004941500200000008070aa04f8e746f",
+      "previewText": ".IAP........O.to....>.2g.a.\\.;._.Uk.K,*.&..H.;.#.....\\....L8...E.Z..M.....V..a.j.7,G.w....Wo..x|...(..J.YI..G..z.?._J.F"
+    },
+    {
+      "path": "assets/Rn2tYewiRYbIr4Bg",
+      "sizeBytes": 156225,
+      "sha256": "C57F433E4BF634F30A0FC198567416FEEC8685A1476C3CEA45CB3C28098C3E62",
+      "previewHex": "00494150020000000807555db256b7ea",
+      "previewText": ".IAP......U].V........{..H.5..._+.X.MD+<...........u..6........U..86.q......b.X.m.G.....5....^..e....!.....J..} .,.."
+    },
+    {
+      "path": "assets/SPA7hBRTmivcyROK",
+      "sizeBytes": 156209,
+      "sha256": "914C05CCD3C4782465BF40FB2D4DABC42ACA3C8584F84D81A2697BBC6F15FA4B",
+      "previewHex": "00494150020000000807d96dccb547c3",
+      "previewText": ".IAP.......m.G.....5....^..e....!.....J..} .,..*-D.....@....S..G.2.[....{....fc3..2.3..0I..../l..D....S.$g........uy.."
+    },
+    {
+      "path": "assets/ulSDghuH8Rmd1e3Q",
+      "sizeBytes": 163048,
+      "sha256": "FC4A37BF7D142B793B66B304D054D6BAA800DFA08F1DF17BF2FAB6A5995CEABA",
+      "previewHex": "004941500200000008075e0d03539a09",
+      "previewText": ".IAP......^..S......B...I.R;.D.&..C|.l'J.\\v..l.6..l..X.~........,..............L|..a{......L...R?......C.8f..9.^."
+    },
+    {
+      "path": "assets/VBpG4wFzyzCNIaYT",
+      "sizeBytes": 215000,
+      "sha256": "85D7FFD0FC0353D448B13133E46C2F38D99CE6F8E8A9E456E0B9FBCDA2479AF0",
+      "previewHex": "0049415002000000080737221c539024",
+      "previewText": ".IAP......7\".S.$o..?.-......!.V..n...oea.kb...zG....Q..Q.vt...#.8.B.4G....VU....:.`>FZ.&.V.{o.a.~\\.)...)..c....!hAQ"
+    },
+    {
+      "path": "assets/WMaNmIcwJqpmR65s",
+      "sizeBytes": 167945,
+      "sha256": "31C4FC952509436CA6C66228F0214159F99801F98138077B8350F604097371D8",
+      "previewHex": "00494150020000000807c03d6d11e576",
+      "previewText": ".IAP.......=m..v. .....Y#\\...y...O.x.u..F.?.2j.....H..QN....Bf..[Em..m..K.6..1..&.....P.s.+...X..hHc.3....+uj..,."
+    },
+    {
+      "path": "assets/YC5YTFujligBGQwa",
+      "sizeBytes": 115673,
+      "sha256": "32094BCA1E19E8D0DB2C3BEBE61BED7C6C2E8C4ACEEED79BA9EBD5566547557C",
+      "previewHex": "00494150020000000807f40262a0afb8",
+      "previewText": ".IAP........b.....l..y.*....[..c./.{4.=P(........+....~.C&@...J.6<..P.|.x*-~&...N ..}...P{.qu../......;.i{.<0.N..."
+    },
+    {
+      "path": "assets/yt_player.html",
+      "sizeBytes": 4035,
+      "sha256": "2E4C131CD925B7E1522775C21CAE5DFCFA0EC87CBA48663C1D7F12268905D5A5",
+      "previewHex": "3c21444f43545950452068746d6c3e0a",
+      "previewText": "<!DOCTYPE html>.<html lang=\"en\">.<head>.<meta charset=\"utf-8\">.<meta name=\"viewport\" content=\"width=device-width, initia"
+    },
+    {
+      "path": "client_analytics.proto",
+      "sizeBytes": 2982,
+      "sha256": "0C76732776772B260528558F9B675A49529CAD785C421CA11B487179B8162610",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2021 Google LLC..//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use t"
+    },
+    {
+      "path": "core/java_features_proto-descriptor-set.proto.bin",
+      "sizeBytes": 1310,
+      "sha256": "AB7EA7F069D69E9D17F8EF896856F4270A05493ED9E4C99FF568E98F61BE4045",
+      "previewHex": "0a9b0a0a23676f6f676c652f70726f74",
+      "previewText": "....#google/protobuf/java_features.proto..pb. google/protobuf/descriptor.proto\"....JavaFeatures.....legacy_closed_enum.."
+    },
+    {
+      "path": "DebugProbesKt.bin",
+      "sizeBytes": 1728,
+      "sha256": "065BD792B8527764F33147188302AF5BF9E2A8DA40FDE0830DC111AD26DAE40E",
+      "previewHex": "cafebabe00000034003d01002c6b6f74",
+      "previewText": ".......4.=..,kotlin/coroutines/jvm/internal/DebugProbesKt......java/lang/Object......probeCoroutineCreated..B(Lkotlin/co"
+    },
+    {
+      "path": "developers/mobile/targeting/proto/client_signals.proto",
+      "sizeBytes": 2051,
+      "sha256": "2DFE6EC615FDC3169AE861372B1B7964C619699DB86B41BEBFB56780D0A25E46",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "firebase/inappmessaging/proto/common_types.proto",
+      "sizeBytes": 6403,
+      "sha256": "3F104394E1D6AE04A52D155B985E460A9AF528A09607A507413E8E842BD31D89",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "firebase/inappmessaging/proto/experiment_payload.proto",
+      "sizeBytes": 4219,
+      "sha256": "2341FF228E92803296B9A7BC0A4E9B74A5C368CF282229A0A2CFFE9C93E4D82E",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "firebase/inappmessaging/proto/messages.proto",
+      "sizeBytes": 4042,
+      "sha256": "54E1840A5AE56993BA4226D2D7305BB3C5349480045EB5F0F1707226D48D52E7",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/annotations.proto",
+      "sizeBytes": 1045,
+      "sha256": "E79EA741CB605A65E78CA322174764A4AF9FDE1962C1631E12B84C4934BA9A6C",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/auth.proto",
+      "sizeBytes": 9262,
+      "sha256": "01264E4E5B8EE20388DC350066704CAD3816BF51430B580F2CCDBDBAB36AC336",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/backend.proto",
+      "sizeBytes": 7609,
+      "sha256": "8D56380CC90A7CBE87766E53BB228BAF90539058421A78A487B81EB6FBC5A5CC",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/billing.proto",
+      "sizeBytes": 3062,
+      "sha256": "09E4AD9B42F918160BC82F14DE80AB93603158600246E4CD5AA88C7BF7156F26",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/client.proto",
+      "sizeBytes": 21460,
+      "sha256": "5E9FC117290FE7D3472791543C979BEC7CF4497F3FE6FFAF9DE9AE99CC4F1804",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/config_change.proto",
+      "sizeBytes": 3166,
+      "sha256": "569E013ADD9082005F06CA659738CF29C06B86A03D6AFB6CD95449603BC5A2D5",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/consumer.proto",
+      "sizeBytes": 2717,
+      "sha256": "999ACB311628D9C2941D0CFDAABDF18047BE2EE061DDA2D9543D79AA6DEFEC84",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/context.proto",
+      "sizeBytes": 3229,
+      "sha256": "9A66FB2AA3BA46DF37E3BD377BA8B842025A4418AF78F38BEB998AF5AAF97185",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/control.proto",
+      "sizeBytes": 1438,
+      "sha256": "581EFB54AEA34A7CD12CC06E0DD2E3155A713645269ECEF215629723338965FE",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/distribution.proto",
+      "sizeBytes": 8660,
+      "sha256": "94BD1A17DBE20BCFB9AD14E160647B3EB2E09A95EDABA3437B83B19D118FC286",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/documentation.proto",
+      "sizeBytes": 6925,
+      "sha256": "A632846B2A6A06DE4AB3880D842F3142A385105553A17FFC9FFE3718B8C58747",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/endpoint.proto",
+      "sizeBytes": 2891,
+      "sha256": "A57C5C460F6C8EC3DCA195C6BD04A24BEA67AEA379AC95ACB00973DE668DC38D",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/error_reason.proto",
+      "sizeBytes": 30153,
+      "sha256": "C69DBC781135D7CA94485EC674E82CCE9458B01AE706906A5B73EB275CB5130E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/field_behavior.proto",
+      "sizeBytes": 4306,
+      "sha256": "BB7ED77725C95F751EC2C47CD92359D0137C39383B8A62AEF41BAB7AA7478DA5",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/field_info.proto",
+      "sizeBytes": 4456,
+      "sha256": "53BB0A673642B4EFFF2CB48F6EB9DBB0693B198AC837DA684AE54F751E8CF39E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/http.proto",
+      "sizeBytes": 15059,
+      "sha256": "EAD99129AA15DD5F6233942030C72EEC33BC0D7B1C7C260DC143293EF66C5B78",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/httpbody.proto",
+      "sizeBytes": 2661,
+      "sha256": "454A5102396E030EDB0DAE5C09056C8953041A27F665E4B1E3C12280F6ED2421",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/label.proto",
+      "sizeBytes": 1357,
+      "sha256": "DADFDE6D5ECCE36B7E3232E2439A0D5AC83357500732A2B7760E89CC66111806",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/launch_stage.proto",
+      "sizeBytes": 3083,
+      "sha256": "68E22C9821227B4E84C7029569FCE1055C21E6CCAB991E0986BC75F12EF4DD82",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/log.proto",
+      "sizeBytes": 2043,
+      "sha256": "4989E9F19F6DBA74DE6AE2915A046FBBEC8F7AA61B55552F45317DF7AC8FEC27",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/logging.proto",
+      "sizeBytes": 3174,
+      "sha256": "803958363B6412ED765ECAE4E2AAB2986B411637C5CB49158196575E61F9EB58",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/metric.proto",
+      "sizeBytes": 11166,
+      "sha256": "021F0EF550DB23D98F8BAFB74ACA4189BED165911C8890BF8769AD052C7AD6CD",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/monitored_resource.proto",
+      "sizeBytes": 5888,
+      "sha256": "CF7D64333F5B6287ADB0EB8BDBE552BC38813A85CE8134C39CBE1C56BE7E9CD2",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/monitoring.proto",
+      "sizeBytes": 4457,
+      "sha256": "06563DC549E756DC559BA73136CA7C5E94AE52F9A88F44FD33D5D99E83FCCECF",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/policy.proto",
+      "sizeBytes": 3110,
+      "sha256": "695CC0F9B612E43C9585AEC68C70FE7A741026ADE82AB288CD7BFB3905C7968A",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/quota.proto",
+      "sizeBytes": 7180,
+      "sha256": "AD5E8A53037FD180BF646894F4E36705AC984F204DC2D5D98D8FE99DEDB725D3",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/resource.proto",
+      "sizeBytes": 8994,
+      "sha256": "815D51EADA4341BF01672B474B5EC0ABBEA190E8DF9F4AA26A0C96DBDAD2993B",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/routing.proto",
+      "sizeBytes": 15193,
+      "sha256": "F31CB43C3EFE07A80CD814EEDE587F1A38B4DAC88053069DCFEAAC86700511BE",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/service.proto",
+      "sizeBytes": 6698,
+      "sha256": "91C47190669FB339437F09F911D2EA4307C6E99F5D66AB504C48D1A3D2274DA3",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/source_info.proto",
+      "sizeBytes": 1091,
+      "sha256": "8698EFC898D714B206EDCC8AF0BCBCF80D538E7DD005FE206D2B922C314BAB63",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/system_parameter.proto",
+      "sizeBytes": 3475,
+      "sha256": "B45151987677AC2789912BC8BBB270709B4F64A853383C65A133013E0974F793",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/usage.proto",
+      "sizeBytes": 3198,
+      "sha256": "26C382037E3E7C6CAEBA6D18329B6D7DDF37C1632EC5BCD57C5854D5BE007BAD",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/api/visibility.proto",
+      "sizeBytes": 3767,
+      "sha256": "80F0B5C5174F0C73380E0E91E865E142133930C5F35B3C07C2A52EC6610A1810",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/apps/card/v1/card.proto",
+      "sizeBytes": 85779,
+      "sha256": "C9AC59499E36DAA9BE95C874EC7AB2756F2D3578D4FEBC5CB8F8F43F85EBF669",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/cloud/audit/audit_log.proto",
+      "sizeBytes": 15317,
+      "sha256": "315B3E43E9ECD1342150B5A677870B10F13058FB5C94BBD7632756ACB247FB85",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/cloud/extended_operations.proto",
+      "sizeBytes": 6307,
+      "sha256": "808E252F9F10670E0938BD35FE3E518AB939034D1FE8C1B43F49B9797F72B523",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/cloud/location/locations.proto",
+      "sizeBytes": 3604,
+      "sha256": "40FA03C073FE86D9577CE97D9AD9B65F358E997307CDBC57D5F608BDF01E02CE",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/geo/type/viewport.proto",
+      "sizeBytes": 2415,
+      "sha256": "F87F656D3F3ECAF3D0D2D65F48DF59FF7ECFAD657F9FECE28465CB4E9FED81DF",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/internal/firebase/inappmessaging/internal/rate_limit.proto",
+      "sizeBytes": 1060,
+      "sha256": "406E8223320A1940490768130F383F21F1ECEC59F06EBF1F7761531E697A04C6",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/internal/firebase/inappmessaging/v1/campaign.proto",
+      "sizeBytes": 4340,
+      "sha256": "8AAB2C753D638A8F944D40450D4F00C0C703955B82999CF8D6F23AA42DF7C600",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/internal/firebase/inappmessaging/v1/sdkserving/fiam_fetch_service.proto",
+      "sizeBytes": 4001,
+      "sha256": "28FE3EF7B3AE5E0A7B2AB5A57CCBE1E9BF64273C01E180AB17E77B958ABF1C7C",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/logging/type/http_request.proto",
+      "sizeBytes": 3601,
+      "sha256": "CF16052273C8732143AD6418C0DE059AA49A3B2F402F62E6A7C63491436CC465",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/logging/type/log_severity.proto",
+      "sizeBytes": 2555,
+      "sha256": "CEA9C15D29125773C61B4B018DDBC9B3D7F088A2F737D6A74E38F1B607DDA51E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/longrunning/operations.proto",
+      "sizeBytes": 10931,
+      "sha256": "5D2E7F9EEB55B8417B50E0A536A092BABD32D26E4FBEB7099C6CDCDA6E16DB9C",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2025 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/protobuf/any.proto",
+      "sizeBytes": 5552,
+      "sha256": "8E56F61E3078E9232D39CE1B1BAB28613783AF8191F93A910C3617933F87A179",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/api.proto",
+      "sizeBytes": 8845,
+      "sha256": "6D47D6272EB687C806B6FEB08EF3925243C64EA076CD9440B783E27A7AEC5502",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/descriptor.proto",
+      "sizeBytes": 61186,
+      "sha256": "C96DB5406336EBCC82523C1DFB122721986A1F43C4AAED45A4A4AD6996EFACC2",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google LLC.  All rights reserved..//.// Use of "
+    },
+    {
+      "path": "google/protobuf/duration.proto",
+      "sizeBytes": 4892,
+      "sha256": "A3F7301FF2956EC2E30C2241ECE07197E4A86C752348D5607224819D4921C9FE",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/empty.proto",
+      "sizeBytes": 2363,
+      "sha256": "ECEF3D54CC9E079673B9816C67BAC770F7F3BF6DADA2D4596BA69D71DAA971E6",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/field_mask.proto",
+      "sizeBytes": 8041,
+      "sha256": "9F031219AE54383AFA84299FDD747E119B5F83C8E3DAB060930EBB126AF4460F",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/source_context.proto",
+      "sizeBytes": 2341,
+      "sha256": "37D3401DE89AF1D1496FC949924A5F2011BD2FADFBEB0DA1CAA277159A96776D",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/struct.proto",
+      "sizeBytes": 4319,
+      "sha256": "85D5DD93079588F3FA33B5AFFE431223DE4036F66FFB76253EFE930BC2D39696",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/timestamp.proto",
+      "sizeBytes": 6595,
+      "sha256": "FA6C44DCA2C90A2AAF3A1E4776CEF2E9177F70FBA365F236269F0F41AC166C96",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/type.proto",
+      "sizeBytes": 7774,
+      "sha256": "50A3B67B4D894E828173319AAFCD6AC440C15340048452BD13A13E8B47CC6637",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/protobuf/wrappers.proto",
+      "sizeBytes": 5392,
+      "sha256": "6878DC7534CF9805EEE56345CDC38B5E9CA39DECE246710C663C7007A67FEF49",
+      "previewHex": "2f2f2050726f746f636f6c2042756666",
+      "previewText": "// Protocol Buffers - Google's data interchange format.// Copyright 2008 Google Inc.  All rights reserved..// https://de"
+    },
+    {
+      "path": "google/rpc/code.proto",
+      "sizeBytes": 7138,
+      "sha256": "83A63185B83CF7332196FC5EAD0EC91B93AC207FBE91B3D5BC3D72F461B0BB31",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/rpc/context/attribute_context.proto",
+      "sizeBytes": 15115,
+      "sha256": "8AA3F0FE9F4872BE0A32A1AD4F6203B18A67B7A4BB69FC00A4652550B455A93E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/rpc/context/audit_context.proto",
+      "sizeBytes": 1829,
+      "sha256": "CD1A53C653CBD626AEB60A226F19913BC975277153E1B5DBAE5A3BA43BDA045E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/rpc/error_details.proto",
+      "sizeBytes": 14599,
+      "sha256": "5C18D42E6924F447622534B4B7CDB8B53C0606C8CE729B912EE5EDF88D1C5520",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/rpc/http.proto",
+      "sizeBytes": 1940,
+      "sha256": "F924995FAAE52EB92C09D7EA25D9B217FE9A662954C06398E75D5CB4E5AC0386",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/rpc/status.proto",
+      "sizeBytes": 1902,
+      "sha256": "F5BFD262E6705C7AE73F32E0AD8EE20CE8C0A2578DF8C4F76EBF76B572F295ED",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/shopping/type/types.proto",
+      "sizeBytes": 7189,
+      "sha256": "A4E4B39EECD61C3128D73FD802FD5B02A23E0040F61CD01B077DF9379B25F8C9",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/calendar_period.proto",
+      "sizeBytes": 1762,
+      "sha256": "F7217988C4B2A5E5B6179C2083F521BD9C6709E764B021BEA8B7854516B8EEC3",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/color.proto",
+      "sizeBytes": 6355,
+      "sha256": "56E75860F7B31538AA69971D59701EF042624D7F1A5B9C78E01E64DD5249D681",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/date.proto",
+      "sizeBytes": 2010,
+      "sha256": "965AED94DC0496471176BD607F7DC9413854F07C81253933DA075DEE2669A9DA",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/datetime.proto",
+      "sizeBytes": 4051,
+      "sha256": "8D3E9DB9A18D579F0B18577446C6EB89F6272FF8D297E9E1642C8354534B649F",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/dayofweek.proto",
+      "sizeBytes": 1204,
+      "sha256": "CA681F90502AD818207105F07E50C0F5E2676C0AF0A87FEEFA071B299C43205B",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/decimal.proto",
+      "sizeBytes": 4225,
+      "sha256": "07B1B8B884B250EC5D7A247B0361054265EF9B4B686A13FCBD6E93679E2D7660",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/expr.proto",
+      "sizeBytes": 2730,
+      "sha256": "D1D3DC4FB64016EA18D21D52ED97FF67E6556D69BFFC94FF4B02F6D80FBD0A63",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/fraction.proto",
+      "sizeBytes": 1156,
+      "sha256": "92689823752AF9E8941677757DCAE82BCABC2B4DA702B2E7D7A203354F0E8E9E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/interval.proto",
+      "sizeBytes": 1635,
+      "sha256": "29AEB806C14AA5382F1BCBD95BD73235DEA1ECAE360D5757BA5C9E1BF16E666A",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/latlng.proto",
+      "sizeBytes": 1433,
+      "sha256": "39666561B6C2CB45D488A56AD909B8EC9B5A086CCF62E28C662059170F3D1CBD",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/localized_text.proto",
+      "sizeBytes": 1317,
+      "sha256": "4225588EA1A34C13416636FFFF2A08C849B2FAB4B82CBC2DE105D424ABF17106",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/money.proto",
+      "sizeBytes": 1571,
+      "sha256": "4A139EF51E243525668AC1DDD0591225452D89633EFB0ED42637E87B7C18F349",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/month.proto",
+      "sizeBytes": 1479,
+      "sha256": "7DB9AFC53A778A06409C4A86C45D1E73FF18931B64344E8E706363058BC49974",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/phone_number.proto",
+      "sizeBytes": 4784,
+      "sha256": "C159B838206A754D75CCB9F687CE021351B56DBDFEEF6DA8FEC5C7C8A20D486D",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/postal_address.proto",
+      "sizeBytes": 6322,
+      "sha256": "6420A116343BE5FDF1AFC571ED9D2A7F3972723D66E0D26338A0CAB03A8003FA",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/quaternion.proto",
+      "sizeBytes": 3826,
+      "sha256": "E33BCCE0B925E547024448A2A7D832167F6B28C6AC72192791DB2363B438A375",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "google/type/timeofday.proto",
+      "sizeBytes": 1840,
+      "sha256": "95E0E5B05489F3C7E17B115FF8DB9FE5B6B9F5162E83381E34D8208CF659728E",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2026 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "logs/proto/firebase/inappmessaging/campaign_analytics.proto",
+      "sizeBytes": 4570,
+      "sha256": "ADBCE18D544B55D0F67DEAC65147205AF6918AEC74104BB46FCDE92FA9E2F8E0",
+      "previewHex": "2f2f20436f7079726967687420323031",
+      "previewText": "// Copyright 2018 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "messaging_event.proto",
+      "sizeBytes": 2381,
+      "sha256": "0B134A9FFE21416FE225F374F44F6ECA58B47519FEAE4C90B82E25677E8D56CE",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2020 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "messaging_event_extension.proto",
+      "sizeBytes": 883,
+      "sha256": "1B9C7669EA81FA9233CCE0CA5E4B5F0478071C34FB40DEEA40D703C4565C42C6",
+      "previewHex": "2f2f20436f7079726967687420323032",
+      "previewText": "// Copyright 2020 Google LLC.//.// Licensed under the Apache License, Version 2.0 (the \"License\");.// you may not use th"
+    },
+    {
+      "path": "META-INF/androidx/annotation/annotation/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/collection/collection/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/collection/collection-ktx/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/constraintlayout/constraintlayout-core/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/datastore/datastore-core-okio/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/datastore/datastore-preferences-external-protobuf/LICENSE.txt",
+      "sizeBytes": 1434,
+      "sha256": "A01B712FBB30F80B86851468B6FA58E80EAB68F69F325E88BBC7DDF47CF1B063",
+      "previewHex": "5265646973747269627574696f6e2061",
+      "previewText": "Redistribution and use in source and binary forms, with or without.modification, are permitted provided that the followi"
+    },
+    {
+      "path": "META-INF/androidx/datastore/datastore-preferences-proto/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/lifecycle/lifecycle-common/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/lifecycle/lifecycle-common-java8/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/androidx/room/room-common/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    },
+    {
+      "path": "META-INF/native-image/io.ktor/ktor-network/reflect-config.json",
+      "sizeBytes": 466,
+      "sha256": "6E85BE3E3F2ADD9084DA444F57948A5854483FF92142CDBBE43A93B2606DE101",
+      "previewHex": "5b0a20207b0a20202020226e616d6522",
+      "previewText": "[.  {.    \"name\": \"io.ktor.network.selector.InterestSuspensionsMap\",.    \"fields\": [.      {.        \"name\": \"readHandle"
+    },
+    {
+      "path": "META-INF/org/jetbrains/androidx/lifecycle/lifecycle-common/LICENSE.txt",
+      "sizeBytes": 10175,
+      "sha256": "809FA1ED21450F59827D1E9AEC720BBC4B687434FA22283C6CB5DD82A47AB9C0",
+      "previewHex": "0a202020202020202020202020202020",
+      "previewText": ".                                 Apache License.                           Version 2.0, January 2004.                  "
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "accessibility_service_config.xml": {
+    "tag": "accessibility-service",
+    "attrs": {
+      "description": "0x7f12001b",
+      "summary": "Click to Enable Kahf-Guardz",
+      "settingsActivity": "com.kahf.dns.ui.MainActivity",
+      "accessibilityEventTypes": "0x820",
+      "accessibilityFeedbackType": "0x8",
+      "notificationTimeout": "0x12c",
+      "accessibilityFlags": "0x12",
+      "canRetrieveWindowContent": true
+    },
+    "children": []
+  },
+  "device_admin_policies.xml": {
+    "tag": "device-admin",
+    "attrs": {
+      "visible": true
+    },
+    "children": [
+      {
+        "tag": "uses-policies",
+        "attrs": {},
+        "children": [
+          {
+            "tag": "force-lock",
+            "attrs": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "data_extraction_rules.xml": {
+    "tag": "data-extraction-rules",
+    "attrs": {},
+    "children": [
+      {
+        "tag": "cloud-backup",
+        "attrs": {},
+        "children": [
+          {
+            "tag": "exclude",
+            "attrs": {
+              "domain": "sharedpref",
+              "path": "user_prefs.xml"
+            },
+            "children": []
+          },
+          {
+            "tag": "exclude",
+            "attrs": {
+              "domain": "sharedpref",
+              "path": "AppPreferences.xml"
+            },
+            "children": []
+          },
+          {
+            "tag": "exclude",
+            "attrs": {
+              "domain": "file",
+              "path": "device_data/"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "device-transfer",
+        "attrs": {},
+        "children": [
+          {
+            "tag": "exclude",
+            "attrs": {
+              "domain": "sharedpref",
+              "path": "AppPreferences.xml"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "shortcuts.xml": {
+    "tag": "shortcuts",
+    "attrs": {},
+    "children": []
+  }
+}
