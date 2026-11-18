@@ -1,8 +1,8 @@
 # 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis
 **Target Infrastructure:** `high.kahfguard.com`, `medium.kahfguard.com`, `low.kahfguard.com`, `safety.kahfguard.com`  
 **Verification Method:** Rate-Limited (`>= 500ms` spacing, 28 total queries) Client-Side Wire-Format Inspection from Dhaka, Bangladesh  
-**Raw Evidence Dump:** [`05_evidence_dumps/dns_verification_results.json`](../04_evidence_dumps/dns_verification_results.json)  
-**Test Script:** [`04_automation_scripts/test_dns_resolvers.js`](../03_automation_scripts/test_dns_resolvers.js)
+**Raw Evidence Dump:** [`04_evidence_dumps/dns_verification_results.json`](../04_evidence_dumps/dns_verification_results.json)  
+**Test Script:** [`03_automation_scripts/test_dns_resolvers.js`](../03_automation_scripts/test_dns_resolvers.js)
 
 ---
 
@@ -34,7 +34,7 @@ From [`dns_verification_results.json:4-39`](../04_evidence_dumps/dns_verificatio
 ### Architectural Implications of Single-IP Hosting (`203.190.10.120`)
 1. **SNI-Based Tier Multiplexing on a Single Box:** Because all three hostnames resolve to the exact same IPv4 address (`203.190.10.120`), Kahf's `dnsdist` frontend inspects the TLS SNI (`high.kahfguard.com` vs `medium.kahfguard.com` vs `low.kahfguard.com`) on Port 853 to select the policy pool.
 2. **Unencrypted Port 53 Cannot Distinguish Tiers & Is Open to the Internet:** Both plain `UDP/53` (`57.52 ms`) and plain `TCP/53` (`77.37 ms`) are open on `203.190.10.120` ([`dns_verification_results.json:41-138`](../04_evidence_dumps/dns_verification_results.json#L41-L138)). Because plain DNS packets carry no TLS SNI or HTTP `Host` header, plain Port 53 traffic hits a single default pool and exposes queries to ISP deep-packet inspection (DPI) and transparent DNS hijacking.
-3. **Zero Redundancy / No Anycast Failover:** If `203.190.10.120` goes offline for maintenance or experiences a fiber cut at `AS58768`, Android's Private DNS enters a hard failure state across the user's phone—which in turn triggers Kahf Guard's `DnsSafetyManager` fail-open bug (Report 02, Section 3) and disables all app protections within 60 seconds!
+3. **Zero Redundancy / No Anycast Failover:** If `203.190.10.120` goes offline for maintenance or experiences a fiber cut at `AS58768`, Android's Private DNS enters a hard failure state across the user's phone—which in turn triggers Kahf Guard's `DnsSafetyManager` fail-open bug (Report 02, Section 3) and permanently disables DNS Change Prevention and Uninstall Prevention within ~5 seconds upon opening the app!
 
 ---
 
