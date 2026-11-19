@@ -1,9 +1,9 @@
-# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.1.2)
+# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.1.3)
 **Target Infrastructure:** `high.kahfguard.com`, `medium.kahfguard.com`, `low.kahfguard.com`, `safety.kahfguard.com`  
 **Verification Method:** Rate-Limited Client-Side Wire-Format DoT/DoH Inspection + Multi-Region EDNS Client Subnet (ECS) & `AAAA` Verification  
 **Raw Evidence Dump (Initial Dhaka Run):** [`04_evidence_dumps/dns_verification_results.json`](../04_evidence_dumps/dns_verification_results.json)  
 **Test Script:** [`03_automation_scripts/test_dns_resolvers.js`](../03_automation_scripts/test_dns_resolvers.js)  
-**Revision:** `v2.1.2` (Corrected single-IP/zero-IPv6 error in `v2.0`, fixed DNS tier DEX citations in `v2.1`, and corrected Dhaka RTT citation ranges in `v2.1.2` on Nov 19–20, 2026)
+**Revision:** `v2.1.3` (Corrected single-IP/zero-IPv6 error in `v2.0`, fixed DNS tier DEX citations in `v2.1`, and corrected Dhaka RTT citation ranges in `v2.1.2`–`v2.1.3` on Nov 19–20, 2026)
 
 ---
 

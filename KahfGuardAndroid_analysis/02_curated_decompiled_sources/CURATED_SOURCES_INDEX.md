@@ -1,4 +1,4 @@
-# Curated Decompiled Sources Index (v2.1.2)
+# Curated Decompiled Sources Index (v2.1.3)
 
 To keep this repository lightweight and focused strictly on verifiable forensic evidence, this folder includes:
 1. **All 128 unobfuscated `com/kahf/dns/**` classes** from `base.apk`.
@@ -10,7 +10,7 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 
 | Source File | Forensic Role & Evidence Summary |
 | :--- | :--- |
-| [`com/kahf/dns/KahfGuardApp.java`](./com/kahf/dns/KahfGuardApp.java) | Initializes Firebase/Crashlytics (`m3561e`), Meta SDK (`m3560d`), self-hosted PostHog (`m3563g`, sessionReplay left `false`) + initial `PRD` PostHog identity (`m3558b` → `ab9.m348e`), and schedules all background sync/analytics workers (`m3565i`). |
+| [`com/kahf/dns/KahfGuardApp.java`](./com/kahf/dns/KahfGuardApp.java) | Initializes Firebase/Crashlytics (`m3561e`), Meta SDK (`m3560d`), self-hosted PostHog (`m3563g`, sessionReplay left `false`) + initial `PRD` PostHog identity (`m3558b` → `ab9.m348e`), and schedules all background sync/analytics workers (`m3565i`). Note: `onCreate()` (lines 561–562) is PairIP-wrapped, while `m3557a()` → `m3561e()` → `Ltf6` is intact in DEX (also referenced at `Lgl;->invoke@307`). |
 | [`com/kahf/dns/p019ui/MainActivity.java`](./com/kahf/dns/p019ui/MainActivity.java) | `m5528t` (lines 585–605): sets the persistent `PRD<12-hex>` ID on Firebase Crashlytics (line 592), Firebase Analytics (line 597), and **Meta/Facebook `AnalyticsUserIDStore.setUserID`** (`AbstractC0093ce.m3061b`, line 604) whenever Google Play Services is available. |
 | [`com/kahf/dns/p015di/core/AndroidAnalyticsProviderFactory.java`](./com/kahf/dns/p015di/core/AndroidAnalyticsProviderFactory.java) | Returns `new qu1(new r54(), new ry3(), new n99())` (line 17). |
 | [`com/kahf/dns/p015di/core/AuthInterceptor.java`](./com/kahf/dns/p015di/core/AuthInterceptor.java) | Reads `preferencesHelper.getUniqueDeviceId()` (`PRD<12-hex>`) and attaches `X-Device-Id` + `app-name: kahf-guard` on every GraphQL request (lines 52–60, 110). |
@@ -29,7 +29,7 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/n99.java`](./p000/n99.java) | `PostHogAnalyticsProvider` implementation; extracts `email` & `name` in `setUserProperties` (lines 54–69) to identify logged-in users on Kahf's self-hosted PostHog. |
 | [`p000/f20.java`](./p000/f20.java) | Hardcoded PostHog API key (`phc_OmqCNJqYWGInDc1b3GQEGWDnPPIV6etPJ1bO7pLRL8N`) and Kahf's self-hosted PostHog URL (`https://p.kahf.co.uk`). |
 | [`p000/ab9.java`](./p000/ab9.java) | `PostHogIdentityManager`: computes `device_id_quality` and identifies PostHog with `PRD<12-hex>` on startup (`m348e`, lines 95–131). *(Does not configure session replay; config lives in `KahfGuardApp.m3563g`.)* |
-| [`p000/AbstractC0378gi.java`](./p000/AbstractC0378gi.java) | PostHog Android SDK `setup()` registering standard SDK integrations (`cd9` Replay — compiled-off in `v4.6.287`, `vd9` Touch — idle timer reset only, `gb9` LogCat — drops all lines when replay inactive), plus `m8670l()` returning `"https://id.kahf.co"`. |
+| [`p000/AbstractC0378gi.java`](./p000/AbstractC0378gi.java) | PostHog Android SDK `setup()` registering standard SDK integrations (`cd9` Replay — compiled-off in `v4.6.287`, `vd9` Touch — branch 0 of R8-merged `Lxc9;->a` resets idle timer only while branch 1 `cd9` `MotionEvent.obtain` is dead code behind `sessionReplay = false`, `gb9` LogCat — drops all lines when replay inactive), plus `m8670l()` returning `"https://id.kahf.co"`. |
 | [`p000/gb9.java`](./p000/gb9.java) | Standard `posthog-android` `PostHogLogCatIntegration` (`logcat -v epoch -T <ts> *:E`); inactive/discarded when session replay is off. |
 | [`p000/tu2.java`](./p000/tu2.java) | Standard `posthog-android` logcat reader thread; checks `isSessionReplayActive()` (`Lcb9;->c`) on every line and drops output when replay is disabled. |
 | [`p000/sxc.java`](./p000/sxc.java) | `UniqueUserIdManager` (`m18373c`): generates persistent 48-bit `PRD<12-hex>` fingerprint from `Settings.Secure.ANDROID_ID` + 7 `Build.*` hardware constants (`"aid:<android_id>|bld:<build_info>"`), backs up to `files/device_data/device_id.dat`, and checks `AD_ID` / `READ_PHONE_STATE` (`m18372a`). |
@@ -62,14 +62,14 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/gt5.java`](./p000/gt5.java) | `NetworkCallback.onLinkPropertiesChanged` listener triggering Private DNS backend sync. |
 | [`p000/yc3.java`](./p000/yc3.java) | Deduplicates and reports `LAST_REPORTED_DNS` to backend. |
 | [`p000/cd3.java`](./p000/cd3.java) | Syncs current Private DNS hostname via `UpdateDeviceDnsSettingsMutation`. |
-| [`p000/nb3.java`](./p000/nb3.java) | `DnsSafetyManager` (`m14124a`): determines if Private DNS is failing and logs `DiagnosticRun` analytics with `last_known_ip` (line 191, fanned out to PostHog, Firebase, and Meta). |
+| [`p000/nb3.java`](./p000/nb3.java) | `DnsSafetyManager` (`m14124a`): checks Kahf DNS substring (line 269), determines if Private DNS is failing, and logs `DiagnosticRun` analytics with `last_known_ip` (line 191; `AnalyticsEvent.java:6880` param #4, surviving Firebase/Meta's 25-parameter SDK cap). |
 | [`p000/m48.java`](./p000/m48.java) | Network & DNS diagnostic engine (`m13149o`): checks SIM/MCC (`470`), `1.1.1.1:443` TCP, `google.com`, `forcesafesearch.google.com`, and `thequran.com`. |
 | [`p000/C0717pp.java`](./p000/C0717pp.java) | Direct TCP socket connectivity probe (`new InetSocketAddress("1.1.1.1", 443)` with 3,000ms timeout, lines 176–180). |
 | [`p000/i48.java`](./p000/i48.java) | Coroutine tasks for DNS bootstrap & canary resolution (`high/medium/low.kahfguard.com`, `thequran.com`, `forcesafesearch.google.com`). |
 | [`p000/j48.java`](./p000/j48.java) | Parallel coroutine runner for DNS verification layers. |
 | [`p000/oa3.java`](./p000/oa3.java) | `DnsDiagnosticResult` payload model (`f29956o` = `hasPrivateDnsIssue`). |
 | [`p000/wo9.java`](./p000/wo9.java) | `ProtectionControlVM`: on local device (`!m21556N()`, line 324), launches DNS safety check (`zl9` → `C0890ud.m19549l`) upon opening the Protection screen. |
-| [`p000/C0890ud.java`](./p000/C0890ud.java) | Executes `nb3.m14124a()` (`m19549l`) and invokes `nm9` (logging `current_ip` in `DnsSafetyDisable`) when `isDnsUnsafe` returns `true`. |
+| [`p000/C0890ud.java`](./p000/C0890ud.java) | Executes `nb3.m14124a()` (`m19549l`), builds the `networkDetails` map containing `current_ip` (lines 238, 257), and invokes `nm9` (`DnsSafetyDisable`, 8 params in `AnalyticsEvent.java:7245, 7324-7332`, surviving Firebase/Meta's 25-param cap) when `isDnsUnsafe` returns `true`. |
 | [`p000/nm9.java`](./p000/nm9.java) | Coroutine that logs `"Disabling protections due to internet connectivity issues with Kahf DNS"` and disables Accessibility-based `pref_dns_change_prevention_enabled` and `pref_uninstall_prevention_enabled` (leaving Device Admin `super_uninstall_protection` intact if enabled). |
 | [`p000/jd2.java`](./p000/jd2.java) | `CountryDetector`: queries `ipwho.is`, `freeipapi.com`, `db-ip.com`, and `ipinfo.io` to detect user country. |
 | [`p000/C0957w6.java`](./p000/C0957w6.java) | Contains the 7-service Public IP walker (`ipify`, `myip`, `checkip.amazonaws`, `ip.sb`, `icanhazip`, `ipecho`, `ipinfo`) and clipboard copy logic. |

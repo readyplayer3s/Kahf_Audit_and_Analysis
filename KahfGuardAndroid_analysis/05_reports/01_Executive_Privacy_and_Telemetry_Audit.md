@@ -1,9 +1,9 @@
-# 01 — Executive Privacy, Tracker & Telemetry Forensic Audit (v2.1.2)
+# 01 — Executive Privacy, Tracker & Telemetry Forensic Audit (v2.1.3)
 **Target Application:** Kahf Guard (`com.kahf.dns`)  
 **Version Audited:** `versionName: "4.6.287"` (`versionCode: 361`, Git Commit: `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`)  
 **Target SDK / Min SDK:** `targetSdkVersion: 37` / `minSdkVersion: 32` (Android 12L+)  
 **Audit Posture:** Defensive Client-Side Static Forensic Verification (Raw DEX Dalvik bytecode inspection + `jadx 1.5.1` + `apktool 2.11.1`)  
-**Revision:** `v2.1.2` (Re-verified against `classes.dex` / `classes2.dex`, `res/xml/*`, and Kahf's exact Privacy Policy text on Nov 19–20, 2026)
+**Revision:** `v2.1.3` (Re-verified against `classes.dex` / `classes2.dex`, `res/xml/*`, and Kahf's exact Privacy Policy text on Nov 19–20, 2026)
 
 ---
 
