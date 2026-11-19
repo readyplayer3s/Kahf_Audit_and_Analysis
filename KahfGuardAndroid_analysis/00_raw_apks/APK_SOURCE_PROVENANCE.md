@@ -3,7 +3,10 @@
 ## Acquisition Hardware & Method
 - **Application Name:** Kahf Guard (`com.kahf.dns`)
 - **Version:** `4.6.287` (`versionCode: 361`)
-- **Git Revision (from `res/values/strings.xml`):** `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`
+- **Git Revision (from `res/values/strings.xml` `com.google.firebase.crashlytics.version_control_info` & `META-INF/version-control-info.textproto`):** `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`
+- **APK Signature Scheme v2/v3 Signing Certificate (`base.apk`):**
+  - **Subject / Issuer:** `C=US, ST=California, L=Mountain View, O=Google Inc., OU=Android, CN=Android`
+  - **Certificate SHA-256:** `95:25:27:C7:16:01:DC:C2:0A:95:0F:99:D0:76:32:EC:DB:FC:01:9D:F4:1D:8E:47:D4:B7:06:CC:20:1A:2B:6A`
 - **Source Store:** Official Google Play Store
 - **Test Device:** OnePlus Nord CE5 (ARM64-v8a, XXHDPI density, English locale)
 - **Extraction Method:** Unmodified split APK bundle pulled directly from the physical device over USB Debugging via Android Debug Bridge (`adb`):

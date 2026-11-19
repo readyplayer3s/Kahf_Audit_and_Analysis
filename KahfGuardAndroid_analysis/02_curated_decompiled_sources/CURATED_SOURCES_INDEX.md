@@ -1,4 +1,4 @@
-# Curated Decompiled Sources Index (v2.1.3)
+# Curated Decompiled Sources Index (v2.1.4)
 
 To keep this repository lightweight and focused strictly on verifiable forensic evidence, this folder includes:
 1. **All 128 unobfuscated `com/kahf/dns/**` classes** from `base.apk`.
@@ -18,6 +18,8 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`com/kahf/dns/features/guards/service/AccessibilityMonitorService.java`](./com/kahf/dns/features/guards/service/AccessibilityMonitorService.java) | Foreground service monitoring accessibility health (`50000ms` grace / `300000ms` check); contains **no** 60-second DNS unlock loop. |
 | [`com/kahf/dns/features/user/InstalledAppsSyncWorker.java`](./com/kahf/dns/features/user/InstalledAppsSyncWorker.java) | Schedules/executes installed app inventory (`l74` case 1) and VPN app metadata sync (`m3841e` → `b53.m1658e`). |
 | [`com/kahf/dns/features/app_usage/AppUsageSyncWorker.java`](./com/kahf/dns/features/app_usage/AppUsageSyncWorker.java) | Schedules/executes hourly app usage (`PACKAGE_USAGE_STATS`) and `Browsing Reports` (`fdb`) GraphQL uploads for logged-in accounts. Raw DEX (`Lx00;->invokeSuspend@1445-1568`) checks `isChildDevice()` (`Ls4c;->g()`) + `ro.kahf.rom == "1"` **only** when `inputData["kahf_cadence"] == true`; on the standard 6-hour periodic schedule unconditionally registered by `KahfGuardApp.m3565i()` (`Lsy0;->x0`), `kahf_cadence` is `false` and the check is bypassed for all logged-in accounts (adult or child). |
+| [`com/kahf/dns/core/analytics/AnalyticsEvent.java`](./com/kahf/dns/core/analytics/AnalyticsEvent.java) | Defines analytics event schemas fanned out via `qu1`: `DiagnosticRun` (`lines 6875-6893`, `LAST_KNOWN_IP` at line `6880` param `#4`), `DnsSafetyDisable` (`lines 7245, 7324-7332`, 8 params), `PostDnsSetDiagnosticEvent.Check` (`lines 9801-9819`, `LAST_KNOWN_IP` at line `9807` param `#4`, invoked in `Lwj2;->invokeSuspend@246`), and `MindfulPauseEvent` (`lines 8992-9236`, sending third-party `package_name`, `opens_in_window`, `daily_limit`, `duration_seconds`, invoked in `Lhe6;->invoke` & `Lir9;->b`). |
+| [`com/kahf/dns/services/AndroidNotificationService.java`](./com/kahf/dns/services/AndroidNotificationService.java) | Firebase Cloud Messaging handler (`lines 807-848`) routing silent FCM push triggers (`installed_apps_sync`, `app_usage_sync`, `PermissionSync`, `MetadataSync`, `DnsSync`, `BlockCountsSync`, `Restriction`, `SupervisionUpdate`, `DeviceAlert`) — disclosed in Kahf's Privacy Policy ("FCM-triggered data collection"). |
 
 ## R8-Obfuscated Class Mapping (`p000/*.java`)
 

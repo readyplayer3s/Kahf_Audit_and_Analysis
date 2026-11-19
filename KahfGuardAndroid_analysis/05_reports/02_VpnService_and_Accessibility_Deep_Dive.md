@@ -1,7 +1,7 @@
-# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1.3)
+# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1.4)
 **Target Application:** Kahf Guard (`com.kahf.dns` v4.6.287, `versionCode: 361`)  
 **Components Audited:** `AndroidManifest.xml`, `res/values/strings.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
-**Revision:** `v2.1.3` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, `C0969wi.java`, `strings.xml`, `res/xml/*`, and raw DEX on Nov 19–20, 2026)
+**Revision:** `v2.1.4` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, `C0969wi.java`, `strings.xml`, `res/xml/*`, and raw DEX on Nov 19–20, 2026)
 
 ---
 
