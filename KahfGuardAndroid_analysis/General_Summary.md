@@ -1,6 +1,6 @@
 # Plain-Language Summary — Kahf Guard Android (`v4.6.287`) Audit (v2.1)
 
-> **v2.0 → v2.1 Correction Notice:** The initial v1.0 version of this summary contained confirmation-biased framing (describing Kahf Guard as "spyware" and overstating PostHog, Accessibility, and DNS findings). It was rewritten in `v2.0` and refined in `v2.1` after independent bytecode verification to reflect **strictly verified bytecode and multi-region DNS facts**.
+> **v2.0 → v2.1 Correction Notice:** The initial v1.0 version of this summary contained confirmation-biased framing (describing Kahf Guard as "spyware" and overstating PostHog, Accessibility, and DNS findings). It was rewritten in `v2.0` and refined in `v2.1` after a follow-up DEX bytecode cross-check to reflect **strictly verified bytecode and multi-region DNS facts**.
 
 ---
 

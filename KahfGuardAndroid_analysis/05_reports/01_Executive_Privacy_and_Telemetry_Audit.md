@@ -3,7 +3,7 @@
 **Version Audited:** `versionName: "4.6.287"` (`versionCode: 361`, Git Commit: `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`)  
 **Target SDK / Min SDK:** `targetSdkVersion: 37` / `minSdkVersion: 32` (Android 12L+)  
 **Audit Posture:** Defensive Client-Side Static Forensic Verification (Raw DEX Dalvik bytecode inspection + `jadx 1.5.1` + `apktool 2.11.1`)  
-**Revision:** `v2.1` (Re-verified against `classes.dex` / `classes2.dex` and Kahf's Privacy Policy, plus independent third-party verification refinements on Nov 19, 2026)
+**Revision:** `v2.1` (Re-verified against `classes.dex` / `classes2.dex` and Kahf's Privacy Policy, with follow-up citation and nuance refinements on Nov 19, 2026)
 
 ---
 

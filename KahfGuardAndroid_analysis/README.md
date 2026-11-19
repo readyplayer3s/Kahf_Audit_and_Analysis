@@ -3,7 +3,7 @@
 > **Target Application:** Kahf Guard (`com.kahf.dns`)  
 > **Version Audited:** `4.6.287` (`versionCode: 361`, Git Commit: `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`)  
 > **APK Provenance:** Downloaded via official Google Play Store on a **OnePlus Nord CE5** and extracted directly from the device via `adb pull` ([see full SHA-256 chain of custody](./00_raw_apks/APK_SOURCE_PROVENANCE.md)).  
-> **Revision:** `v2.1` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode & multi-region DNS/DoH, plus independent third-party citation/nuance review on Nov 19, 2026).
+> **Revision:** `v2.1` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode & multi-region DNS/DoH, with citation and nuance refinements on Nov 19, 2026).
 
 ---
 
