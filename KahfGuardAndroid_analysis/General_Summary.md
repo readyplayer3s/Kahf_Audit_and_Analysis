@@ -1,6 +1,6 @@
-# Plain-Language Summary — Kahf Guard Android (`v4.6.287`) Audit (v2.0)
+# Plain-Language Summary — Kahf Guard Android (`v4.6.287`) Audit (v2.1)
 
-> **v2.0 Correction Notice:** The initial version of this summary contained confirmation-biased framing (describing Kahf Guard as "spyware" and overstating PostHog, Accessibility, and DNS findings). It has been rewritten below to reflect **strictly verified bytecode and multi-region DNS facts**.
+> **v2.0 → v2.1 Correction Notice:** The initial v1.0 version of this summary contained confirmation-biased framing (describing Kahf Guard as "spyware" and overstating PostHog, Accessibility, and DNS findings). It was rewritten in `v2.0` and refined in `v2.1` after independent bytecode verification to reflect **strictly verified bytecode and multi-region DNS facts**.
 
 ---
 
@@ -16,13 +16,13 @@
 ## Verified Privacy & Security Concerns That *Do* Stand
 
 ### 1. Mandatory Triple-SDK Telemetry & Zero Opt-Out
-Every in-app event, screen view, and a **62-field daily device/protection snapshot** (`rp9.java`) is fanned out simultaneously (`qu1.java`) to **Google Firebase**, **Meta/Facebook Business SDK** (`AutoLogAppEventsEnabled=true`, `AdvertiserIDCollectionEnabled=true`), and Kahf's self-hosted **PostHog** (`p.kahf.co.uk`). There is **no in-app opt-out toggle**; Kahf's Privacy Policy states the only way to stop collection is to uninstall the app.
+Every in-app event, screen view, and a **62-field daily device/protection snapshot** (`rp9.java`) is fanned out simultaneously (`qu1.java`) to **Google Firebase**, **Meta/Facebook Business SDK** (`AutoLogAppEventsEnabled=true`, `AdvertiserIDCollectionEnabled=true`), and Kahf's self-hosted **PostHog** (`p.kahf.co.uk`). *(Note: Firebase Analytics and Meta App Events enforce a 25-parameter-per-event cap and truncate/drop excess fields on the 62-field snapshot, whereas self-hosted PostHog receives all 62 fields.)* There is **no in-app opt-out toggle**; Kahf's Privacy Policy states the only way to stop collection is to uninstall the app.
 
 ### 2. Undisclosed Persistent Hardware Fingerprint (`PRD<12-hex>`) Sent to Meta
 Even when **logged out**, `sxc.java` hashes `ANDROID_ID` + 7 `Build.*` hardware properties into a non-resettable `PRD<12-hex>` ID (backed up to `files/device_data/device_id.dat`). On app launch, this ID is sent to PostHog (`KahfGuardApp` → `ab9.m348e`), attached to every GraphQL request (`AuthInterceptor` `X-Device-Id`), and—when Play Services is present—passed by `MainActivity.m5528t` (`MainActivity.java:604`) to Firebase and **Meta's `AnalyticsUserIDStore.setUserID`**, which Meta's SDK sends as **`"app_user_id"`**. Resetting Android's Advertising ID (GAID) does **not** reset this fingerprint, and it is not disclosed in Kahf's Privacy Policy (which claims *"Only aggregated, anonymized data"* is sent to external services). In addition, DNS diagnostic/fail-open events (`DiagnosticRun`, `DnsSafetyDisable`) fan out the user's **public IP** to all three analytics SDKs.
 
 ### 3. Installed App List & Usage Sync Applies to Adult Accounts Too
-Kahf's Privacy Policy states: *"On Child Device, we get the App List & Screen-time for Parents to see."* In code, `InstalledAppsSyncWorker` (`l74.java:230-241`) and `AppUsageSyncWorker` contain **no `isChildDevice()` check**. Any **logged-in account (adult or child)** automatically syncs its complete installed app inventory (via manifest `QUERY_ALL_PACKAGES`, no runtime permission required) and installed VPN apps to `https://id.kahf.co/graphql`. If a logged-in adult grants `Usage Access` to view their own screen time, hourly app usage also uploads to the server.
+Kahf's Privacy Policy states: *"On Child Device, we get the App List & Screen-time for Parents to see."* In code, `InstalledAppsSyncWorker` (`l74.java:230-241`) has **zero `isChildDevice()` check**, and `AppUsageSyncWorker` (`Lx00`) only checks `isChildDevice()` on the Kahf-ROM `"kahf_cadence"` branch—bypassing it completely on the standard 6-hour periodic schedule for all logged-in accounts (adult or child). Any **logged-in account (adult or child)** automatically syncs its complete installed app inventory (via manifest `QUERY_ALL_PACKAGES`, no runtime permission required) and installed VPN apps to `https://id.kahf.co/graphql`. If a logged-in adult grants `Usage Access` to view their own screen time, hourly app usage also uploads to the server on the standard 6-hour schedule.
 
 ### 4. DNS Filtering Nuances & Fail-Open Parental Control Bypass
 - **YouTube Comments:** `high.kahfguard.com` rewrites `www.youtube.com` to `216.239.38.120` (`restrict.youtube.com`), disabling YouTube comments globally.

@@ -1,4 +1,4 @@
-# Curated Decompiled Sources Index (v2.0)
+# Curated Decompiled Sources Index (v2.1)
 
 To keep this repository lightweight and focused strictly on verifiable forensic evidence, this folder includes:
 1. **All 128 unobfuscated `com/kahf/dns/**` classes** from `base.apk`.
@@ -17,7 +17,7 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`com/kahf/dns/features/guards/service/KahfBlockerService.java`](./com/kahf/dns/features/guards/service/KahfBlockerService.java) | Core `AccessibilityService`: defines target app sets (`f6289u0`–`f6291w0`, lines 174–180 — note Messenger is *not* included), loads opt-in toggles defaulting to `false` (`m3789L`, lines 905–1012), runs local RAM Risky Word Block (lines 3549–3626, increments counters only in `m3806t`), and scrapes browser URL bars when enabled. |
 | [`com/kahf/dns/features/guards/service/AccessibilityMonitorService.java`](./com/kahf/dns/features/guards/service/AccessibilityMonitorService.java) | Foreground service monitoring accessibility health (`50000ms` grace / `300000ms` check); contains **no** 60-second DNS unlock loop. |
 | [`com/kahf/dns/features/user/InstalledAppsSyncWorker.java`](./com/kahf/dns/features/user/InstalledAppsSyncWorker.java) | Schedules/executes installed app inventory (`l74` case 1) and VPN app metadata sync (`m3841e` → `b53.m1658e`). |
-| [`com/kahf/dns/features/app_usage/AppUsageSyncWorker.java`](./com/kahf/dns/features/app_usage/AppUsageSyncWorker.java) | Schedules/executes hourly app usage (`PACKAGE_USAGE_STATS`) and `Browsing Reports` (`fdb`) GraphQL uploads for logged-in accounts (no `isChildDevice()` gate). |
+| [`com/kahf/dns/features/app_usage/AppUsageSyncWorker.java`](./com/kahf/dns/features/app_usage/AppUsageSyncWorker.java) | Schedules/executes hourly app usage (`PACKAGE_USAGE_STATS`) and `Browsing Reports` (`fdb`) GraphQL uploads for logged-in accounts. Raw DEX (`Lx00;->invokeSuspend@1445-1568`) checks `isChildDevice()` (`Ls4c;->g()`) + `ro.kahf.rom == "1"` **only** when `inputData["kahf_cadence"] == true`; on the standard 6-hour periodic schedule unconditionally registered by `KahfGuardApp.m3565i()` (`Lsy0;->x0`), `kahf_cadence` is `false` and the check is bypassed for all logged-in accounts (adult or child). |
 
 ## R8-Obfuscated Class Mapping (`p000/*.java`)
 
@@ -52,11 +52,11 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/nl3.java`](./p000/nl3.java) | Serializer for `SiteVisitHourInput` (`host`, `hour`, `visits`, `blocked`, `activeSeconds`). |
 | [`p000/xcb.java`](./p000/xcb.java) | `SiteVisitRecorder`: records domain names and active foreground duration into Room SQLite for 35 days when `pref_browsing_report_enabled` is `true`. |
 | [`p000/fdb.java`](./p000/fdb.java) | `SiteVisitUploader`: batches up to 34 days of dirty `site_visit` rows (up to 1,976 hosts/day) for GraphQL upload. |
-| [`p000/bcb.java`](./p000/bcb.java) | Extracts normalized domain names (stripping paths/queries) from browser URL bar text. |
-| [`p000/gd7.java`](./p000/gd7.java) | Browser URL bar node extractor (`m8530G`, lines 83+) scanning up to 100 visible `AccessibilityNodeInfo` nodes for known URL bar view IDs. |
+| [`p000/bcb.java`](./p000/bcb.java) | Validates and IDN/lowercase-normalizes already-extracted domain hosts (`m1876a`, lines 27–76 of 77 lines; initial URL-to-host stripping is performed by `gd7.m8571v`). |
+| [`p000/gd7.java`](./p000/gd7.java) | Browser URL bar node extractor (`m8530G`, lines 83+) scanning up to 100 visible `AccessibilityNodeInfo` nodes for known URL bar view IDs, and stripping full URL paths/queries to a host via `m8571v` (line 1413) before calling `bcb.m1876a`. |
 | [`p000/hge.java`](./p000/hge.java) | Local in-RAM risky keyword matcher (`m9467n`) and Android Settings / Private DNS / Uninstall UI detector. |
-| [`p000/a13.java`](./p000/a13.java) | Constants: URL bar resource IDs (`f55e`, line 40), `low/medium/high.kahfguard.com` (`f56f`, line 108), Private DNS & Uninstall UI lock strings (`f58h`–`f61k`), and built-in risky word list (`f50C`, lines 202–205). |
-| [`p000/qa3.java`](./p000/qa3.java) | Protection tier enum mapping `HIGH` → `high.kahfguard.com`, `MEDIUM` → `medium.kahfguard.com`, `LOW` → `low.kahfguard.com`. |
+| [`p000/a13.java`](./p000/a13.java) | Constants: URL bar resource IDs (`f55e`, line 40), `low/medium/high.kahfguard.com` (`f56f`, line 108 — also referenced in raw DEX by `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`), Private DNS & Uninstall UI lock strings (`f58h`–`f61k`), and built-in risky word list (`f50C`, lines 202–205). |
+| [`p000/qa3.java`](./p000/qa3.java) | `DnsDiagnosticTask` (`implements az8`, lines 12–426): coordinates Private DNS diagnostic execution. *(v2.1 correction: `qa3` is not the DNS tier hostname enum; `high`/`medium`/`low.kahfguard.com` are defined/referenced in `a13.java:108` (`f56f`), `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`.)* |
 | [`p000/C0969wi.java`](./p000/C0969wi.java) | Reads active Android Private DNS hostname via `ConnectivityManager.getLinkProperties().getPrivateDnsServerName()`. |
 | [`p000/ti9.java`](./p000/ti9.java) | Registers `DefaultNetworkCallback` to monitor Private DNS changes. |
 | [`p000/gt5.java`](./p000/gt5.java) | `NetworkCallback.onLinkPropertiesChanged` listener triggering Private DNS backend sync. |
@@ -74,5 +74,5 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/jd2.java`](./p000/jd2.java) | `CountryDetector`: queries `ipwho.is`, `freeipapi.com`, `db-ip.com`, and `ipinfo.io` to detect user country. |
 | [`p000/C0957w6.java`](./p000/C0957w6.java) | Contains the 7-service Public IP walker (`ipify`, `myip`, `checkip.amazonaws`, `ip.sb`, `icanhazip`, `ipecho`, `ipinfo`) and clipboard copy logic. |
 | [`p000/C1061z.java`](./p000/C1061z.java) | Caches and coordinates public IP resolution. |
-| [`p000/tk2.java`](./p000/tk2.java) | Executes `DailyStatusTask` and dispatches the 62-field daily status snapshot to PostHog (`$set`) and `AnalyticsEvent.DailyStatusEvent.Snapshot` (fanned out to Firebase, Meta, and PostHog). |
+| [`p000/tk2.java`](./p000/tk2.java) | Executes `DailyStatusTask` and dispatches the 62-field daily status snapshot to PostHog (`$set`) and `AnalyticsEvent.DailyStatusEvent.Snapshot` (fanned out to Firebase, Meta, and PostHog; Firebase/Meta enforce a 25-parameter-per-event SDK cap while self-hosted PostHog receives all 62). |
 | [`p000/rp9.java`](./p000/rp9.java) | Builds the **62-field** daily device configuration, permission, prayer silence, and per-app block counter map (`line 789` / `line 840`). |

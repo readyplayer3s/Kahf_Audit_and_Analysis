@@ -1,9 +1,9 @@
-# Kahf Guard Android (`com.kahf.dns` v4.6.287) — Technical Privacy, Network & Security Audit (v2.0)
+# Kahf Guard Android (`com.kahf.dns` v4.6.287) — Technical Privacy, Network & Security Audit (v2.1)
 
 > **Target Application:** Kahf Guard (`com.kahf.dns`)  
 > **Version Audited:** `4.6.287` (`versionCode: 361`, Git Commit: `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`)  
 > **APK Provenance:** Downloaded via official Google Play Store on a **OnePlus Nord CE5** and extracted directly from the device via `adb pull` ([see full SHA-256 chain of custody](./00_raw_apks/APK_SOURCE_PROVENANCE.md)).  
-> **Revision:** `v2.0` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode & multi-region DNS/DoH on Nov 19, 2026).
+> **Revision:** `v2.1` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode & multi-region DNS/DoH, plus independent third-party citation/nuance review on Nov 19, 2026).
 
 ---
 
@@ -16,7 +16,7 @@ This directory contains the static reverse-engineering evidence and live client-
 ### Key Verified Findings
 
 1. **Mandatory Triple-SDK Analytics Fan-Out & Zero Opt-Out (Firebase + Meta/Facebook + Self-Hosted PostHog):**
-   - [`AndroidAnalyticsProviderFactory.java`](./02_curated_decompiled_sources/com/kahf/dns/p015di/core/AndroidAnalyticsProviderFactory.java#L16-L18) wires `new qu1(new r54(), new ry3(), new n99())` ([`qu1.java`](./02_curated_decompiled_sources/p000/qu1.java#L31-L82)), dispatching app events, screen views, and a daily **62-field** device/protection status snapshot ([`rp9.java`](./02_curated_decompiled_sources/p000/rp9.java#L789)) simultaneously to **Google Firebase** ([`r54.java`](./02_curated_decompiled_sources/p000/r54.java)), **Meta/Facebook Graph API** ([`ry3.java`](./02_curated_decompiled_sources/p000/ry3.java), `AppId: 1121274686010716`, `AutoLogAppEventsEnabled=true`, `AdvertiserIDCollectionEnabled=true`), and Kahf's **self-hosted PostHog** server (`https://p.kahf.co.uk`, [`f20.java`](./02_curated_decompiled_sources/p000/f20.java#L10-L19)).
+   - [`AndroidAnalyticsProviderFactory.java`](./02_curated_decompiled_sources/com/kahf/dns/p015di/core/AndroidAnalyticsProviderFactory.java#L16-L18) wires `new qu1(new r54(), new ry3(), new n99())` ([`qu1.java`](./02_curated_decompiled_sources/p000/qu1.java#L31-L82)), dispatching app events, screen views, and a daily **62-field** device/protection status snapshot ([`rp9.java`](./02_curated_decompiled_sources/p000/rp9.java#L789)) simultaneously to **Google Firebase** ([`r54.java`](./02_curated_decompiled_sources/p000/r54.java)), **Meta/Facebook Graph API** ([`ry3.java`](./02_curated_decompiled_sources/p000/ry3.java), `AppId: 1121274686010716`, `AutoLogAppEventsEnabled=true`, `AdvertiserIDCollectionEnabled=true`), and Kahf's **self-hosted PostHog** server (`https://p.kahf.co.uk`, [`f20.java`](./02_curated_decompiled_sources/p000/f20.java#L10-L19)). *(SDK cap note: while `tk2` dispatches all 62 fields to all three providers, Firebase Analytics and Meta App Events enforce a 25-parameter-per-event limit and truncate/drop excess parameters in practice, whereas self-hosted PostHog receives all 62 fields plus `$set` properties.)*
    - There is **zero in-app opt-out toggle**; Kahf's Privacy Policy explicitly states that the only way to stop data collection is to uninstall the app.
    - **Self-Hosted PostHog Clarification (v2.0 Correction):** `p.kahf.co.uk` resolves to Kahf's own Hetzner host (`large1.kahf.co.uk` → `157.180.4.107`), not PostHog Cloud (disclosed in Kahf's Privacy Policy). Raw DEX verification (`Ly3c;->p@360,402` → `Lk99;->z@37` → `Lcd9;->r` & `Lbp;->run@58-62`) confirms **PostHog Session Replay is compiled-off (`false`)** in `v4.6.287` (even remote config cannot enable it without an app update), `PostHogTouchActivityIntegration` (`vd9`) only resets the session idle timer, and `PostHogLogCatIntegration` (`gb9`/`tu2`) discards all log lines while replay is inactive. Logged-in user `email` and `name` are sent to self-hosted PostHog ([`n99.java`](./02_curated_decompiled_sources/p000/n99.java#L54-L69)), not Firebase or Meta.
 
@@ -27,7 +27,7 @@ This directory contains the static reverse-engineering evidence and live client-
 
 3. **Installed App Inventory & Hourly Usage Sync Not Restricted to Child Devices (`https://id.kahf.co/graphql`):**
    - Kahf's Privacy Policy states: *"On Child Device, we get the App List & Screen-time for Parents to see."*
-   - In code, neither `InstalledAppsSyncWorker` ([`l74.java`](./02_curated_decompiled_sources/p000/l74.java#L222-L316)) nor `AppUsageSyncWorker` checks `isChildDevice()`. Because standard login registers `device_mongodb_id` (`Lcf0;->k` → `v` → `z`), **any logged-in account (adult or child)** automatically uploads its **full installed app list** (`QUERY_ALL_PACKAGES`, no runtime permission needed) and **installed VPN apps** ([`C0602ml.java`](./02_curated_decompiled_sources/p000/C0602ml.java#L155-L184), [`b53.java`](./02_curated_decompiled_sources/p000/b53.java#L267-L365)) to `id.kahf.co/graphql`. If a logged-in adult grants `Usage Access` (`PACKAGE_USAGE_STATS`) for self-use features (*App Usage / Screen Time Limits*), hourly per-app usage also syncs to the server.
+   - In code, `InstalledAppsSyncWorker` ([`l74.java`](./02_curated_decompiled_sources/p000/l74.java#L222-L316)) has **zero `isChildDevice()` check**, and `AppUsageSyncWorker` (`Lx00`) only checks `isChildDevice()` (`Ls4c;->g()`) + `ro.kahf.rom == "1"` on the Kahf-ROM `"kahf_cadence"` branch—bypassing that gate entirely on the standard 6-hour periodic schedule unconditionally registered by `KahfGuardApp.m3565i()` (`Lsy0;->x0`). Because standard adult (`FAMILY`/`ORG`) sign-ins register and save `device_mongodb_id` (`Lcf0;->k@881` → `Lfj7;->m` → `v` → `z`), **any logged-in account (adult or child)** automatically uploads its **full installed app list** (`QUERY_ALL_PACKAGES`, no runtime permission needed) and **installed VPN apps** ([`C0602ml.java`](./02_curated_decompiled_sources/p000/C0602ml.java#L155-L184), [`b53.java`](./02_curated_decompiled_sources/p000/b53.java#L267-L365)) to `id.kahf.co/graphql`. If a logged-in adult grants `Usage Access` (`PACKAGE_USAGE_STATS`) for self-use features (*App Usage / Screen Time Limits*), hourly per-app usage also syncs to the server on the standard 6-hour schedule.
    - **Opt-In Clarifications:** `Risky Word Block` (`pref_risky_word_block_enabled`, default `false`) scans text locally in RAM and uploads zero chat content. `Browsing Reports` (`pref_browsing_report_enabled`, default `false`) extracts **domain names only** (`example.com`, not full URLs or searches), retains them locally for 35 days (`site_visit`), and uploads up to 34 days via `UpdateDeviceSiteVisits` ([`fdb.java`](./02_curated_decompiled_sources/p000/fdb.java#L63-L295), [`y0d.java`](./02_curated_decompiled_sources/p000/y0d.java#L45-L67)).
 
 4. **Zero Local `VpnService` & The "DNS Safety Mechanism" Fail-Open Bypass:**
@@ -51,7 +51,7 @@ KahfGuardAndroid_analysis/
 │   └── CURATED_SOURCES_INDEX.md        # Maps obfuscated p000/*.java classes to their exact roles
 ├── 03_automation_scripts/              # Standalone Node.js static analysis & DNS verification scripts
 ├── 04_evidence_dumps/                  # Structured JSON outputs from static & DNS verification
-└── 05_reports/                         # Full Technical Audit Reports (v2.0)
+└── 05_reports/                         # Full Technical Audit Reports (v2.1)
     ├── 01_Executive_Privacy_and_Telemetry_Audit.md
     ├── 02_VpnService_and_Accessibility_Deep_Dive.md
     └── 03_DNS_Infrastructure_and_Failproof_Analysis.md

@@ -1,7 +1,7 @@
-# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.0)
+# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1)
 **Target Application:** Kahf Guard (`com.kahf.dns` v4.6.287, `versionCode: 361`)  
 **Components Audited:** `AndroidManifest.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
-**Revision:** `v2.0` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, and raw DEX on Nov 19, 2026)
+**Revision:** `v2.1` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, and raw DEX on Nov 19, 2026)
 
 ---
 
@@ -23,7 +23,7 @@ A primary hypothesis entering this audit was that Kahf Guard—like RethinkDNS, 
 
 ### 1.2 How Kahf Guard Configures DNS: Manual Android System Private DNS (DoT)
 Kahf Guard intentionally uses Android's built-in Private DNS (DoT) rather than a local VPN (avoiding Android's single-VPN slot conflict, banking-app VPN warnings, and OEM background-kill issues). Because non-Device-Owner apps cannot write Private DNS programmatically:
-1. The app copies one of three hardcoded **DNS-over-TLS (DoT)** hostnames to the clipboard ([`qa3.java:18-45`](../02_curated_decompiled_sources/p000/qa3.java#L18-L45), [`a13.java:108`](../02_curated_decompiled_sources/p000/a13.java#L108)):
+1. The app copies one of three hardcoded **DNS-over-TLS (DoT)** hostnames to the clipboard ([`a13.java:108`](../02_curated_decompiled_sources/p000/a13.java#L108) `f56f`, plus raw DEX `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`):
    - **Strong Protection (`HIGH`):** `high.kahfguard.com`
    - **Moderate Protection (`MEDIUM`):** `medium.kahfguard.com`
    - **Weak Protection (`LOW`):** `low.kahfguard.com`
@@ -62,7 +62,7 @@ When the opt-in `"Risky Word Block"` (`pref_risky_word_block_enabled`, default `
 ### 2.3 Opt-In Browser URL Bar Scraping ("Browsing Reports") — *v2.0 Clarification*
 When `Custom Site Block` or opt-in `Browsing Reports` (`pref_browsing_report_enabled`, default `false`) is enabled:
 1. [`gd7.m8530G(accessibilityNodeInfo)`](../02_curated_decompiled_sources/p000/gd7.java#L83-L100) scans up to 100 visible nodes in supported browsers (`f6290v0`) for known URL bar resource IDs ([`a13.java:40`](../02_curated_decompiled_sources/p000/a13.java#L40)).
-2. [`bcb.m1876a(urlText)`](../02_curated_decompiled_sources/p000/bcb.java#L22-L120) normalizes the text to **domain name only** (e.g., `example.com` — full URL paths and search queries are stripped).
+2. [`gd7.m8571v`](../02_curated_decompiled_sources/p000/gd7.java#L1413) (called from `gd7.m8530G`) strips full URL paths and search queries down to a bare host string, and [`bcb.m1876a`](../02_curated_decompiled_sources/p000/bcb.java#L27-L76) validates and IDN/lowercase-normalizes that extracted domain (e.g., `example.com`).
 3. Only if `pref_browsing_report_enabled == true`, [`xcb.java:330-362`](../02_curated_decompiled_sources/p000/xcb.java#L330-L362) records `(domain, date, hour, visits, blocked, activeSeconds)` in local Room SQLite (`site_visit`, 35-day retention).
 4. When signed into a Kahf account, [`fdb.java:63-295`](../02_curated_decompiled_sources/p000/fdb.java#L63-L295) uploads up to 34 days of dirty `site_visit` rows via `UpdateDeviceSiteVisits` ([`y0d.java:45-67`](../02_curated_decompiled_sources/p000/y0d.java#L45-L67)) to `https://id.kahf.co/graphql`.
 

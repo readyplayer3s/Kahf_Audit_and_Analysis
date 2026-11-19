@@ -1,9 +1,9 @@
-# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.0)
+# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.1)
 **Target Infrastructure:** `high.kahfguard.com`, `medium.kahfguard.com`, `low.kahfguard.com`, `safety.kahfguard.com`  
 **Verification Method:** Rate-Limited Client-Side Wire-Format DoT/DoH Inspection + Multi-Region EDNS Client Subnet (ECS) & `AAAA` Verification  
 **Raw Evidence Dump (Initial Dhaka Run):** [`04_evidence_dumps/dns_verification_results.json`](../04_evidence_dumps/dns_verification_results.json)  
 **Test Script:** [`03_automation_scripts/test_dns_resolvers.js`](../03_automation_scripts/test_dns_resolvers.js)  
-**Revision:** `v2.0` (Corrected single-IP/zero-IPv6 error after multi-region GeoDNS & DoH parity verification on Nov 19, 2026)
+**Revision:** `v2.1` (Corrected single-IP/zero-IPv6 error in `v2.0` and fixed DNS tier DEX citations in `v2.1` on Nov 19, 2026)
 
 ---
 
@@ -32,11 +32,11 @@ Re-testing directly via explicit `A`/`AAAA` queries and EDNS Client Subnet (ECS)
 
 ## 2. Multi-Region GeoDNS Resolution & Hosting Breakdown
 
-| Hostname | Tier Role (`qa3.java`) | EU / US / UK Pool (`hz-prod.kahfguard.com`) | Bangladesh / SE Asia Pool (`bdix-*.kahfguard.com`) |
+| Hostname | Tier Role (`v4.6.287` DEX) | EU / US / UK Pool (`hz-prod.kahfguard.com`) | Bangladesh / SE Asia Pool (`bdix-*.kahfguard.com`) |
 | :--- | :--- | :--- | :--- |
-| `high.kahfguard.com` | Strong Protection (`qa3.f34200w`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
-| `medium.kahfguard.com` | Moderate Protection (`qa3.f34201x`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
-| `low.kahfguard.com` | Weak Protection (`qa3.f34202y`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
+| `high.kahfguard.com` | Strong Protection (`a13.f56f` / `vc3` / `i48`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
+| `medium.kahfguard.com` | Moderate Protection (`a13.f56f` / `vc3` / `i48`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
+| `low.kahfguard.com` | Weak Protection (`a13.f56f` / `vc3` / `i48`) | `A`: `157.90.95.113`, `46.4.74.205`, `142.132.207.231` (Hetzner) | `A`: `203.190.10.120` (`AS58768` BDIX)<br>`AAAA`: `2400:fa40:400:1::120` |
 | `safety.kahfguard.com` | Legacy Host (`classes2.dex`) | **`NXDOMAIN`** | **`NXDOMAIN`** |
 
 ### Architectural Notes
