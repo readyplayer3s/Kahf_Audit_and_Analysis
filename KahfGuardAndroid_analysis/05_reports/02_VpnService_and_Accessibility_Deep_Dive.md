@@ -1,105 +1,86 @@
-# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive
+# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.0)
 **Target Application:** Kahf Guard (`com.kahf.dns` v4.6.287, `versionCode: 361`)  
-**Components Audited:** `AndroidManifest.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)
+**Components Audited:** `AndroidManifest.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
+**Revision:** `v2.0` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, and raw DEX on Nov 19, 2026)
 
 ---
 
-## 1. Architectural Surprise: Zero Local `VpnService` Implementation
+## 1. Architectural Overview: Zero Local `VpnService` Implementation
 
 ### 1.1 Disproven Hypothesis: Local `tun` Interface or Packet-Level MitM
-A primary hypothesis entering this audit was that Kahf Guard—like RethinkDNS, Intra, Nebulo, or AdGuard—instantiates a local `android.net.VpnService` virtual `tun` interface to intercept DNS traffic (`UDP/TCP 53`) or Layer-3 device traffic (`0.0.0.0/0`, `::/0`).
+A primary hypothesis entering this audit was that Kahf Guard—like RethinkDNS, Intra, Nebulo, or AdGuard—instantiates a local `android.net.VpnService` virtual `tun` interface to intercept DNS or Layer-3 traffic.
 
 **Forensic Verdict (Disproven Hypothesis / Verified Code Fact):**
-1. **Zero `VpnService` Declarations in `AndroidManifest.xml`:** Full inspection of [`AndroidManifest.xml`](../01_manifest_and_resources/AndroidManifest.xml#L1-L328) and [`manifest_audit.json`](../04_evidence_dumps/manifest_audit.json) confirms that Kahf Guard declares **no** `<service>` with `android.permission.BIND_VPN_SERVICE`.
-2. **Only 3 First-Party (`com.kahf.dns.*`) Services Exist in the APK (Alongside Standard Firebase/WorkManager/Room Services):**
-   - `com.kahf.dns.features.guards.service.KahfBlockerService` (`BIND_ACCESSIBILITY_SERVICE`, `android:exported="true"`, [`AndroidManifest.xml:148-153`](../01_manifest_and_resources/AndroidManifest.xml#L148-L153))
-   - `com.kahf.dns.features.guards.service.AccessibilityMonitorService` (`foregroundServiceType="specialUse"`, `android:exported="false"`, [`AndroidManifest.xml:162-164`](../01_manifest_and_resources/AndroidManifest.xml#L162-L164))
-   - `com.kahf.dns.services.AndroidNotificationService` (`com.google.firebase.MESSAGING_EVENT`, `android:exported="false"`, [`AndroidManifest.xml:143-147`](../01_manifest_and_resources/AndroidManifest.xml#L143-L147))
-3. **Why `"android.net.VpnService"` Appears in `classes2.dex`:**
-   String search across DEX files found `"android.net.VpnService"` in [`C0602ml.java:155-184`](../02_curated_decompiled_sources/p000/C0602ml.java#L155-L184). Decompilation proves this is **not** a VPN service implementation; rather, it is a **VPN-app hunter** (`getInstalledVpnApps`) that queries `PackageManager.queryIntentServices(new Intent("android.net.VpnService"), 0)` so Kahf Guard can:
-   - Upload the user's installed VPN apps (`vpn_service_apps`) to `https://id.kahf.co/graphql` via [`InstalledAppsSyncWorker.java:141-250`](../02_curated_decompiled_sources/com/kahf/dns/features/user/InstalledAppsSyncWorker.java#L141-L250) -> [`b53.java:267-365`](../02_curated_decompiled_sources/p000/b53.java#L267-L365) -> [`h0d.java:44`](../02_curated_decompiled_sources/p000/h0d.java#L44), and
-   - Block the user from launching competing VPN/Tor apps via `AccessibilityService` when `"Block VPN & Tor"` (`pref_group_vpn_tor_enabled`) is toggled on!
+1. **Zero `VpnService` Declarations in `AndroidManifest.xml`:** Full inspection of [`AndroidManifest.xml`](../01_manifest_and_resources/AndroidManifest.xml#L1-L328) and [`manifest_audit.json`](../04_evidence_dumps/manifest_audit.json) confirms Kahf Guard declares **no** `<service>` with `android.permission.BIND_VPN_SERVICE`.
+2. **Only 3 First-Party (`com.kahf.dns.*`) Services Exist in the APK:**
+   - `com.kahf.dns.features.guards.service.KahfBlockerService` (`BIND_ACCESSIBILITY_SERVICE`, [`AndroidManifest.xml:148-153`](../01_manifest_and_resources/AndroidManifest.xml#L148-L153))
+   - `com.kahf.dns.features.guards.service.AccessibilityMonitorService` (`foregroundServiceType="specialUse"`, [`AndroidManifest.xml:162-164`](../01_manifest_and_resources/AndroidManifest.xml#L162-L164)) — monitors accessibility service health (`50000ms` / `300000ms` timers); contains **no** 60-second DNS unlock loop.
+   - `com.kahf.dns.services.AndroidNotificationService` (`com.google.firebase.MESSAGING_EVENT`, [`AndroidManifest.xml:143-147`](../01_manifest_and_resources/AndroidManifest.xml#L143-L147))
+3. **Why `"android.net.VpnService"` Appears in DEX:**
+   [`C0602ml.java:155-184`](../02_curated_decompiled_sources/p000/C0602ml.java#L155-L184) queries `PackageManager.queryIntentServices(new Intent("android.net.VpnService"), 0)` to detect installed VPN apps so Kahf Guard can:
+   - Upload installed VPN apps (`vpn_service_apps`) to `https://id.kahf.co/graphql` for any logged-in account ([`InstalledAppsSyncWorker.java:141-250`](../02_curated_decompiled_sources/com/kahf/dns/features/user/InstalledAppsSyncWorker.java#L141-L250) → [`b53.java:267-365`](../02_curated_decompiled_sources/p000/b53.java#L267-L365) → [`h0d.java:44`](../02_curated_decompiled_sources/p000/h0d.java#L44)), and
+   - Block launching VPN/Tor apps via `AccessibilityService` when the opt-in `"Block VPN & Tor"` (`pref_group_vpn_tor_enabled`, default `false`) toggle is enabled.
 
-### 1.2 How Kahf Guard Actually Configures DNS: Manual Android System Private DNS (DoT)
-Because Kahf Guard has no `VpnService` (and does not hold Device Owner / Profile Owner privileges required to call `DevicePolicyManager.setGlobalPrivateDnsModeSpecifiedHost()`), it **cannot programmatically set DNS on standard non-rooted Android devices**.
+### 1.2 How Kahf Guard Configures DNS: Manual Android System Private DNS (DoT)
+Kahf Guard intentionally uses Android's built-in Private DNS (DoT) rather than a local VPN (avoiding Android's single-VPN slot conflict, banking-app VPN warnings, and OEM background-kill issues). Because non-Device-Owner apps cannot write Private DNS programmatically:
+1. The app copies one of three hardcoded **DNS-over-TLS (DoT)** hostnames to the clipboard ([`qa3.java:18-45`](../02_curated_decompiled_sources/p000/qa3.java#L18-L45), [`a13.java:108`](../02_curated_decompiled_sources/p000/a13.java#L108)):
+   - **Strong Protection (`HIGH`):** `high.kahfguard.com`
+   - **Moderate Protection (`MEDIUM`):** `medium.kahfguard.com`
+   - **Weak Protection (`LOW`):** `low.kahfguard.com`
+2. It guides the user to paste the hostname into **Settings → Network & Internet → Private DNS**.
+3. [`C0969wi.java:86-98`](../02_curated_decompiled_sources/p000/C0969wi.java#L86-L98) verifies activation via `LinkProperties.getPrivateDnsServerName()` (`contains("kahf")`), and [`ti9.java`](../02_curated_decompiled_sources/p000/ti9.java) / [`gt5.java`](../02_curated_decompiled_sources/p000/gt5.java) sync Private DNS changes to `id.kahf.co/graphql` (`tzc.java`) when logged in.
 
-Instead, as proven in [`a13.java:25-39`](../02_curated_decompiled_sources/p000/a13.java#L25-L39), [`qa3.java:18-45`](../02_curated_decompiled_sources/p000/qa3.java#L18-L45), and [`C0957w6.java:219-232`](../02_curated_decompiled_sources/p000/C0957w6.java#L219-L232):
-1. The app copies one of three hardcoded **DNS-over-TLS (DoT)** hostnames to the Android system clipboard (`ClipboardManager.setPrimaryClip`):
-   - **Strong Protection (`HIGH`):** `high.kahfguard.com` (`qa3.f34200w`)
-   - **Moderate Protection (`MEDIUM`):** `medium.kahfguard.com` (`qa3.f34201x`)
-   - **Weak Protection (`LOW`):** `low.kahfguard.com` (`qa3.f34202y`)
-2. It launches the system settings intent (`"android.settings.NETWORK_OPERATOR_SETTINGS"` or `"com.android.settings.SEARCH_RESULT_TRAMPOLINE"`, [`a13.java:46-55`](../02_curated_decompiled_sources/p000/a13.java#L46-L55)) and instructs the user to manually paste the hostname into **Settings -> Network & Internet -> Private DNS**.
-3. To verify if the user actually set it, [`C0969wi.java:86-98`](../02_curated_decompiled_sources/p000/C0969wi.java#L86-L98) calls `ConnectivityManager.getLinkProperties(activeNetwork).getPrivateDnsServerName()` and checks if the string contains `"kahf"` (`stb.m18246L0(str, "kahf", true)`).
-4. In addition, [`ti9.java:32-44`](../02_curated_decompiled_sources/p000/ti9.java#L32-L44) and [`gt5.java:86-105`](../02_curated_decompiled_sources/p000/gt5.java#L86-L105) register a `ConnectivityManager.NetworkCallback` (`onLinkPropertiesChanged`) that watches `linkProperties.getPrivateDnsServerName()` in real time and uploads any change to `https://id.kahf.co/graphql` via `UpdateDeviceDnsSettingsMutation` ([`tzc.java`](../02_curated_decompiled_sources/p000/tzc.java)).
-
-### 1.3 Architectural Flaws of Relying on Manual System Private DNS + UI Scraping
-By avoiding a local `VpnService` and relying on manual Android Private DNS + `AccessibilityService` UI locks, Kahf Guard introduces four major engineering flaws:
-1. **Zero Granular / Per-Category Client Control:** Android's Private DNS setting accepts only a single static DoT hostname. Because Kahf only operates three static hostnames (`high`, `medium`, `low`), users are trapped in monolithic presets—enabling `high.kahfguard.com` forces `restrict.youtube.com` IP rewriting globally and kills YouTube comments with no way to toggle YouTube Restricted Mode independently.
-2. **Conflict with Legitimate WireGuard / Corporate VPNs:** When a user activates a legitimate work or privacy VPN (`TRANSPORT_VPN`), the VPN tunnel either overrides system DNS or causes Kahf's `CountryDetector` (`jd2.java:92`) and `KahfBlockerService` (`pref_group_vpn_tor_enabled`) to break or block the VPN app.
-3. **Coercive UI Scraping to Prevent DNS Changes:** Because the app does not own the DNS transport, it resorts to using `AccessibilityService` (`KahfBlockerService.m3805s`, [`KahfBlockerService.java:1084-1142`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L1084-L1142)) to watch `com.android.settings` for strings like `"Select Private DNS Mode"` or `"Private DNS provider hostname"` (`a13.f59i`) and throws a full-screen blocking overlay (`f4d`) over the Android Settings app.
-4. **The "DNS Safety Mechanism" Fail-Open Vulnerability (Detailed in Section 3 below):** If Private DNS becomes unreachable while raw IP (`1.1.1.1:443`) works, opening the Kahf Guard app **automatically and permanently disables its own DNS Change Prevention and Uninstall Prevention locks**, allowing trivial bypass.
+### 1.3 Architectural Trade-Offs & Flaws of System Private DNS + Accessibility Locks
+1. **Monolithic Presets (No Per-Category Toggles):** Because Android Private DNS accepts only one static hostname and Kahf offers only three static tiers (`high`/`medium`/`low`), using `high.kahfguard.com` globally enforces `restrict.youtube.com` and disables YouTube comments with no option to toggle Restricted Mode independently.
+2. **UI-Overlay Locking (`AccessibilityService`):** To prevent changing Private DNS, opt-in `DNS Change Prevention` (`pref_dns_change_prevention_enabled`, default `false`) watches `com.android.settings` for Private DNS labels ([`a13.java:115-117`](../02_curated_decompiled_sources/p000/a13.java#L115-L117)) and overlays a blocking screen.
+3. **DNS Fail-Open Parental Control Bypass (Section 3):** When `1.1.1.1:443` is reachable but Kahf DoT (`853`) fails, opening the Protection screen automatically disables Accessibility-based `DNS Change Prevention` and `Uninstall Prevention` without PIN or cooldown.
 
 ---
 
 ## 2. AccessibilityService (`KahfBlockerService`) Forensic Deep Dive
 
-### 2.1 Static XML Configuration vs. Dynamic Runtime Expansion
+### 2.1 Configuration, Opt-In Defaults & Actual Scoped App Sets
 In [`res/xml/accessibility_service_config.xml`](../04_evidence_dumps/res_xml_audit.json):
-```xml
-<accessibility-service
-    android:description="@string/accessibility_service_description"
-    android:settingsActivity="com.kahf.dns.ui.MainActivity"
-    android:canRetrieveWindowContent="true"
-    android:accessibilityEventTypes="0x820"
-    android:accessibilityFeedbackType="0x10"
-    android:notificationTimeout="200"
-    android:accessibilityFlags="0x12" />
-```
-- `accessibilityEventTypes="0x820"`: `TYPE_WINDOW_STATE_CHANGED (0x0020) | TYPE_WINDOW_CONTENT_CHANGED (0x0800)`.
-- `accessibilityFlags="0x12"`: `FLAG_INCLUDE_NOT_IMPORTANT_VIEWS (0x0002) | FLAG_REPORT_VIEW_IDS (0x0010)`.
-- `canRetrieveWindowContent="true"`: Grants full read access to the view hierarchy (`getRootInActiveWindow()`) of monitored packages.
-- **Static XML Omission of `android:packageNames`:** The static XML omits `android:packageNames` (which defaults to all packages on the device until `onServiceConnected` runs).
+- `canRetrieveWindowContent="true"`, `accessibilityEventTypes="0x820"` (`WINDOW_STATE_CHANGED | WINDOW_CONTENT_CHANGED`), `accessibilityFlags="0x12"` (`INCLUDE_NOT_IMPORTANT_VIEWS | REPORT_VIEW_IDS`).
+- **All Major Features Default to `false` ([`KahfBlockerService.java:905-1012`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L905-L1012)):**
+  `pref_risky_word_block_enabled`, `pref_browsing_report_enabled`, `pref_dns_change_prevention_enabled`, `pref_uninstall_prevention_enabled`, `pref_custom_site_block_enabled`, `pref_youtube_shorts_enabled`, `pref_instagram_reels_enabled`, and `pref_facebook_reels_enabled` all default to `false` and require explicit user/parent opt-in.
+- At runtime, `KahfBlockerService.m3791b()` ([`KahfBlockerService.java:1038-1056`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L1038-L1056)) dynamically updates `serviceInfo.packageNames` based on enabled toggles.
 
-At runtime, [`KahfBlockerService.java:356-530`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L356-L530) (`m3791b()` and `m3788K()`) dynamically builds a `LinkedHashSet` of target package names and calls `setServiceInfo(serviceInfo)`. While this dynamic scoping avoids hooking banking apps when only Reels/Shorts blocking is active, enabling standard protection features rapidly expands the monitored scope across dozens of sensitive apps:
-
-| Feature Toggle | Packages Added to `AccessibilityServiceInfo.packageNames` | Evidence Location |
+#### Exact Hardcoded Target Package Sets in `KahfBlockerService.java` *(v2.0 Correction)*
+| Static Set | Exact Packages in `KahfBlockerService.java` | Source Lines |
 | :--- | :--- | :--- |
-| **YouTube Shorts / Instagram Reels / Facebook Reels** | `com.google.android.youtube`, `com.instagram.android`, `com.facebook.katana`, `com.facebook.lite` | [`KahfBlockerService.java:371-383`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L371-L383) |
-| **Telegram Search / WhatsApp Status** | `org.telegram.messenger`, `com.whatsapp`, `com.whatsapp.w4b` | [`KahfBlockerService.java:384-391`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L384-L391) |
-| **Custom Site Blocker OR Browsing Report (`pref_browsing_report_enabled`)** | **18 Web Browsers** (`a13.f55e`): Chrome, Firefox, Samsung Internet, Opera, Opera Mini, Edge, Brave, DuckDuckGo, Vivaldi, Mi Browser, UC Browser, Kiwi, Via, Puffin, Tor Browser, Dolphin, Huawei Browser, Yahoo | [`KahfBlockerService.java:460-467`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L460-L467), [`a13.java:58-77`](../02_curated_decompiled_sources/p000/a13.java#L58-L77) |
-| **Risky Word Block (`m11290t()`)** | **All 18 Browsers** + **Play Store** (`com.android.vending`) + **Social Media (`f6289u0`)**: Facebook, Instagram, YouTube, X/Twitter, TikTok, Snapchat, LinkedIn, Pinterest, Reddit, Tumblr + **Messaging (`f6290v0`)**: WhatsApp, WhatsApp Business, FB Messenger, Telegram, Discord | [`KahfBlockerService.java:81-101`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L81-L101), [`KahfBlockerService.java:468-475`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L468-L475) |
-| **Uninstall Prevention / Super Uninstall Protection** | **60+ System & OEM Packages (`f6291w0`, `f6292x0`)**: `com.android.settings`, `com.google.android.packageinstaller`, `com.android.systemui`, MIUI Security Center, Samsung OneUI Home, ColorOS/Oppo/Vivo/Xiaomi/Huawei/Realme/OnePlus launchers & settings | [`KahfBlockerService.java:103-165`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L103-L165), [`KahfBlockerService.java:476-484`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L476-L484) |
+| **`f6289u0` (Core Social / Messaging — 7 apps)** | `com.google.android.youtube`, `com.instagram.android`, `com.facebook.katana`, `com.facebook.lite`, `org.telegram.messenger`, `com.whatsapp`, `com.whatsapp.w4b` *(Note: Facebook Messenger is **not** in `f6289u0` or `f6291w0`.)* | [`KahfBlockerService.java:174`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L174) |
+| **`f6290v0` (18 Supported Browsers)** | Chrome (`com.android.chrome`), Chrome Dev (`com.chrome.dev`), Firefox (`org.mozilla.firefox`), Firefox Lite (`org.mozilla.rocket`), Samsung Internet (`com.sec.android.app.sbrowser`), Edge (`com.microsoft.emmx`), Opera (`com.opera.browser`), Opera Mini (`com.opera.mini.native`), Brave (`com.brave.browser`), DuckDuckGo (`com.duckduckgo.mobile.android`), Vivaldi (`com.vivaldi.browser`), Tor Browser (`org.torproject.torbrowser`), SPIN Safe Browser (`com.nationaledtech.spinbrowser`), Ecosia (`com.ecosia.android`), Free Adblocker Browser (`com.hsv.freeadblockerbrowser`), 1DM (`idm.internet.download.manager`), Web Video Caster (`com.instantbits.cast.webvideo`), Kahf Browser (`io.kahf.browser`). *(Note: [`a13.java:107`](../02_curated_decompiled_sources/p000/a13.java#L107) explicitly documents UC Browser, Mi Browser, and Huawei Browser as having `"No capture"`.)* | [`KahfBlockerService.java:177`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L177), [`a13.java:40, 106-107`](../02_curated_decompiled_sources/p000/a13.java#L40) |
+| **`f6291w0` (Additional Social / Chat — 8 apps)** | X/Twitter (`com.twitter.android`), TikTok (`com.zhiliaoapp.musically`), Snapchat (`com.snapchat.android`), Reddit (`com.reddit.frontpage`), Threads (`com.instagram.barcelona`), Pinterest (`com.pinterest`), Discord (`com.discord`), Tumblr (`com.tumblr`). | [`KahfBlockerService.java:180`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L180) |
 
-### 2.2 Full-Screen Text Scraping in Messaging & Social Apps ("Risky Word Block")
-When `"Risky Word Block"` (`pref_risky_word_block_enabled`) is enabled, [`KahfBlockerService.m3800n()`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L966-L1026) runs on every window content change (`throttled` at 300ms) inside WhatsApp, Telegram, Messenger, Discord, Instagram, Facebook, YouTube, Reddit, X, and 18 browsers:
-- It calls [`gd7.m8526C(rootNode, this)`](../02_curated_decompiled_sources/p000/gd7.java#L27-L69), which **recursively traverses the entire on-screen UI tree** (`node.getChild(i)`) and extracts `node.getText().toString()` from every visible `AccessibilityNodeInfo`!
-- While keyword matching (`hge.m9457d`) occurs in RAM against the risky keyword list (`a13.f63m`), granting an app containing **PostHog Session Replay (`cd9`)** and **Facebook/Firebase SDKs** full `AccessibilityNodeInfo` read access inside private messaging apps (`com.whatsapp`, `org.telegram.messenger`) violates the principle of least privilege.
+### 2.2 Local In-RAM Text Scanning ("Risky Word Block") — *v2.0 Clarification*
+When the opt-in `"Risky Word Block"` (`pref_risky_word_block_enabled`, default `false`) feature is enabled ([`KahfBlockerService.java:3549-3626`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L3549-L3626)):
+- It calls `hge.m9467n(accessibilityNodeInfo, this.f6295B)` to scan visible screen text locally in RAM against built-in ([`a13.java:202-205`](../02_curated_decompiled_sources/p000/a13.java#L202-L205)) and user-configured risky words.
+- **No Chat Upload in Code:** On a match, `m3806t(str)` ([`KahfBlockerService.java:3692-3704`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L3692-L3704)) only increments local block counters (`pref_*_blocks_count`, `pref_total_blocks_count`) and triggers the blocking overlay. **No matched text, typed messages, or chat contents are stored or uploaded to any server.**
+- **Residual Risk (Trust Surface):** As with any closed-source parental control app using `AccessibilityService` on messaging apps, users must trust future updates and backend security.
 
-### 2.3 Browser URL Bar Scraping, 35-Day SQLite Logging & 92-Day Backend Retention
-Even more invasive is [`KahfBlockerService.m3801o()`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L1028-L1082):
-1. Whenever any of the 18 supported browsers is in the foreground, [`gd7.m8530G(rootNode, packageName)`](../02_curated_decompiled_sources/p000/gd7.java#L156-L246) locates the browser's URL bar (`:id/url_bar`, `:id/mozac_browser_toolbar_url_view`, `:id/location_bar_edit_text`, etc.) and reads `node.getText()`.
-2. It extracts the normalized hostname via [`bcb.m1876a(urlText)`](../02_curated_decompiled_sources/p000/bcb.java#L22-L120).
-3. If `pref_browsing_report_enabled` is true (`xcb.m22015c`), it calls `xcb.m22018f(packageName, host, isBlocked, isIncognito)` ([`xcb.java:272-276`](../02_curated_decompiled_sources/p000/xcb.java#L272-L276)).
-4. **Local Persistence (35 Days):** [`xcb.java:330-362`](../02_curated_decompiled_sources/p000/xcb.java#L330-L362) flushes the visited host, hour of day, visit count, block count, and active foreground milliseconds into the Room SQLite database (`app_database.db` tables `site_visit` and `site_visit_day`, defined in [`AppDatabase_Impl.java:65-115`](../02_curated_decompiled_sources/com/kahf/dns/data/database/AppDatabase_Impl.java#L65-L115)), retaining 35 days of history.
-5. **Cloud Exfiltration to `https://id.kahf.co/graphql` (Up to 92-Day Retention):** Every hour when `AppUsageSyncWorker` runs, [`fdb.m7915a()`](../02_curated_decompiled_sources/p000/fdb.java#L63-L295) queries up to 34 days of dirty `site_visit` records (up to 1,976 unique domains per day) and uploads them via `mutation UpdateDeviceSiteVisits($deviceId: ID!, $days: [SiteVisitDayInput!]!)` ([`y0d.java:45-67`](../02_curated_decompiled_sources/p000/y0d.java#L45-L67), [`nl3.java:1164-1180`](../02_curated_decompiled_sources/p000/nl3.java#L1164-L1180)), where the backend `Query.deviceSiteVisits` endpoint serves up to **92 days** of browsing history.
+### 2.3 Opt-In Browser URL Bar Scraping ("Browsing Reports") — *v2.0 Clarification*
+When `Custom Site Block` or opt-in `Browsing Reports` (`pref_browsing_report_enabled`, default `false`) is enabled:
+1. [`gd7.m8530G(accessibilityNodeInfo)`](../02_curated_decompiled_sources/p000/gd7.java#L83-L100) scans up to 100 visible nodes in supported browsers (`f6290v0`) for known URL bar resource IDs ([`a13.java:40`](../02_curated_decompiled_sources/p000/a13.java#L40)).
+2. [`bcb.m1876a(urlText)`](../02_curated_decompiled_sources/p000/bcb.java#L22-L120) normalizes the text to **domain name only** (e.g., `example.com` — full URL paths and search queries are stripped).
+3. Only if `pref_browsing_report_enabled == true`, [`xcb.java:330-362`](../02_curated_decompiled_sources/p000/xcb.java#L330-L362) records `(domain, date, hour, visits, blocked, activeSeconds)` in local Room SQLite (`site_visit`, 35-day retention).
+4. When signed into a Kahf account, [`fdb.java:63-295`](../02_curated_decompiled_sources/p000/fdb.java#L63-L295) uploads up to 34 days of dirty `site_visit` rows via `UpdateDeviceSiteVisits` ([`y0d.java:45-67`](../02_curated_decompiled_sources/p000/y0d.java#L45-L67)) to `https://id.kahf.co/graphql`.
 
 ---
 
-## 3. The "DNS Safety Mechanism" Fail-Open Vulnerability (`wo9` -> `zl9` -> `C0890ud` -> `nb3` -> `m48` -> `nm9`)
+## 3. The "DNS Safety Mechanism" Fail-Open Bypass (`wo9` → `zl9` → `C0890ud` → `nb3` → `m48` → `nm9`)
 
-To prevent users from getting locked out of their device if Kahf's DNS servers go offline, `ProtectionControlVM` ([`wo9.java:326`](../02_curated_decompiled_sources/p000/wo9.java#L326)) launches a background coroutine (`zl9` case 0 -> [`C0890ud.m19549l()`](../02_curated_decompiled_sources/p000/C0890ud.java#L268)) every time the user opens the Kahf Guard app / Protection screen. This check calls `DnsSafetyManager.isDnsUnsafe()` ([`nb3.m14124a()`](../02_curated_decompiled_sources/p000/nb3.java#L91-L298)), which executes [`m48.m13149o()`](../02_curated_decompiled_sources/p000/m48.java#L447-L960):
+To avoid locking users out of their device if Kahf's DNS resolvers go down, `ProtectionControlVM` ([`wo9.java:324-329`](../02_curated_decompiled_sources/p000/wo9.java#L324-L329)) — when operating on the local device (`!m21556N()`, [`wo9.java:1999-2001`](../02_curated_decompiled_sources/p000/wo9.java#L1999-L2001)) — launches a check upon opening the Protection screen (**not** on a 60-second background timer).
 
-### Exact Fail-Open Call Chain (`C0717pp.java:176-180`, `m48.java:656-657`, `C0890ud.java:268`, `nm9.java`)
-1. `m48.m13149o()` (`m48.java:813-827`) invokes `i48` case 6 -> [`C0717pp.invokeSuspend()`](../02_curated_decompiled_sources/p000/C0717pp.java#L176-L180), which opens a raw TCP socket to Cloudflare (`new InetSocketAddress("1.1.1.1", 443)`) with a 3,000ms timeout.
-2. Next, it attempts to resolve `"google.com"` via the system DNS resolver with a 5,000ms timeout (`m48.java:926`).
-3. If `1.1.1.1:443` is reachable (`hasDirectInternet = true`), **but** `"google.com"` fails to resolve (`canResolveDns = false`), `m48.m13149o()` logs `"DNS resolution failed but internet works → Private DNS issue"` and returns `hasPrivateDnsIssue = true` (`oa3.f29956o = true`, `diagnosticStatus = "private_dns_down"`, [`m48.java:656-657`](../02_curated_decompiled_sources/p000/m48.java#L656-L657)).
-4. When `nb3.m14124a()` sees that Kahf DNS is currently set (or `last_known_dns` contains `"kahf"`) and `hasPrivateDnsIssue == true`, it returns `Boolean.TRUE` (`isDnsUnsafe = true`) to [`C0890ud.m19549l()`](../02_curated_decompiled_sources/p000/C0890ud.java#L268-L276).
-5. `C0890ud.m19549l()` immediately invokes [`nm9.invokeSuspend()`](../02_curated_decompiled_sources/p000/nm9.java) (`01_unpacked_apktool/base/smali_classes2/nm9.smali:190-543`), which logs:
-   ```
-   "Disabling protections due to internet connectivity issues with Kahf DNS"
-   ```
-   displays the UI warning banner `"Security features disabled due to connectivity issues"`, iterates over `"dns_change_prevention"` and `"uninstall_prevention"`, logs `"Auto-disabling <feature> due to DNS safety failure"`, and calls `PreferencesHelper.saveToPreferences(prefKey, false)` to **permanently overwrite SharedPreferences**:
+### Exact Call Chain (`C0717pp.java:176-180`, `m48.java:656-657`, `C0890ud.java`, `nm9.java`)
+1. `m48.m13149o()` invokes `i48` → [`C0717pp`](../02_curated_decompiled_sources/p000/C0717pp.java#L176-L180), opening a raw TCP socket to `1.1.1.1:443` (3,000ms timeout).
+2. Next, it resolves `"google.com"` via system DNS (5,000ms timeout).
+3. If `1.1.1.1:443` succeeds (`hasDirectInternet = true`) **but** `"google.com"` fails (`canResolveDns = false`), `m48` returns `hasPrivateDnsIssue = true` (`oa3.f29956o = true`, `diagnosticStatus = "private_dns_down"`, [`m48.java:656-657`](../02_curated_decompiled_sources/p000/m48.java#L656-L657)).
+4. If Kahf DNS is configured, [`nb3.m14124a()`](../02_curated_decompiled_sources/p000/nb3.java#L91-L298) returns `true` (`isDnsUnsafe`) and logs `DiagnosticRun` (including `last_known_ip`) to all three analytics SDKs.
+5. `C0890ud.m19549l()` (`Lud;->l`) triggers [`nm9`](../02_curated_decompiled_sources/p000/nm9.java), which logs `"Disabling protections due to internet connectivity issues with Kahf DNS"`, logs `DnsSafetyDisable` (including `current_ip`), and sets:
    - `pref_dns_change_prevention_enabled = false`
    - `pref_uninstall_prevention_enabled = false`
 
-**Security Impact:** Anyone on the local Wi-Fi router (or a user with a local firewall/hotspot rule) who blocks TCP port `853` (or blocks `*.kahfguard.com`) while allowing `1.1.1.1:443` and opens the Kahf Guard app will trigger `ProtectionControlVM` -> `nm9` within ~5 seconds to **permanently disarm DNS Change Prevention and Uninstall Prevention** on the device, allowing unrestricted modification of Android Private DNS settings, Device Admin deactivation, and app uninstallation!
+**Security Impact & Exact Scope (v2.0 Clarification):**
+- While intentional for outage recovery, blocking TCP port `853` (or `*.kahfguard.com`) on a local Wi-Fi router/hotspot while allowing `1.1.1.1:443` and opening Kahf Guard's Protection screen disables Accessibility-based **DNS Change Prevention** and **Uninstall Prevention** in ~5–8 seconds with **zero PIN, cooldown, or parental confirmation**.
+- **Scope Note:** `nm9` does **not** revoke Android Device Admin (`pref_super_uninstall_protection_enabled`) if the user separately enabled Super Uninstall Protection.

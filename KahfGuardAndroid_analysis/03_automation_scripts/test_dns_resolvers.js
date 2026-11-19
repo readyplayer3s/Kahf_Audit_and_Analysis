@@ -512,20 +512,23 @@ async function main() {
 
   console.log('=== PHASE 4: SAFE, RATE-LIMITED DNS INFRASTRUCTURE VERIFICATION (<= 28 QUERIES) ===');
 
-  // 1. Resolve Kahf DNS hostnames via OS lookup
+  // 1. Resolve Kahf DNS hostnames via explicit A + AAAA queries (avoids OS AI_ADDRCONFIG hiding IPv6 on IPv4-only hosts)
   const kahfHosts = ['high.kahfguard.com', 'medium.kahfguard.com', 'low.kahfguard.com', 'safety.kahfguard.com'];
   const uniqueIps = new Set();
 
   for (const host of kahfHosts) {
-    console.log(`[1] OS Lookup for ${host}...`);
-    try {
-      const addrs = await dns.promises.lookup(host, { all: true });
-      const ipv4 = addrs.filter((a) => a.family === 4).map((a) => a.address);
-      const ipv6 = addrs.filter((a) => a.family === 6).map((a) => a.address);
+    console.log(`[1] Resolving A + AAAA records for ${host}...`);
+    let ipv4 = [];
+    let ipv6 = [];
+    let err4 = null;
+    let err6 = null;
+    try { ipv4 = await dns.promises.resolve4(host); } catch (e) { err4 = e.code || e.message; }
+    try { ipv6 = await dns.promises.resolve6(host); } catch (e) { err6 = e.code || e.message; }
+    if (ipv4.length === 0 && ipv6.length === 0) {
+      report.endpoints[host] = { error: err4 || err6 || 'ENOTFOUND' };
+    } else {
       report.endpoints[host] = { ipv4, ipv6 };
       for (const ip of ipv4) uniqueIps.add(ip);
-    } catch (e) {
-      report.endpoints[host] = { error: e.message };
     }
     await sleep(SLEEP_MS);
   }
