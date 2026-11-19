@@ -1,8 +1,8 @@
-# Curated Decompiled Sources Index (v2.1)
+# Curated Decompiled Sources Index (v2.1.2)
 
 To keep this repository lightweight and focused strictly on verifiable forensic evidence, this folder includes:
 1. **All 128 unobfuscated `com/kahf/dns/**` classes** from `base.apk`.
-2. **The 53 R8-repackaged `p000/*.java` classes** directly cited in our forensic audit reports (out of 14,663 total R8-flattened library classes in `base.apk`).
+2. **The 53 R8-repackaged `p000/*.java` classes** directly cited in our forensic audit reports (out of 14,663 total R8-flattened classes in `base.apk`).
 
 Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jadx 1.5.1` to inspect any other class or verify raw Dalvik bytecode directly.
 
@@ -34,8 +34,8 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/tu2.java`](./p000/tu2.java) | Standard `posthog-android` logcat reader thread; checks `isSessionReplayActive()` (`Lcb9;->c`) on every line and drops output when replay is disabled. |
 | [`p000/sxc.java`](./p000/sxc.java) | `UniqueUserIdManager` (`m18373c`): generates persistent 48-bit `PRD<12-hex>` fingerprint from `Settings.Secure.ANDROID_ID` + 7 `Build.*` hardware constants (`"aid:<android_id>|bld:<build_info>"`), backs up to `files/device_data/device_id.dat`, and checks `AD_ID` / `READ_PHONE_STATE` (`m18372a`). |
 | [`p000/dxc.java`](./p000/dxc.java) | Coroutine wrapper invoking `sxc.m18373c` via `Lml`. |
-| [`p000/C0639nl.java`](./p000/C0639nl.java) | `InstalledAppsCollector`: enumerates installed apps via `QUERY_ALL_PACKAGES`. |
-| [`p000/C0602ml.java`](./p000/C0602ml.java) | Queries `PackageManager` for installed `android.net.VpnService` implementations (`vpn_service_apps`). |
+| [`p000/C0639nl.java`](./p000/C0639nl.java) | `InstalledAppsCollector`: enumerates all launchable user-installed (non-system) apps plus a hardcoded 161-package curated list (`f28440e`, lines 21, 47–52) via `QUERY_ALL_PACKAGES` (excluding Kahf Guard itself), and defines 10 excluded MDM/enterprise/Kahf Browser packages (`f28439d`, line 18). |
+| [`p000/C0602ml.java`](./p000/C0602ml.java) | Queries `PackageManager` for installed `android.net.VpnService` implementations (`vpn_service_apps`, lines 155–184), excluding Kahf Guard itself and the 10 packages in `C0639nl.f28439d` (line 177). |
 | [`p000/l74.java`](./p000/l74.java) | Case 1 (lines 221–316): executes `UpdateDeviceInstalledApps` for any logged-in account (`user_id` + `device_mongodb_id`, no `isChildDevice()` check). Case 2 (lines 318–377): fetches `PRD<12-hex>` and dispatches `MainActivity.m5528t`. |
 | [`p000/a0d.java`](./p000/a0d.java) | Apollo GraphQL mutation: `UpdateDeviceInstalledApps`. |
 | [`p000/b0d.java`](./p000/b0d.java) | Static field selection helper for `UpdateDeviceInstalledApps` (`a0d.java`). |

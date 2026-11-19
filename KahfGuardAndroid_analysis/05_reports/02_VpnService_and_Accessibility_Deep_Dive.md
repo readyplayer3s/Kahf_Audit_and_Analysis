@@ -1,7 +1,7 @@
-# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1.1)
+# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1.2)
 **Target Application:** Kahf Guard (`com.kahf.dns` v4.6.287, `versionCode: 361`)  
 **Components Audited:** `AndroidManifest.xml`, `res/values/strings.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
-**Revision:** `v2.1.1` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, `strings.xml`, and raw DEX on Nov 19, 2026)
+**Revision:** `v2.1.2` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, `C0969wi.java`, `strings.xml`, `res/xml/*`, and raw DEX on Nov 19–20, 2026)
 
 ---
 
@@ -18,7 +18,7 @@ A primary hypothesis entering this audit was that Kahf Guard—like RethinkDNS, 
    - `com.kahf.dns.services.AndroidNotificationService` (`com.google.firebase.MESSAGING_EVENT`, [`AndroidManifest.xml:143-147`](../01_manifest_and_resources/AndroidManifest.xml#L143-L147))
 3. **Why `"android.net.VpnService"` Appears in DEX:**
    [`C0602ml.java:155-184`](../02_curated_decompiled_sources/p000/C0602ml.java#L155-L184) queries `PackageManager.queryIntentServices(new Intent("android.net.VpnService"), 0)` to detect installed VPN apps so Kahf Guard can:
-   - Upload installed VPN apps (`vpn_service_apps`) to `https://id.kahf.co/graphql` for any logged-in account ([`InstalledAppsSyncWorker.java:141-250`](../02_curated_decompiled_sources/com/kahf/dns/features/user/InstalledAppsSyncWorker.java#L141-L250) → [`b53.java:267-365`](../02_curated_decompiled_sources/p000/b53.java#L267-L365) → [`h0d.java:44`](../02_curated_decompiled_sources/p000/h0d.java#L44)), and
+   - Upload installed VPN apps (`vpn_service_apps`, excluding Kahf Guard and 10 MDM/enterprise/Kahf Browser packages in `C0639nl.f28439d` at [`C0602ml.java:177`](../02_curated_decompiled_sources/p000/C0602ml.java#L177)) to `https://id.kahf.co/graphql` for any logged-in account ([`InstalledAppsSyncWorker.java:141-250`](../02_curated_decompiled_sources/com/kahf/dns/features/user/InstalledAppsSyncWorker.java#L141-L250) → [`b53.java:267-365`](../02_curated_decompiled_sources/p000/b53.java#L267-L365) → [`h0d.java:44`](../02_curated_decompiled_sources/p000/h0d.java#L44)), and
    - Block launching VPN/Tor apps via `AccessibilityService` when the opt-in `"Block VPN & Tor"` (`pref_group_vpn_tor_enabled`, default `false`) toggle is enabled.
 
 ### 1.2 How Kahf Guard Configures DNS: Manual Android System Private DNS (DoT)
@@ -28,7 +28,7 @@ Kahf Guard intentionally uses Android's built-in Private DNS (DoT) rather than a
    - **Moderate Protection (`MEDIUM`):** `medium.kahfguard.com`
    - **Weak Protection (`LOW`):** `low.kahfguard.com`
 2. It guides the user to paste the hostname into **Settings → Network & Internet → Private DNS**.
-3. [`C0969wi.java:86-98`](../02_curated_decompiled_sources/p000/C0969wi.java#L86-L98) verifies activation via `LinkProperties.getPrivateDnsServerName()` (`contains("kahf")`), and [`ti9.java`](../02_curated_decompiled_sources/p000/ti9.java) / [`gt5.java`](../02_curated_decompiled_sources/p000/gt5.java) sync Private DNS changes to `id.kahf.co/graphql` (`tzc.java`) when logged in.
+3. [`C0969wi.java:86-98`](../02_curated_decompiled_sources/p000/C0969wi.java#L86-L98) reads the active Private DNS hostname via `LinkProperties.getPrivateDnsServerName()`, callers such as [`nb3.java:269`](../02_curated_decompiled_sources/p000/nb3.java#L269) (`stb.m18246L0(..., "kahf", false)`) check whether it matches Kahf DNS, and [`ti9.java`](../02_curated_decompiled_sources/p000/ti9.java) / [`gt5.java`](../02_curated_decompiled_sources/p000/gt5.java) sync Private DNS changes to `id.kahf.co/graphql` (`tzc.java`) when logged in.
 
 ### 1.3 Architectural Trade-Offs & Flaws of System Private DNS + Accessibility Locks
 1. **Monolithic Presets (No Per-Category Toggles):** Because Android Private DNS accepts only one static hostname and Kahf offers only three static tiers (`high`/`medium`/`low`), using `high.kahfguard.com` globally enforces `restrict.youtube.com` and disables YouTube comments with no option to toggle Restricted Mode independently.
@@ -40,8 +40,8 @@ Kahf Guard intentionally uses Android's built-in Private DNS (DoT) rather than a
 ## 2. AccessibilityService (`KahfBlockerService`) Forensic Deep Dive
 
 ### 2.1 Configuration, Opt-In Defaults & Actual Scoped App Sets
-In [`res/xml/accessibility_service_config.xml`](../04_evidence_dumps/res_xml_audit.json):
-- `canRetrieveWindowContent="true"`, `accessibilityEventTypes="0x820"` (`WINDOW_STATE_CHANGED | WINDOW_CONTENT_CHANGED`), `accessibilityFlags="0x12"` (`INCLUDE_NOT_IMPORTANT_VIEWS | REPORT_VIEW_IDS`).
+In [`res/xml/accessibility_service_config.xml`](../01_manifest_and_resources/res/xml/accessibility_service_config.xml) (raw hex bitmasks also dumped in [`res_xml_audit.json`](../04_evidence_dumps/res_xml_audit.json)):
+- `canRetrieveWindowContent="true"`, `accessibilityEventTypes="typeWindowContentChanged|typeWindowStateChanged"` (`0x820`), `accessibilityFlags="flagIncludeNotImportantViews|flagReportViewIds"` (`0x12`).
 - **All Major Features Default to `false` ([`KahfBlockerService.java:905-1012`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L905-L1012)):**
   `pref_risky_word_block_enabled`, `pref_browsing_report_enabled`, `pref_dns_change_prevention_enabled`, `pref_uninstall_prevention_enabled`, `pref_custom_site_block_enabled`, `pref_youtube_shorts_enabled`, `pref_instagram_reels_enabled`, and `pref_facebook_reels_enabled` all default to `false` and require explicit user/parent opt-in.
 - At runtime, `KahfBlockerService.m3791b()` ([`KahfBlockerService.java:1038-1056`](../02_curated_decompiled_sources/com/kahf/dns/features/guards/service/KahfBlockerService.java#L1038-L1056)) dynamically updates `serviceInfo.packageNames` based on enabled toggles.

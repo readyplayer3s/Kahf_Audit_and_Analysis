@@ -1,9 +1,9 @@
-# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.1)
+# 03 — DNS Infrastructure, Wire-Format Filtering Diff & Failproof Analysis (v2.1.2)
 **Target Infrastructure:** `high.kahfguard.com`, `medium.kahfguard.com`, `low.kahfguard.com`, `safety.kahfguard.com`  
 **Verification Method:** Rate-Limited Client-Side Wire-Format DoT/DoH Inspection + Multi-Region EDNS Client Subnet (ECS) & `AAAA` Verification  
 **Raw Evidence Dump (Initial Dhaka Run):** [`04_evidence_dumps/dns_verification_results.json`](../04_evidence_dumps/dns_verification_results.json)  
 **Test Script:** [`03_automation_scripts/test_dns_resolvers.js`](../03_automation_scripts/test_dns_resolvers.js)  
-**Revision:** `v2.1` (Corrected single-IP/zero-IPv6 error in `v2.0` and fixed DNS tier DEX citations in `v2.1` on Nov 19, 2026)
+**Revision:** `v2.1.2` (Corrected single-IP/zero-IPv6 error in `v2.0`, fixed DNS tier DEX citations in `v2.1`, and corrected Dhaka RTT citation ranges in `v2.1.2` on Nov 19–20, 2026)
 
 ---
 
@@ -86,4 +86,4 @@ Live comparison via DoT (`high.kahfguard.com`) and DoH (`family.adguard-dns.com`
 ## 6. DNSSEC Validation & Dhaka Latency Benchmark
 
 - **DNSSEC Validation (`dns_verification_results.json:922-960`):** `sigok.verteiltesysteme.net` → `NOERROR` with **`AD=true`** (`RRSIG` present); `sigfail.verteiltesysteme.net` → **`SERVFAIL` (`RCODE=2`)**. **Passed.**
-- **Dhaka Latency (`dns_verification_results.json:961-978`):** `high.kahfguard.com` DoT via BDIX (`203.190.10.120`) measured **`4.14–11.09 ms`** cached RTT (`20.04 ms` TLS handshake), vs. ~30–32 ms to Cloudflare/Quad9/AdGuard from the same Dhaka ISP.
+- **Dhaka Latency (`dns_verification_results.json:961-978` & `236-825`):** In `latencyBenchmarkDhaka` (lines `961-978`), `high.kahfguard.com` DoT via BDIX (`203.190.10.120`) measured **`7.83 ms`** query RTT (`20.04 ms` TLS handshake), vs. `30.19 ms` (Cloudflare), `31.08 ms` (Quad9), and `32.47 ms` (AdGuard) from the same Dhaka ISP. Across `tierComparison` (lines `236-825`), cached DoT RTT measured **`4.93–9.17 ms`** on `high.kahfguard.com` alone, and **`4.14–11.09 ms`** across all three tiers (excluding one `172.38 ms` cache-miss query on `medium.kahfguard.com` for `www.google.com`).

@@ -1,9 +1,9 @@
-# Kahf Guard Android (`com.kahf.dns` v4.6.287) — Technical Privacy, Network & Security Audit (v2.1.1)
+# Kahf Guard Android (`com.kahf.dns` v4.6.287) — Technical Privacy, Network & Security Audit (v2.1.2)
 
 > **Target Application:** Kahf Guard (`com.kahf.dns`)  
 > **Version Audited:** `4.6.287` (`versionCode: 361`, Git Commit: `2a1ed43f12fd4fcaaa0f5662eccfc3287f73d5b1`)  
 > **APK Provenance:** Downloaded via official Google Play Store on a **OnePlus Nord CE5** and extracted directly from the device via `adb pull` ([see full SHA-256 chain of custody](./00_raw_apks/APK_SOURCE_PROVENANCE.md)).  
-> **Revision:** `v2.1.1` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode, `strings.xml`, Kahf's Privacy Policy, and multi-region DNS/DoH on Nov 19, 2026).
+> **Revision:** `v2.1.2` (Re-verified directly against raw `classes.dex` / `classes2.dex` bytecode, `strings.xml`, `res/xml/*`, Kahf's Privacy Policy, and multi-region DNS/DoH on Nov 19–20, 2026).
 
 ---
 
@@ -27,7 +27,7 @@ This directory contains the static reverse-engineering evidence and live client-
 
 3. **Installed App Inventory & Hourly Usage Sync Not Restricted to Child Devices (`https://id.kahf.co/graphql`):**
    - Kahf's Privacy Policy contains two separate bullets: a general bullet (*"The amount of time spent on the other Apps"*) and a child-specific bullet (*"On Child Device, we get the App List & Screen-time for Parents to see"*).
-   - **Direct Policy Contradiction (Installed App List & VPN Apps):** Although the Policy *only* mentions App List under *"On Child Device"*, `InstalledAppsSyncWorker` ([`l74.java`](./02_curated_decompiled_sources/p000/l74.java#L222-L316)) has **zero `isChildDevice()` check**. Because standard adult (`FAMILY`/`ORG`) sign-ins register and save `device_mongodb_id` (`Lcf0;->k@881` → `Lfj7;->m` → `v` → `z`), **any logged-in account (adult or child)** automatically uploads its **full installed app list** (`QUERY_ALL_PACKAGES`, no runtime permission needed) and **installed VPN apps** ([`C0602ml.java`](./02_curated_decompiled_sources/p000/C0602ml.java#L155-L184), [`b53.java`](./02_curated_decompiled_sources/p000/b53.java#L267-L365)) to `id.kahf.co/graphql`.
+   - **Direct Policy Contradiction (Installed App List & VPN Apps):** Although the Policy *only* mentions App List under *"On Child Device"*, `InstalledAppsSyncWorker` ([`l74.java`](./02_curated_decompiled_sources/p000/l74.java#L222-L316)) has **zero `isChildDevice()` check**. Because standard adult (`FAMILY`/`ORG`) sign-ins register and save `device_mongodb_id` (`Lcf0;->k@881` → `Lfj7;->m` → `v` → `z`), **any logged-in account (adult or child)** automatically uploads **all launchable user-installed apps plus 161 curated system/preinstalled packages** ([`C0639nl.java:47-52`](./02_curated_decompiled_sources/p000/C0639nl.java#L47-L52), `f28440e`, via `QUERY_ALL_PACKAGES` with no runtime permission needed) and **installed VPN apps** ([`C0602ml.java:155-184`](./02_curated_decompiled_sources/p000/C0602ml.java#L155-L184), excluding 10 MDM/enterprise/Kahf Browser packages in `C0639nl.f28439d`; [`b53.java`](./02_curated_decompiled_sources/p000/b53.java#L267-L365)) to `id.kahf.co/graphql`.
    - **Usage Sync Nuance (`AppUsageSyncWorker` / `Lx00`):** While screen-time is also listed under the general Policy bullet, in code `AppUsageSyncWorker` (`Lx00`) checks `isChildDevice()` (`Ls4c;->g()`) + `ro.kahf.rom == "1"` **only** on the Kahf-ROM `"kahf_cadence"` branch—bypassing that gate entirely on the standard 6-hour periodic schedule unconditionally registered by `KahfGuardApp.m3565i()` (`Lsy0;->x0`). Thus, if a logged-in adult grants `Usage Access` (`PACKAGE_USAGE_STATS`) for self-use features (*App Usage / Screen Time Limits*), hourly per-app usage also syncs to `id.kahf.co/graphql`.
    - **Opt-In Clarifications:** `Risky Word Block` (`pref_risky_word_block_enabled`, default `false`) scans text locally in RAM and uploads zero chat content. `Browsing Reports` (`pref_browsing_report_enabled`, default `false`) extracts **domain names only** (`example.com`, not full URLs or searches), retains them locally for 35 days (`site_visit`), and uploads up to 34 days via `UpdateDeviceSiteVisits` ([`fdb.java`](./02_curated_decompiled_sources/p000/fdb.java#L63-L295), [`y0d.java`](./02_curated_decompiled_sources/p000/y0d.java#L45-L67)).
 
@@ -52,7 +52,7 @@ KahfGuardAndroid_analysis/
 │   └── CURATED_SOURCES_INDEX.md        # Maps obfuscated p000/*.java classes to their exact roles
 ├── 03_automation_scripts/              # Standalone Node.js static analysis & DNS verification scripts
 ├── 04_evidence_dumps/                  # Structured JSON outputs from static & DNS verification
-└── 05_reports/                         # Full Technical Audit Reports (v2.1.1)
+└── 05_reports/                         # Full Technical Audit Reports (v2.1.2)
     ├── 01_Executive_Privacy_and_Telemetry_Audit.md
     ├── 02_VpnService_and_Accessibility_Deep_Dive.md
     └── 03_DNS_Infrastructure_and_Failproof_Analysis.md
