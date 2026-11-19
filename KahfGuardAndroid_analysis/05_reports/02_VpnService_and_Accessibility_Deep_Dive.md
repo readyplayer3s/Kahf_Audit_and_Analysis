@@ -1,7 +1,7 @@
-# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1)
+# 02 — VpnService Absence, System Private DNS Architecture & AccessibilityService Deep Dive (v2.1.1)
 **Target Application:** Kahf Guard (`com.kahf.dns` v4.6.287, `versionCode: 361`)  
-**Components Audited:** `AndroidManifest.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
-**Revision:** `v2.1` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, and raw DEX on Nov 19, 2026)
+**Components Audited:** `AndroidManifest.xml`, `res/values/strings.xml`, `res/xml/accessibility_service_config.xml`, `res/xml/device_admin_policies.xml`, `KahfBlockerService`, `AccessibilityMonitorService`, `DnsSafetyManager` (`nb3` / `m48` / `wo9` / `C0890ud` / `nm9`), `SiteVisitRecorder` (`xcb` / `fdb`)  
+**Revision:** `v2.1.1` (Re-verified against `KahfBlockerService.java`, `a13.java`, `gd7.java`, `bcb.java`, `strings.xml`, and raw DEX on Nov 19, 2026)
 
 ---
 
@@ -13,7 +13,7 @@ A primary hypothesis entering this audit was that Kahf Guard—like RethinkDNS, 
 **Forensic Verdict (Disproven Hypothesis / Verified Code Fact):**
 1. **Zero `VpnService` Declarations in `AndroidManifest.xml`:** Full inspection of [`AndroidManifest.xml`](../01_manifest_and_resources/AndroidManifest.xml#L1-L328) and [`manifest_audit.json`](../04_evidence_dumps/manifest_audit.json) confirms Kahf Guard declares **no** `<service>` with `android.permission.BIND_VPN_SERVICE`.
 2. **Only 3 First-Party (`com.kahf.dns.*`) Services Exist in the APK:**
-   - `com.kahf.dns.features.guards.service.KahfBlockerService` (`BIND_ACCESSIBILITY_SERVICE`, [`AndroidManifest.xml:148-153`](../01_manifest_and_resources/AndroidManifest.xml#L148-L153))
+   - `com.kahf.dns.features.guards.service.KahfBlockerService` (`BIND_ACCESSIBILITY_SERVICE`, UI label `"Kahf Guard Protections"` in [`res/values/strings.xml:13`](../01_manifest_and_resources/res/values/strings.xml#L13), [`AndroidManifest.xml:148-153`](../01_manifest_and_resources/AndroidManifest.xml#L148-L153))
    - `com.kahf.dns.features.guards.service.AccessibilityMonitorService` (`foregroundServiceType="specialUse"`, [`AndroidManifest.xml:162-164`](../01_manifest_and_resources/AndroidManifest.xml#L162-L164)) — monitors accessibility service health (`50000ms` / `300000ms` timers); contains **no** 60-second DNS unlock loop.
    - `com.kahf.dns.services.AndroidNotificationService` (`com.google.firebase.MESSAGING_EVENT`, [`AndroidManifest.xml:143-147`](../01_manifest_and_resources/AndroidManifest.xml#L143-L147))
 3. **Why `"android.net.VpnService"` Appears in DEX:**
@@ -83,4 +83,4 @@ To avoid locking users out of their device if Kahf's DNS resolvers go down, `Pro
 
 **Security Impact & Exact Scope (v2.0 Clarification):**
 - While intentional for outage recovery, blocking TCP port `853` (or `*.kahfguard.com`) on a local Wi-Fi router/hotspot while allowing `1.1.1.1:443` and opening Kahf Guard's Protection screen disables Accessibility-based **DNS Change Prevention** and **Uninstall Prevention** in ~5–8 seconds with **zero PIN, cooldown, or parental confirmation**.
-- **Scope Note:** `nm9` does **not** revoke Android Device Admin (`pref_super_uninstall_protection_enabled`) if the user separately enabled Super Uninstall Protection.
+- **Scope Note:** `nm9` does **not** revoke Android Device Admin (`pref_super_uninstall_protection_enabled`, listed in Android Settings → Device Admin Apps as **`"KG-AdminZ"`**, [`res/values/strings.xml:170`](../01_manifest_and_resources/res/values/strings.xml#L170)) if the user separately enabled Super Uninstall Protection.
