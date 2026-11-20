@@ -1,4 +1,4 @@
-# Curated Decompiled Sources Index (v2.1.4)
+# Curated Decompiled Sources Index (New Version)
 
 To keep this repository lightweight and focused strictly on verifiable forensic evidence, this folder includes:
 1. **All 128 unobfuscated `com/kahf/dns/**` classes** from `base.apk`.
@@ -58,7 +58,7 @@ Anyone can decompile [`00_raw_apks/base.apk`](../00_raw_apks/base.apk) with `jad
 | [`p000/gd7.java`](./p000/gd7.java) | Browser URL bar node extractor (`m8530G`, lines 83+) scanning up to 100 visible `AccessibilityNodeInfo` nodes for known URL bar view IDs, and stripping full URL paths/queries to a host via `m8571v` (line 1413) before calling `bcb.m1876a`. |
 | [`p000/hge.java`](./p000/hge.java) | Local in-RAM risky keyword matcher (`m9467n`) and Android Settings / Private DNS / Uninstall UI detector. |
 | [`p000/a13.java`](./p000/a13.java) | Constants: URL bar resource IDs (`f55e`, line 40), `low/medium/high.kahfguard.com` (`f56f`, line 108 — also referenced in raw DEX by `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`), Private DNS & Uninstall UI lock strings (`f58h`–`f61k`), and built-in risky word list (`f50C`, lines 202–205). |
-| [`p000/qa3.java`](./p000/qa3.java) | `DnsDiagnosticTask` (`implements az8`, lines 12–426): coordinates Private DNS diagnostic execution. *(v2.1 correction: `qa3` is not the DNS tier hostname enum; `high`/`medium`/`low.kahfguard.com` are defined/referenced in `a13.java:108` (`f56f`), `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`.)* |
+| [`p000/qa3.java`](./p000/qa3.java) | `DnsDiagnosticTask` (`implements az8`, lines 12–426): coordinates Private DNS diagnostic execution. *(New version correction: `qa3` is not the DNS tier hostname enum; `high`/`medium`/`low.kahfguard.com` are defined/referenced in `a13.java:108` (`f56f`), `vc3.<init>`, `va3.invoke`, `i48.invokeSuspend`, and `w5.invoke`.)* |
 | [`p000/C0969wi.java`](./p000/C0969wi.java) | Reads active Android Private DNS hostname via `ConnectivityManager.getLinkProperties().getPrivateDnsServerName()`. |
 | [`p000/ti9.java`](./p000/ti9.java) | Registers `DefaultNetworkCallback` to monitor Private DNS changes. |
 | [`p000/gt5.java`](./p000/gt5.java) | `NetworkCallback.onLinkPropertiesChanged` listener triggering Private DNS backend sync. |
