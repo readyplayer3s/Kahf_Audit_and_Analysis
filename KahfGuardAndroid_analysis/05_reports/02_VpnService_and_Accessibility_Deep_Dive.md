@@ -64,7 +64,7 @@ When `Custom Site Block` or opt-in `Browsing Reports` (`pref_browsing_report_ena
 1. [`gd7.m8530G(accessibilityNodeInfo)`](../02_curated_decompiled_sources/p000/gd7.java#L83-L100) scans up to 100 visible nodes in supported browsers (`f6290v0`) for known URL bar resource IDs ([`a13.java:40`](../02_curated_decompiled_sources/p000/a13.java#L40)).
 2. [`gd7.m8571v`](../02_curated_decompiled_sources/p000/gd7.java#L1413) (called from `gd7.m8530G`) strips full URL paths and search queries down to a bare host string, and [`bcb.m1876a`](../02_curated_decompiled_sources/p000/bcb.java#L27-L76) validates and IDN/lowercase-normalizes that extracted domain (e.g., `example.com`).
 3. Only if `pref_browsing_report_enabled == true`, [`xcb.java:330-362`](../02_curated_decompiled_sources/p000/xcb.java#L330-L362) records `(domain, date, hour, visits, blocked, activeSeconds)` in local Room SQLite (`site_visit`, 35-day retention).
-4. When signed into a Kahf account, [`fdb.java:63-295`](../02_curated_decompiled_sources/p000/fdb.java#L63-L295) uploads up to 34 days of dirty `site_visit` rows via `UpdateDeviceSiteVisits` ([`y0d.java:45-67`](../02_curated_decompiled_sources/p000/y0d.java#L45-L67)) to `https://id.kahf.co/graphql`.
+4. When signed into a Kahf account, [`fdb.java:63-295`](../02_curated_decompiled_sources/p000/fdb.java#L63-L295) uploads up to 34 days of dirty `site_visit` rows via `UpdateDeviceSiteVisits` ([`y0d.java:45-67`](../02_curated_decompiled_sources/p000/y0d.java#L45-L67)) to `https://id.kahf.co/graphql` *(this Browsing Reports / visited-domain upload is not disclosed in Kahf's current Privacy Policy)*.
 
 ---
 
